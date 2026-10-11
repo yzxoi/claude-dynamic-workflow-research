@@ -60,6 +60,8 @@ def classify(relative: Path, symlink: bool) -> tuple[str, str]:
         return "omitted", "symlink; underlying regular files are archived separately"
     if ".git" in parts or "__pycache__" in parts or relative.suffix == ".pyc" or relative.name == ".DS_Store":
         return "omitted", "VCS/cache/OS byproduct; not experimental evidence"
+    if relative.name == ".env" or relative.name.startswith(".env.") or relative.suffix == ".secret":
+        return "omitted", "local env/secret state is excluded from publication"
     if name in {"native-latest/package/claude", "native-latest.tgz", "tools/ant-1.40.0/ant", "tools/ant-1.40.0/download.zip"}:
         return "release-or-upstream", "large official distribution; retrieve using manifest or private release asset"
     if name == "unknown-content-probe-records.zip":
@@ -96,6 +98,10 @@ def refresh(repository: Path) -> None:
     for path in sorted(repository.rglob("*")):
         rel = path.relative_to(repository)
         if not path.is_file() or ".git" in rel.parts or "__pycache__" in rel.parts or str(rel) in exclusions:
+            continue
+        if rel.parts[0] in {"downloads", "local-private", ".venv"} or path.name == ".DS_Store" or path.suffix == ".pyc":
+            continue
+        if path.name == ".env" or path.name.startswith(".env.") or path.suffix == ".secret":
             continue
         data = path.read_bytes()
         entries.append({"path": str(rel), "bytes": len(data), "sha256": digest(data)})

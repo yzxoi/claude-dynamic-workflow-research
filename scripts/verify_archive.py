@@ -29,7 +29,10 @@ def verify(repository: Path, structural_only: bool) -> dict[str, object]:
     special_formats = {item["path"]: item for item in formats["files"]}
     paths = [path for path in sorted(repository.rglob("*")) if path.is_file()
              and ".git" not in path.relative_to(repository).parts
-             and "__pycache__" not in path.relative_to(repository).parts]
+             and "__pycache__" not in path.relative_to(repository).parts
+             and path.relative_to(repository).parts[0] not in {"downloads", "local-private", ".venv"}
+             and path.name != ".DS_Store" and path.suffix not in {".pyc", ".secret"}
+             and path.name != ".env" and not path.name.startswith(".env.")]
 
     def fail(path: Path, check: str, detail: str) -> None:
         errors.append({"path": str(path.relative_to(repository)), "check": check, "detail": detail})
@@ -157,7 +160,7 @@ def verify(repository: Path, structural_only: bool) -> dict[str, object]:
     return {"status": "passed" if not errors else "failed", "offline_only": True,
             "structural_only": structural_only, "checks": dict(counts), "errors": errors,
             "scope": "all repository JSON/JSONL with declared concatenated stream and negative-fixture formats; Python syntax; authored docs and claim links; published hashes; REA gzip JSON; sanitized experiment ZIP",
-            "excluded_checks": ["network links", "historical/vendor Markdown links", "execution of evidence code", "model or cloud calls", "original-source hash equality after declared redactions"]}
+            "excluded_checks": ["network links", "historical/vendor Markdown links", "execution of evidence code", "model or cloud calls", "local downloads/local-private/.venv and cache/VCS files", "original-source hash equality after declared redactions"]}
 
 
 def main() -> None:

@@ -25,7 +25,11 @@
     "historical/vendor Markdown links",
     "execution of evidence code",
     "model or cloud calls",
+    "local downloads/local-private/.venv and cache/VCS files",
     "original-source hash equality after declared redactions"
   ],
-  "date": "2026-10-11"
+  "date": "2026-10-11",
+  "behavioral_checks": {
+    "ignored_local_download_does_not_change_inventory": "passed; same marker failed before exclusion and passed afterward"
+  }
 }

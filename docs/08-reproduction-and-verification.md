@@ -12,6 +12,8 @@ python3 scripts/verify_archive.py
 
 三项内容按 [content-formats](../manifests/content-formats.json) 声明的原格式检查：models.json 是 CLI 连续输出的多个 JSON 值；bad.json 和 badenc.json 是 worker 故意生成的畸形 JSON/编码输入，用来触发错误路径。验证器核对负例的 hash 并确认它们仍不能解析，而不是修改原记录让所有 .json 假装有效。
 
+根目录 downloads、local-private、.venv 以及 VCS/cache 是本机工作区附件，不属于发布 inventory；下载 Release 后可继续运行验证器，不必删除这些文件。
+
 查看 [validation-report](../manifests/validation-report.json) 和 [scan-summary](../manifests/scan-summary.json) 可了解发布时检查口径。完整 gitleaks 临时报告没有加入仓库，安全摘要保留规则、文件位置和人工判断。
 
 ## 原始、脱敏与重新提取

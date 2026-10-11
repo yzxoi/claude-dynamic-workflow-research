@@ -5,7 +5,7 @@
     "manifests/published-files.json"
   ],
   "file_count": 5947,
-  "total_bytes": 175914962,
+  "total_bytes": 175916126,
   "files": [
     {
       "path": ".gitignore",
@@ -59,8 +59,8 @@
     },
     {
       "path": "docs/08-reproduction-and-verification.md",
-      "bytes": 5883,
-      "sha256": "c9037fdcfdd085ba8804ddee2a1d4e8448908bf76e54b0fb89a5c60d6acf865a"
+      "bytes": 6073,
+      "sha256": "7922e3cdabc21fe3c167fdfe91d664d84701968148adc396cc340c386468fb93"
     },
     {
       "path": "docs/09-corrections-and-history.md",
@@ -29729,18 +29729,18 @@
     },
     {
       "path": "manifests/validation-report.json",
-      "bytes": 972,
-      "sha256": "b729c5d54fa92c1bc76beabf72ae2a6b9d9200bcd9532035b869304446ba4df4"
+      "bytes": 1188,
+      "sha256": "16133b8b736e2b64e351690b2d27d7ec5e77dceb52af3b11a879b042e03bb2ff"
     },
     {
       "path": "scripts/build_publication.py",
-      "bytes": 8288,
-      "sha256": "37d9a226955e3ce255c0d5da80a08d025936a9ed51cc960f952b0c75c934e845"
+      "bytes": 8725,
+      "sha256": "f235eb002fd5625e1ccf009f0af89e8cc7c97ae5be46afccb9ede550339698ea"
     },
     {
       "path": "scripts/verify_archive.py",
-      "bytes": 8832,
-      "sha256": "f3790aecab752ab432ed3e6171d7321afa3e0ec63cdb07e7d5038d9aefdd1b74"
+      "bytes": 9153,
+      "sha256": "99d43946c4944b3aa07539f36ad45cb48943858048c6f08d2f6ef9d28d813a77"
     }
   ]
 }
