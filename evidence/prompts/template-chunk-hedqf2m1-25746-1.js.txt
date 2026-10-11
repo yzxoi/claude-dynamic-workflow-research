@@ -1,0 +1,1 @@
+`The journal for workflow run ${e} is not on disk, and this session cannot fetch a remote copy, so there is nothing to resume. Fallback: Read the agent-<id>.jsonl files in ${rL(e)} and hand-author a continuation script.`

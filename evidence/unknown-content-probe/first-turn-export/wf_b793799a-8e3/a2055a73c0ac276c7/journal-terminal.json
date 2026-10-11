@@ -1,0 +1,84 @@
+[
+  {
+    "type": "result",
+    "key": "v2:e9042366a81e49bc67185dfc48898c76bf829dfeeb2e6a60ddc310fb43530b3d",
+    "agentId": "a2055a73c0ac276c7",
+    "result": {
+      "items": [
+        {
+          "title": "Array index grammar (leading zeros, signs, unicode digits, empty, '-', negative, out of range, huge) in resolve/get_part/to_last",
+          "classification": "rejected",
+          "citation": "RFC 6901 section 4 (array-index = %x30 / ( %x31-39 *(%x30-39) ), '-' is the nonexistent element after the last); tests.py WrongInputTests.test_leading_zero, test_oob, test_eol",
+          "repro": "L=[10,20,30]; for p in ['/00','/-0','/+1','/1.0','/ 1','/1 ','/١','/²','/０','/','/1\\n','/-1','/3','/10000000000000000000']: resolve_pointer(L,p)  # plus resolve_pointer(L,'/0'), resolve_pointer(L,'/-'), JsonPointer.get_part([1],'01')",
+          "expected": "'/0' returns 10, '/-' returns EndOfList, and every other token is rejected with JsonPointerException.",
+          "actual": "As expected. '/0' gives 10, '/-' gives EndOfList([10, 20, 30]), and all others raise JsonPointerException ('not a valid sequence index' or 'out of bounds'). Unicode digits, a trailing newline, and a 20-digit index are all rejected cleanly.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "Escape decoding order (~01, ~001, ~00, a~01b, ~0~1) and empty-string keys",
+          "classification": "rejected",
+          "citation": "RFC 6901 section 4: first transform ~1 to /, then ~0 to ~; section 5 example '/' -> key '' and '/m~0n'",
+          "repro": "doc={'~1':'tilde1','/':'slash','~':'tilde','~01':'x','~/':'tildeslash','~0':'t0'}; resolve_pointer(doc,p) for p in ['/~01','/~001','/~1','/~0','/~0~1','/~00']; resolve_pointer({'':{'':1}},'//')",
+          "expected": "'~01' -> key '~1'; '~001' -> '~01'; '~1' -> '/'; '~0' -> '~'; '~0~1' -> '~/'; '~00' -> '~0'; '//' -> 1.",
+          "actual": "All matched: tilde1, x, slash, tilde, tildeslash, t0, and 1.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "set_pointer with '-' on a tuple parent raises AttributeError instead of JsonPointerException",
+          "classification": "ambiguity",
+          "citation": "jsonpointer.py JsonPointer.set wraps TypeError and IndexError from parent[part]=value into JsonPointerException ('Invalid assignment target'); set_pointer docs do not say how immutable sequences are handled. JSON documents from json.loads never contain tuples.",
+          "repro": "set_pointer({'a':(1,2)}, '/a/-', 3)   # compare: set_pointer({'a':(1,2)}, '/a/0', 3)",
+          "expected": "Probably JsonPointerException, consistent with the '/a/0' case, but the docs are silent for non-JSON immutable sequences.",
+          "actual": "'/a/-' raises AttributeError: 'tuple' object has no attribute 'append'. '/a/0' raises JsonPointerException 'Invalid assignment target'. The library's own error type is therefore inconsistent for a non-JSON input.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "set_pointer inplace semantics (root, return value, deepcopy, failure leaves original untouched, '-' append)",
+          "classification": "rejected",
+          "citation": "set_pointer docstring: 'With inplace set to true, doc is modified as long as pointer is not the root'; doc/tutorial.rst (inplace=False creates a copy); tests.py SetTests",
+          "repro": "doc={'a':[1]}; r=set_pointer(doc,'/a/0',2); r is doc; r=set_pointer(doc,'/a/0',3,inplace=False); set_pointer([1],'',[2],inplace=False); set_pointer([1],'',[2]); set_pointer(doc,'/a/5/x',1,inplace=False)",
+          "expected": "inplace=True returns the same object. inplace=False returns a copy and leaves doc unchanged, even on failure. Root with inplace=False returns the value, and root with inplace=True raises JsonPointerException.",
+          "actual": "As expected. 'r is doc' is True for inplace=True, and False with the original unchanged for inplace=False. Root with inplace=False returns [2], and the failed non-inplace set left doc == {'a': [1]}. Out-of-range sets (index 5, or index == len) raise JsonPointerException.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "doc/tutorial.rst doctest output differs in dict key order",
+          "classification": "rejected",
+          "citation": "doc/tutorial.rst lines about set_pointer show {'foo': {'another prop': ..., 'anArray': ...}}",
+          "repro": "doctest.testfile('doc/tutorial.rst', module_relative=False)  # run via python3 -I",
+          "expected": "The tutorial doctests pass.",
+          "actual": "4 failures. The only difference is repr key order ('anArray' printed before 'another prop'). The tutorial text assumes pre-3.7 dict ordering, and the module docstrings use '==' comparisons that pass (21/21). This is a documentation artefact, not a library behaviour bug.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/q.py"
+        },
+        {
+          "title": "resolve default argument semantics and error types",
+          "classification": "rejected",
+          "citation": "resolve_pointer docstring and tutorial: resolve_pointer(obj,'/some/path',None) == None; tests LargeIndexTests default handling; tests.py WrongInputTests",
+          "repro": "resolve_pointer([10,20,30],'/9','D'); resolve_pointer(5,'/9','D'); resolve_pointer({},'/a',0); resolve_pointer({'a':None},'/a/b','D'); resolve_pointer({'a':[1]},'/a/-/0','D'); resolve_pointer({}, 'a', 'D')",
+          "expected": "The default is returned for any unresolvable path, including falsy defaults like 0. A malformed pointer string still raises.",
+          "actual": "'D', 'D', 0, 'D', and 'D' respectively. The malformed pointer 'a' raises JsonPointerException 'Location must start with /' even with a default (the pointer is parsed before the default is considered, which matches the tests).",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "Custom __getitem__ object raising IndexError is not mapped to JsonPointerException (default not honoured)",
+          "classification": "ambiguity",
+          "citation": "jsonpointer.py walk only catches KeyError for ducktyped objects; tests.py AltTypesTests only covers KeyError-raising objects; docs do not specify the ducktyping error contract",
+          "repro": "class C:\n    def __getitem__(self,k): raise IndexError(k)\nresolve_pointer(C(), '/x', 'D')",
+          "expected": "Unclear. The docs say nothing about __getitem__ objects that raise other exceptions. A reader could expect 'D' or JsonPointerException.",
+          "actual": "IndexError propagates out of resolve_pointer even with a default supplied. This is only reachable with non-JSON ducktyped containers, and the documented ducktyping tests use KeyError only.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/q.py"
+        },
+        {
+          "title": "to_last / get_part / EndOfList traversal and set via '/-' mid-path",
+          "classification": "rejected",
+          "citation": "tests.py ToLastTests, test_eol (resolve '/foo/-/1' raises JsonPointerException); RFC 6901 section 4 ('-' refers to the nonexistent element after the last)",
+          "repro": "JsonPointer('/a/-').to_last({'a':[1]}); JsonPointer('/a/9').to_last({'a':[1]}); JsonPointer('').to_last(d); set_pointer({'a':[1]},'/a/-/b',1); set_pointer({'a':[1]},'/a/-',[],inplace=False)",
+          "expected": "to_last returns (parent, '-') for a trailing '-' and (doc, None) for the root. Setting through '-' mid-path raises JsonPointerException. A trailing '-' appends.",
+          "actual": "to_last returns ([1], '-') and ([1], 9) (no bounds check, which is only a parent/step split), and (doc, None) for the root. The mid-path '-' set raises JsonPointerException. The trailing '-' append returns {'a': [1, []]}.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        }
+      ],
+      "coverageGaps": "I did not probe the CLI (bin/jsonpointer), join, contains, or eq/hash, which belong to other areas. I did not fuzz against a reference implementation, so I covered about 12 hand-picked edge-case groups in resolve, set, walk, get_part and to_last. I did not test non-str pointer inputs beyond JsonPointer(None), which raises TypeError. That is outside documented behaviour. I did not test VERBOSE_EXCEPTIONS=False behaviour. Mutable Sequence types other than list (such as bytearray or deque) were not exercised."
+    }
+  }
+]

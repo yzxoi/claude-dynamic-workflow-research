@@ -1,0 +1,228 @@
+{
+  "auditRunId": "wf_19ca15dc-a9c",
+  "sessionId": "82d3665d-baba-4221-bb2b-28055303b823",
+  "workflowCalls": 2,
+  "workflowCallAgents": [
+    4,
+    0
+  ],
+  "leadAgents": 1,
+  "workerAgents": 4,
+  "uniqueWorkerIds": 4,
+  "failedJournalEntries": 0,
+  "sourcesUnchanged": true,
+  "originalScriptMatchesPayloadAndMetadata": true,
+  "workerSystemIdentical": true,
+  "workers": [
+    {
+      "module": "inventory",
+      "agentId": "ab6ffa32b9d8da01f",
+      "label": "audit:inventory",
+      "durationMs": 10931,
+      "startedAt": 1791695362426,
+      "attempt": 1,
+      "tools": [
+        "Read",
+        "Read",
+        "Bash",
+        "StructuredOutput"
+      ],
+      "statuses": {
+        "confirmed": 1,
+        "rejected": 2
+      },
+      "timestamps": [
+        "2026-10-11T05:09:22.426Z",
+        "2026-10-11T05:09:22.429Z",
+        "2026-10-11T05:09:22.429Z",
+        "2026-10-11T05:09:22.430Z",
+        "2026-10-11T05:09:22.432Z",
+        "2026-10-11T05:09:22.432Z",
+        "2026-10-11T05:09:22.432Z",
+        "2026-10-11T05:09:22.433Z",
+        "2026-10-11T05:09:22.433Z",
+        "2026-10-11T05:09:24.733Z",
+        "2026-10-11T05:09:24.747Z",
+        "2026-10-11T05:09:25.320Z",
+        "2026-10-11T05:09:25.324Z",
+        "2026-10-11T05:09:25.328Z",
+        "2026-10-11T05:09:25.329Z",
+        "2026-10-11T05:09:25.329Z",
+        "2026-10-11T05:09:26.654Z",
+        "2026-10-11T05:09:28.992Z",
+        "2026-10-11T05:09:29.313Z",
+        "2026-10-11T05:09:29.314Z",
+        "2026-10-11T05:09:29.314Z",
+        "2026-10-11T05:09:33.334Z",
+        "2026-10-11T05:09:33.336Z",
+        "2026-10-11T05:09:33.336Z"
+      ]
+    },
+    {
+      "module": "pricing",
+      "agentId": "ab55d16267e7e7e0c",
+      "label": "audit:pricing",
+      "durationMs": 11171,
+      "startedAt": 1791695362426,
+      "attempt": 1,
+      "tools": [
+        "Read",
+        "Read",
+        "Bash",
+        "StructuredOutput"
+      ],
+      "statuses": {
+        "confirmed": 1,
+        "unverified": 1,
+        "rejected": 1
+      },
+      "timestamps": [
+        "2026-10-11T05:09:24.022Z",
+        "2026-10-11T05:09:24.024Z",
+        "2026-10-11T05:09:24.024Z",
+        "2026-10-11T05:09:24.025Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.028Z",
+        "2026-10-11T05:09:26.488Z",
+        "2026-10-11T05:09:26.492Z",
+        "2026-10-11T05:09:26.996Z",
+        "2026-10-11T05:09:27.000Z",
+        "2026-10-11T05:09:27.002Z",
+        "2026-10-11T05:09:27.003Z",
+        "2026-10-11T05:09:27.003Z",
+        "2026-10-11T05:09:28.753Z",
+        "2026-10-11T05:09:30.702Z",
+        "2026-10-11T05:09:31.031Z",
+        "2026-10-11T05:09:31.032Z",
+        "2026-10-11T05:09:31.032Z",
+        "2026-10-11T05:09:35.189Z",
+        "2026-10-11T05:09:35.190Z",
+        "2026-10-11T05:09:35.191Z"
+      ]
+    },
+    {
+      "module": "scheduling",
+      "agentId": "a4f81911f2b46ef48",
+      "label": "audit:scheduling",
+      "durationMs": 13516,
+      "startedAt": 1791695362426,
+      "attempt": 1,
+      "tools": [
+        "Read",
+        "Read",
+        "Bash",
+        "StructuredOutput"
+      ],
+      "statuses": {
+        "confirmed": 2,
+        "rejected": 2
+      },
+      "timestamps": [
+        "2026-10-11T05:09:24.023Z",
+        "2026-10-11T05:09:24.024Z",
+        "2026-10-11T05:09:24.024Z",
+        "2026-10-11T05:09:24.025Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.028Z",
+        "2026-10-11T05:09:26.364Z",
+        "2026-10-11T05:09:26.368Z",
+        "2026-10-11T05:09:27.001Z",
+        "2026-10-11T05:09:27.010Z",
+        "2026-10-11T05:09:27.010Z",
+        "2026-10-11T05:09:27.010Z",
+        "2026-10-11T05:09:27.011Z",
+        "2026-10-11T05:09:29.437Z",
+        "2026-10-11T05:09:32.323Z",
+        "2026-10-11T05:09:32.629Z",
+        "2026-10-11T05:09:32.630Z",
+        "2026-10-11T05:09:32.630Z",
+        "2026-10-11T05:09:34.442Z",
+        "2026-10-11T05:09:37.532Z",
+        "2026-10-11T05:09:37.535Z",
+        "2026-10-11T05:09:37.536Z"
+      ]
+    },
+    {
+      "module": "metrics",
+      "agentId": "a762fcae704fafdb3",
+      "label": "audit:metrics",
+      "durationMs": 15364,
+      "startedAt": 1791695362426,
+      "attempt": 1,
+      "tools": [
+        "Read",
+        "Read",
+        "Bash",
+        "StructuredOutput"
+      ],
+      "statuses": {
+        "confirmed": 2,
+        "rejected": 1
+      },
+      "timestamps": [
+        "2026-10-11T05:09:24.023Z",
+        "2026-10-11T05:09:24.024Z",
+        "2026-10-11T05:09:24.024Z",
+        "2026-10-11T05:09:24.025Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.027Z",
+        "2026-10-11T05:09:24.028Z",
+        "2026-10-11T05:09:26.457Z",
+        "2026-10-11T05:09:26.461Z",
+        "2026-10-11T05:09:27.044Z",
+        "2026-10-11T05:09:27.047Z",
+        "2026-10-11T05:09:27.049Z",
+        "2026-10-11T05:09:27.050Z",
+        "2026-10-11T05:09:27.050Z",
+        "2026-10-11T05:09:29.609Z",
+        "2026-10-11T05:09:33.094Z",
+        "2026-10-11T05:09:33.404Z",
+        "2026-10-11T05:09:33.405Z",
+        "2026-10-11T05:09:33.405Z",
+        "2026-10-11T05:09:35.712Z",
+        "2026-10-11T05:09:39.384Z",
+        "2026-10-11T05:09:39.386Z",
+        "2026-10-11T05:09:39.386Z"
+      ]
+    }
+  ],
+  "workerFindingStatuses": {
+    "confirmed": 6,
+    "rejected": 6,
+    "unverified": 1
+  },
+  "auditDurationMs": 19202,
+  "auditTokensReported": 45503,
+  "auditToolCalls": 16,
+  "totalCostUsdListEstimate": 0.32556000000000007,
+  "modelUsage": {
+    "claude-sonnet-5-5": {
+      "inputTokens": 42,
+      "outputTokens": 9994,
+      "cacheReadInputTokens": 264170,
+      "cacheCreationInputTokens": 60777,
+      "webSearchRequests": 0,
+      "costUSD": 0.32556000000000007,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 929,
+      "canonicalModel": "claude-sonnet-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "cliDurationApiMs": 89647,
+  "leadPermissionDenials": [],
+  "knownSeededBugs": 5,
+  "leadConfirmedSeededBugs": 5,
+  "extraRuntimePrecisionFinding": true,
+  "oneWorkflowInstructionSatisfied": false
+}

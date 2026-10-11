@@ -1,0 +1,25 @@
+NAME:
+   ant beta:sessions:events send - Send Events
+
+USAGE:
+   ant beta:sessions:events send
+
+OPTIONS:
+   --session-id string                                
+   --event '{key: value}' [ --event '{key: value}' ]  Events to send to the `session`.
+     --event.type string                              Allowed values: "user.message", "user.interrupt", "user.tool_confirmation", "user.custom_tool_result", "user.define_outcome", "user.tool_result", "system.message".
+     --event.content value                            
+     --event.custom-tool-use-id string                The id of the `agent.custom_tool_use` event this result corresponds to, which can be found in the last `session.status_idle` [event's](https://platform.claude.com/docs/en/api/beta/sessions/events/list#beta_managed_agents_session_requires_action.event_ids) `stop_reason.event_ids` field.
+     --event.deny-message string                      Optional message providing context for a 'deny' decision. Only allowed when result is 'deny'.
+     --event.description string                       What the agent should produce. This is the task specification.
+     --event.is-error boolean                         Whether the tool execution resulted in an error.
+     --event.max-iterations int                       Eval→revision cycles before giving up. Default 3, max 20.
+     --event.result string                            The confirmation result: 'allow' or 'deny'.
+     --event.rubric '{key: value}'                    How to grade the outcome. Text or file reference.
+     --event.session-thread-id string                 If absent, interrupts every non-archived thread in a multiagent session (or the primary alone in a single-agent session). If present, interrupts only the named thread.
+     --event.tool-use-id string                       The id of the `agent.tool_use` or `agent.mcp_tool_use` event this result corresponds to, which can be found in the last `session.status_idle` [event's](https://platform.claude.com/docs/en/api/beta/sessions/events/list#beta_managed_agents_session_requires_action.event_ids) `stop_reason.event_ids` field.
+   --beta string [ --beta string ]                    Optional header to specify the beta version(s) you want to use.
+   --workspace-id string                              Optional header to select the Workspace for this request. The value is a Workspace ID (for example, `wrkspc_011CZkZaBF1tNoB5wlCeusgy`).
+
+      Only needed for credentials that can act on more than one Workspace. A credential that belongs to a specific Workspace may omit it; if sent, it must match that Workspace.
+   --help, -h  show help

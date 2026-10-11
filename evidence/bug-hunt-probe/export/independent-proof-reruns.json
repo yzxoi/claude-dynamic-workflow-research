@@ -1,0 +1,38 @@
+[
+  {
+    "script": "/research/claude-workflow-research/bug-hunt-probe/workspace/scratch/inventory_proof.py",
+    "returncode": 0,
+    "stdout": "exact False 5\nless True 1\nmore False 5\nbadres 0 {'a': 5}\nbadrest 0 {'a': 5}\nbadres -1 {'a': 5}\nbadrest -1 {'a': 5}\nbadres 1.5 {'a': 5}\nbadrest 1.5 {'a': 5}\nbadres 1 {'a': 5}\nbadrest 1 {'a': 5}\nnew 3 0\nmut {'a': 1}\n",
+    "stderr": ""
+  },
+  {
+    "script": "/research/claude-workflow-research/bug-hunt-probe/workspace/scratch/lead_check.py",
+    "returncode": 0,
+    "stdout": "reserve all False 5\nquote at min {'subtotal': 1000, 'discount': 0, 'shipping': 100, 'total': 1100}\noverlaps touching True\nslot before busy 10\npercentile 3 4 5\n",
+    "stderr": ""
+  },
+  {
+    "script": "/research/claude-workflow-research/bug-hunt-probe/workspace/scratch/lead_check2.py",
+    "returncode": 0,
+    "stdout": "6 2 8\n10 10\n[5000000000000000.0, 0.0, 0.0, 5000000000000000.0] [1.5, 2.5, 3.5]\n",
+    "stderr": ""
+  },
+  {
+    "script": "/research/claude-workflow-research/bug-hunt-probe/workspace/scratch/metrics_proof.py",
+    "returncode": 0,
+    "stdout": "p50 of 1..10 (expect 5): 6\np10 (expect 1): 2\np100 (expect 10): 10\np70 (expect 7): 8 7.0\nmutation: [3, 1, 2]\nempty ok\nbad p ok -1\nbad p ok 101\np0: 3\nma: [1.5, 2.5, 3.5] []\n[1, 2, 3]\nok 0\nok -1\nok 2.0\ndrift: [0.0, 0.0] expect [1.0,1.0]\n",
+    "stderr": ""
+  },
+  {
+    "script": "/research/claude-workflow-research/bug-hunt-probe/workspace/scratch/pricing_proof.py",
+    "returncode": 0,
+    "stdout": "boundary {'subtotal': 1000, 'discount': 0, 'shipping': 100, 'total': 1100}\nempty {'subtotal': 0, 'discount': 0, 'shipping': 0, 'total': 0} 0\nfloor {'subtotal': 1005, 'discount': 100, 'shipping': 100, 'total': 1005}\nzero min {'subtotal': 0, 'discount': 0, 'shipping': 100, 'total': 100}\nraised invalid unit price\nraised invalid quantity\nraised invalid unit price\n",
+    "stderr": ""
+  },
+  {
+    "script": "/research/claude-workflow-research/bug-hunt-probe/workspace/scratch/scheduling_proof.py",
+    "returncode": 0,
+    "stdout": "overlaps touching True\nmerge touching [(0, 5), (5, 10)] merge overlap [(0, 10)]\nmutation [(5, 10), (0, 2)]\nslot ends at busy start 10 expected 0\nslot ends at latest 0 expected 0\ngap exact 10 expected 2\nunordered 10 expected 2 [(5, 10), (0, 2)]\nnone None expected None\n",
+    "stderr": ""
+  }
+]

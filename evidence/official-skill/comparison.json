@@ -1,0 +1,34 @@
+[
+  {
+    "name": "bug-hunter",
+    "public_url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/claude-api/shared/managed-agents-quickstarts/bug-hunter.md",
+    "sha256": "9afd40ef3e1bca9e1cc4c6655d314127cec0b4dcff0e12f6016508c134954248",
+    "bytes": 8096,
+    "matches_bundled_bytes": false,
+    "matches_after_exact_skill_model_substitution": true
+  },
+  {
+    "name": "watchlist-scanner",
+    "public_url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/claude-api/shared/managed-agents-quickstarts/watchlist-scanner.md",
+    "sha256": "e67861c63b9d46b01c8d2784998b7f0de9a87aa6012b77127def1253c5ac13db",
+    "bytes": 5642,
+    "matches_bundled_bytes": false,
+    "matches_after_exact_skill_model_substitution": true
+  },
+  {
+    "name": "explainer-video-maker",
+    "public_url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/claude-api/shared/managed-agents-quickstarts/explainer-video-maker.md",
+    "sha256": "c2570c5e14d51c5caa77646ac417d18619d34a27cc94dc72cf020c698f2803f3",
+    "bytes": 4886,
+    "matches_bundled_bytes": false,
+    "matches_after_exact_skill_model_substitution": true
+  },
+  {
+    "name": "performance-tuner",
+    "public_url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/claude-api/shared/managed-agents-quickstarts/performance-tuner.md",
+    "sha256": "922396e14b569bc98a7bdde34d10890cc81c5184e81971e6c9be108d191dd639",
+    "bytes": 11394,
+    "matches_bundled_bytes": false,
+    "matches_after_exact_skill_model_substitution": true
+  }
+]

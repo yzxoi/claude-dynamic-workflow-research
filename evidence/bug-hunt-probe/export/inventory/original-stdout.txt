@@ -1,0 +1,13 @@
+exact False 5
+less True 1
+more False 5
+badres 0 {'a': 5}
+badrest 0 {'a': 5}
+badres -1 {'a': 5}
+badrest -1 {'a': 5}
+badres 1.5 {'a': 5}
+badrest 1.5 {'a': 5}
+badres 1 {'a': 5}
+badrest 1 {'a': 5}
+new 3 0
+mut {'a': 1}

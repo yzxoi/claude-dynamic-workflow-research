@@ -1,0 +1,24 @@
+NAME:
+   ant beta:environments create - Create a new environment with the specified configuration.
+
+USAGE:
+   ant beta:environments create
+
+OPTIONS:
+   --name string                         Human-readable name for the environment
+   --config '{key: value}'               Environment configuration
+     --config.type string                Environment type
+     --config.networking '{key: value}'  Network configuration policy. Omit on update to preserve the existing value.
+     --config.packages '{key: value}'    Specify packages (and optionally their versions) available in this environment.
+
+      When versioning, use the version semantics relevant for the package manager, e.g. for `pip` use `package==1.0.0`. You are responsible for validating the package and version exist. Unversioned installs the latest.
+
+      Under `limited` networking, requires `networking.allow_package_managers` to be `true`.
+   --description string             Optional description of the environment
+   --metadata '{key: value}'        User-provided metadata key-value pairs
+   --scope string                   The visibility scope for this environment. 'organization' makes the environment visible to all accounts. 'account' restricts visibility to the owning account only. API organizations support only 'organization'; 'account' is rejected. If not specified, defaults based on organization type.
+   --beta string [ --beta string ]  Optional header to specify the beta version(s) you want to use.
+   --workspace-id string            Optional header to select the Workspace for this request. The value is a Workspace ID (for example, `wrkspc_011CZkZaBF1tNoB5wlCeusgy`).
+
+      Only needed for credentials that can act on more than one Workspace. A credential that belongs to a specific Workspace may omit it; if sent, it must match that Workspace.
+   --help, -h  show help

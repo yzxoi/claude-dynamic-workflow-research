@@ -1,0 +1,7 @@
+{"type":"launched"}
+{"type":"started","key":"v2:f0fa85ae15e130aadfc245afb78fc5814dfd00da4717698de266cdc4f8825ed4","agentId":"ac929522131d8814a","label":"worker-A","phase":"Observe"}
+{"type":"started","key":"v2:80c12df193d7b85d4d55032e546bc96a942223b2aad59eb2117d202294511442","agentId":"a13d5005ccdd03e6b","label":"worker-B","phase":"Observe"}
+{"type":"result","key":"v2:f0fa85ae15e130aadfc245afb78fc5814dfd00da4717698de266cdc4f8825ed4","agentId":"ac929522131d8814a","result":{"worker":"A","seed":"workspace-shared-6295","leadOnlyValue":null}}
+{"type":"result","key":"v2:80c12df193d7b85d4d55032e546bc96a942223b2aad59eb2117d202294511442","agentId":"a13d5005ccdd03e6b","result":{"worker":"B","seed":"workspace-shared-6295","leadOnlyValue":null}}
+{"type":"started","key":"v2:e9730b56bb84185915ff4b469a5feb0072e6849b28b15e4daadd49ba0ea256e6","agentId":"a2445755e56a74143","label":"worker-C","phase":"Merge"}
+{"type":"result","key":"v2:e9730b56bb84185915ff4b469a5feb0072e6849b28b15e4daadd49ba0ea256e6","agentId":"a2445755e56a74143","result":{"receivedA":{"worker":"A","seed":"workspace-shared-6295","leadOnlyValue":null},"receivedB":{"worker":"B","seed":"workspace-shared-6295","leadOnlyValue":null},"artifactContents":"artifact-A-85192","leadOnlyValue":null}}

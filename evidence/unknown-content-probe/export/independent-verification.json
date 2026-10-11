@@ -1,0 +1,56 @@
+{
+  "kind": "post-run independent verification by the experiment runner",
+  "receivedByLead": false,
+  "moduleOrigin": "/research/claude-workflow-research/unknown-content-probe/workspace/jsonpointer.py",
+  "upstreamVersion": "3.2.1",
+  "upstreamTests": {
+    "testsRun": 52,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "successful": true,
+    "stderr": "....................................................\n----------------------------------------------------------------------\nRan 52 tests in 0.595s\n\nOK\n",
+    "stdout": ""
+  },
+  "cliCases": [
+    {
+      "label": "mixed",
+      "command": [
+        "python3",
+        "/research/claude-workflow-research/unknown-content-probe/workspace/bin/jsonpointer",
+        "/a/-",
+        "first.json",
+        "second.json"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/research/claude-workflow-research/unknown-content-probe/workspace/bin/jsonpointer\", line 105, in <module>\n    main()\n    ~~~~^^\n  File \"/research/claude-workflow-research/unknown-content-probe/workspace/bin/jsonpointer\", line 36, in main\n    ok = resolve_files()\n  File \"/research/claude-workflow-research/unknown-content-probe/workspace/bin/jsonpointer\", line 96, in resolve_files\n    print(json.dumps(result, indent=args.indent))\n          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\", line 235, in dumps\n    return _default_encoder.encode(obj)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 202, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 263, in iterencode\n    return _iterencode(o, 0)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 182, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\n                    f'is not JSON serializable')\nTypeError: Object of type EndOfList is not JSON serializable\n"
+    },
+    {
+      "label": "second-only",
+      "command": [
+        "python3",
+        "/research/claude-workflow-research/unknown-content-probe/workspace/bin/jsonpointer",
+        "/a/-",
+        "second.json"
+      ],
+      "returncode": 0,
+      "stdout": "\"second-file-marker\"\n",
+      "stderr": ""
+    },
+    {
+      "label": "control",
+      "command": [
+        "python3",
+        "/research/claude-workflow-research/unknown-content-probe/workspace/bin/jsonpointer",
+        "/a/9",
+        "first.json",
+        "second.json"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Could not resolve pointer: index '9' is out of bounds\nCould not resolve pointer: member '9' not found in {'-': 'second-file-marker'}\n"
+    }
+  ],
+  "conclusion": "The EndOfList CLI serialization error is reproduced. A second valid file is skipped after the first-file error; it succeeds when run alone. Existing upstream tests pass with the workspace module explicitly selected."
+}

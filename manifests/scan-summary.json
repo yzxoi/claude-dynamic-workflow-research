@@ -1,0 +1,328 @@
+{
+  "date": "2026-10-11",
+  "gitleaks": {
+    "tool": "gitleaks dir",
+    "mode": "redacted report outside repository; archive depth 3; decode depth 2; no inline allow suppression",
+    "bytes_scanned": 324772571,
+    "findings": 43,
+    "rules": {
+      "generic-api-key": 43
+    },
+    "reviewed_true_credentials": 0,
+    "reviewed_false_positives": 43,
+    "alerts": [
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/bun-files/chunk-bk5ct2gw.js",
+        "line": 14,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/bun-files/chunk-h20sc871.js",
+        "line": 13,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/bun-files/chunk-qxmpnv25.js",
+        "line": 24,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/bun-files/chunk-r2vtj1kh.js",
+        "line": 11,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/extracted-js/187415892.js",
+        "line": 13,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/extracted-js/189363955.js",
+        "line": 14,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/extracted-js/192065217.js",
+        "line": 24,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/extracted-js/187593539.js",
+        "line": 11,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/bun-files/chunk-yhar7r1q.js",
+        "line": 236,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/strings/187415892.txt",
+        "line": 13,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/strings/189363955.txt",
+        "line": 14,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/strings/192065217.txt",
+        "line": 24,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/strings/187593539.txt",
+        "line": 11,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/extracted-js/213225650.js",
+        "line": 236,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/strings/213225650.txt",
+        "line": 236,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "evidence/rea-evidence.json.gz",
+        "line": 1,
+        "classification": "false-positive in public distributed minified code or embedded duplicate",
+        "note": "Reviewed code categories: createPrivateKey import bindings, key/attribute variable expressions, PKCS algorithm identifier literals. No credential values."
+      }
+    ],
+    "limitation": "Automated rules plus human review are not proof against every possible secret format; final encoded host-path removal was applied after this scan and introduced no credentials."
+  },
+  "privacy": {
+    "status": "passed",
+    "utf8_or_decompressed_text_files_checked": 5784,
+    "original_research_home_or_host_root_hits": 0,
+    "non_pseudonymous_account_fields": 0,
+    "zip_policy": "rebuilt from already scanned published experiment directory",
+    "binary_artifacts": "official public distributions or retained public upstream fixtures; credentials/auth stores not included"
+  },
+  "auth_stores_copied": false,
+  "raw_secret_report_published": false
+}

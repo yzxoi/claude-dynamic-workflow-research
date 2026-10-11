@@ -1,0 +1,10 @@
+*.pyc
+build
+.coverage
+MANIFEST
+dist
+*.swp
+doc/_build
+*.egg-info
+.idea
+coverage.lcov

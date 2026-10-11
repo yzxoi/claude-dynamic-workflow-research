@@ -1,0 +1,22 @@
+NAME:
+   ant beta:sessions update - Update Session
+
+USAGE:
+   ant beta:sessions update
+
+OPTIONS:
+   --session-id string                      
+   --agent '{key: value}'                   Mid-session agent configuration update. Only `tools` and `mcp_servers` are updatable. Full replacement: the provided array becomes the new value. To preserve existing entries, GET the session, modify the array, and POST it back.
+     --agent.mcp-servers '{key: value}'     Replacement MCP server list. Full replacement: the provided array becomes the new value. Send an empty array to clear; omit to preserve.
+     --agent.tools '{key: value}'           Replacement tool list. Full replacement: the provided array becomes the new value. Send an empty array to clear; omit to preserve.
+   --budget '{key: value}'                  A hard spend ceiling. The session stops issuing new model requests once the tracked list cost reaches `max_list_cost`.
+     --budget.max-list-cost '{key: value}'  A monetary amount in a specific currency.
+     --budget.type string                   Allowed values: "limit".
+   --metadata '{key: value}'                Metadata patch. Set a key to a string to upsert it, or to null to delete it. Omit the field to preserve.
+   --title string                           Human-readable session title.
+   --vault-id string [ --vault-id string ]  Vault IDs (`vlt_*`) to attach to the session. Not yet supported; requests setting this field are rejected. Reserved for future use.
+   --beta string [ --beta string ]          Optional header to specify the beta version(s) you want to use.
+   --workspace-id string                    Optional header to select the Workspace for this request. The value is a Workspace ID (for example, `wrkspc_011CZkZaBF1tNoB5wlCeusgy`).
+
+      Only needed for credentials that can act on more than one Workspace. A credential that belongs to a specific Workspace may omit it; if sent, it must match that Workspace.
+   --help, -h  show help

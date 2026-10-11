@@ -1,0 +1,300 @@
+{
+  "date": "2026-10-11",
+  "label_definitions_document": "docs/01-scope-and-methodology.md",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "本地 Workflow 为 JavaScript 程序，JSON 用于工具参数和数据",
+      "evidence_labels": [
+        "LOCAL-SOURCE",
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/formatted-js/workflow-tool.js",
+        "evidence/bug-hunt-probe/export/workflow.js"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C02",
+      "claim": "Worker 最终结果先返回脚本，后续 prompt 显式组装",
+      "evidence_labels": [
+        "LOCAL-SOURCE",
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/prompts/worker-structured-system.txt",
+        "evidence/live-probe/capture/session/workflows/scripts/context-probe-wf_a2116ab0-2a2.js"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C03",
+      "claim": "本地 workers 默认不复制完整 lead history",
+      "evidence_labels": [
+        "LOCAL-SOURCE",
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/formatted-js/subagent-runner.js",
+        "evidence/live-probe/summary.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C04",
+      "claim": "共同 cwd 支持共享文件，受控实验确实传递产物",
+      "evidence_labels": [
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/live-probe/summary.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C05",
+      "claim": "进度事件与完整返回注入 lead 是不同路径",
+      "evidence_labels": [
+        "LOCAL-SOURCE",
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/formatted-js/workflow-runtime.js",
+        "evidence/unknown-content-probe/export/lead/queue-operations.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C06",
+      "claim": "Lead 完成通知默认只带脚本最终返回，可被截断",
+      "evidence_labels": [
+        "LOCAL-SOURCE",
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/formatted-js/205220505.js",
+        "evidence/unknown-content-probe/export/observations.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C07",
+      "claim": "被检查的指令没有要求每轮实现通用任意意外重规划出口",
+      "evidence_labels": [
+        "LOCAL-SOURCE",
+        "TEMPLATE"
+      ],
+      "sources": [
+        "evidence/prompts/workflow-authoring.txt",
+        "evidence/REPLANNING-AND-RESULT-DELIVERY.md"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C08",
+      "claim": "四模板包含任务特定复核和有限返工策略",
+      "evidence_labels": [
+        "TEMPLATE"
+      ],
+      "sources": [
+        "evidence/official-skill/bug-hunter.md",
+        "evidence/official-skill/watchlist-scanner.md",
+        "evidence/official-skill/performance-tuner.md",
+        "evidence/official-skill/explainer-video-maker.md"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C09",
+      "claim": "四模板走 API onboarding，与本地 Workflow 工具不同入口",
+      "evidence_labels": [
+        "LOCAL-SOURCE",
+        "TEMPLATE"
+      ],
+      "sources": [
+        "evidence/template-call-sites.json",
+        "evidence/formatted-js/chunk-k9bc38yt.js",
+        "evidence/formatted-js/workflow-tool.js"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C10",
+      "claim": "Pipeline 无跨项阶段屏障，parallel thunks 保序",
+      "evidence_labels": [
+        "HOST-PROBE",
+        "LOCAL-SOURCE"
+      ],
+      "sources": [
+        "evidence/probe-semantics.cjs",
+        "evidence/semantics-probe.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C11",
+      "claim": "Journal key 链支持缓存前缀重放，完整 CLI 编辑恢复未实测",
+      "evidence_labels": [
+        "HOST-PROBE",
+        "LOCAL-SOURCE"
+      ],
+      "sources": [
+        "evidence/semantics-probe.json",
+        "evidence/formatted-js/workflow-runtime.js"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C12",
+      "claim": "外部文件变化本身不参与该缓存 key",
+      "evidence_labels": [
+        "INFERENCE"
+      ],
+      "sources": [
+        "evidence/formatted-js/workflow-runtime.js"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C13",
+      "claim": "可达本地 launch 的 token budget total 为 null",
+      "evidence_labels": [
+        "LOCAL-SOURCE"
+      ],
+      "sources": [
+        "evidence/formatted-js/workflow-runtime.js"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C14",
+      "claim": "Fact-rule 路径未被本地通常入口启用",
+      "evidence_labels": [
+        "LOCAL-SOURCE"
+      ],
+      "sources": [
+        "evidence/formatted-js/workflow-tool.js",
+        "evidence/formatted-js/workflow-runtime.js"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C15",
+      "claim": "L2 lead 自选四模块，确认五个植入缺陷，无 verifier worker",
+      "evidence_labels": [
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/bug-hunt-probe/export/verification.json",
+        "evidence/bug-hunt-probe/export/workflow.js",
+        "evidence/bug-hunt-probe/ground-truth.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C16",
+      "claim": "L2 额外 noop run 没有 workers",
+      "evidence_labels": [
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/bug-hunt-probe/export/verification.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C17",
+      "claim": "L3 真实上游没有植入缺陷，无追加 worker",
+      "evidence_labels": [
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/unknown-content-probe/provenance.json",
+        "evidence/unknown-content-probe/export/observations.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C18",
+      "claim": "L3 首轮后撤销单 run 限制，lead 仍自行验证",
+      "evidence_labels": [
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/unknown-content-probe/continuation-task.txt",
+        "evidence/unknown-content-probe/export/observations.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C19",
+      "claim": "L3 CLI 问题可复现；json.dumps 在 try 内，但 except 不捕获 TypeError",
+      "evidence_labels": [
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/unknown-content-probe/export/independent-verification.json",
+        "evidence/unknown-content-probe/workspace/bin/jsonpointer"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C20",
+      "claim": "L3 52 tests 由研究者随后跑通，没有交付 lead",
+      "evidence_labels": [
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/unknown-content-probe/export/observations.json"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C21",
+      "claim": "云端首个 create 请求额度拒绝，无 resources/run",
+      "evidence_labels": [
+        "LOCAL-LIVE"
+      ],
+      "sources": [
+        "evidence/cloud-probe/agent-created.json",
+        "evidence/cloud-probe/run-probe.py"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C22",
+      "claim": "SDK 公开配置支持 multiagent_20261001 与 workflows enabled",
+      "evidence_labels": [
+        "PUBLIC-CONTRACT"
+      ],
+      "sources": [
+        "evidence/cloud-sdk/package/src/resources/beta/agents/agents.ts"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C23",
+      "claim": "云端完整私有 lead harness、DSL、scheduler 和结果注入仍未知",
+      "evidence_labels": [
+        "UNVERIFIED"
+      ],
+      "sources": [
+        "docs/07-limitations-and-open-questions.md"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    },
+    {
+      "id": "C24",
+      "claim": "Cloud/local 是否共用编排实现尚无证据",
+      "evidence_labels": [
+        "UNVERIFIED"
+      ],
+      "sources": [
+        "docs/03-local-runtime-and-call-chain.md",
+        "docs/04-prompts-and-templates.md"
+      ],
+      "scope": "local 2.1.296 and recorded experiments unless explicitly cloud/public/unverified"
+    }
+  ]
+}

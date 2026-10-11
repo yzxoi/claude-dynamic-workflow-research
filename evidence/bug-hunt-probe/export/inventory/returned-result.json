@@ -1,0 +1,28 @@
+{
+  "findings": [
+    {
+      "module": "inventory.py",
+      "title": "reserve() rejects a request that consumes all remaining units",
+      "status": "confirmed",
+      "repro": "python3 scratch/inventory_proof.py; Inventory({'a':5}).reserve('a',5). The cause is `if quantity >= available` at inventory.py line 12, which should be `>`.",
+      "expected": "Returns True and available becomes 0, since the spec says exact consumption of all remaining units succeeds.",
+      "actual": "Returns False and available stays 5. Reserving 4 of 5 works (True, 1 left). Reserving 6 correctly returns False with state unchanged."
+    },
+    {
+      "module": "inventory.py",
+      "title": "Invalid quantities (0, -1, 1.5, '1') in reserve/restock leave state unchanged",
+      "status": "rejected",
+      "repro": "scratch/inventory_proof.py",
+      "expected": "ValueError with no state change",
+      "actual": "ValueError was raised and the stock stayed {'a': 5} in every case."
+    },
+    {
+      "module": "inventory.py",
+      "title": "restock creates unknown SKUs, available() returns 0 for unknown SKUs, and the constructor copies its input",
+      "status": "rejected",
+      "repro": "scratch/inventory_proof.py",
+      "expected": "restock creates the SKU. available() returns 0 for an unknown SKU. The caller's dict is not mutated.",
+      "actual": "restock created 'n' with 3. available('zz') returned 0. The caller's dict stayed {'a': 1} after restocking the Inventory built from it."
+    }
+  ]
+}

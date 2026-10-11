@@ -1,0 +1,122 @@
+[
+  {
+    "path": ".coveragerc",
+    "bytes": 247,
+    "sha256": "17dfdd9fd6ca4e89d83605dcb9ba5b3711063e41ea41d20dba4e4691f81b8bba"
+  },
+  {
+    "path": ".github/workflows/publish.yml",
+    "bytes": 2901,
+    "sha256": "72b2c795e039cfb1d5963d28e439720edffbc78820b0bba997f9e0f77fcca0a0"
+  },
+  {
+    "path": ".github/workflows/test.yaml",
+    "bytes": 1872,
+    "sha256": "ada94b1d5e97d727dea11acfd3dcf3d795327187cf493024d8d4470f7ea63363"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 84,
+    "sha256": "55430c5431e5a70e2d47efddef2ff0255c4a319ac0e7c6de9dce55a335f6be83"
+  },
+  {
+    "path": ".readthedocs.yaml",
+    "bytes": 576,
+    "sha256": "5b5c9335d6fa7ff57c3c847a057db901372e2083f259a801046acf5018f544a4"
+  },
+  {
+    "path": "AUTHORS",
+    "bytes": 113,
+    "sha256": "4d58319d0f59c87bef5b07b3fe4db0f19c2d7d5545b034c6bf7b57c89bbef57f"
+  },
+  {
+    "path": "LICENSE.txt",
+    "bytes": 1413,
+    "sha256": "d8b24f15d472885f788a2d6e985850f264627b86012a17bb242c83f310d907e5"
+  },
+  {
+    "path": "MANIFEST.in",
+    "bytes": 71,
+    "sha256": "d3c47d3def3d000bc1bec6fc5919c3f0a343a81f9bcc49ade5a704593786e426"
+  },
+  {
+    "path": "README.md",
+    "bytes": 1243,
+    "sha256": "246fadbc39105b9f7d767fd04828d575c4f7c1492fbc4eb3c2cb86b340b0886d"
+  },
+  {
+    "path": "bin/jsonpointer",
+    "bytes": 3047,
+    "sha256": "dce4b41042649041094a4c3b285aa106d847f28b9d308fbec754885c4157e8e4"
+  },
+  {
+    "path": "doc/Makefile",
+    "bytes": 5616,
+    "sha256": "e0893b995c517c88f7f5f7c6eaa93d16934120190d9839d3d120dbd2d71c1b58"
+  },
+  {
+    "path": "doc/_static/.empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "doc/commandline.rst",
+    "bytes": 1905,
+    "sha256": "163107b005dad9907b1d1daa45f3840acbc464a39308487abff6d8a3b373dc8d"
+  },
+  {
+    "path": "doc/conf.py",
+    "bytes": 7910,
+    "sha256": "29948433491bf1f630becf275c954520f9af944dcc5199946efac7cd698d928a"
+  },
+  {
+    "path": "doc/index.rst",
+    "bytes": 664,
+    "sha256": "a4443e9a5731d5e3cf6f74a414a1121c148896891f7c3dc3f35d9c240d95bdf9"
+  },
+  {
+    "path": "doc/mod-jsonpointer.rst",
+    "bytes": 119,
+    "sha256": "349d4172a8f0a02ce4a77688e9b85aa100526a181ec82a4c01c0f01b7123defb"
+  },
+  {
+    "path": "doc/tutorial.rst",
+    "bytes": 2189,
+    "sha256": "3533285f8297ab4f283effa7cd7fd0d9bb0ebdbdc6b342be4c7b45dd736a871a"
+  },
+  {
+    "path": "jsonpointer.py",
+    "bytes": 11409,
+    "sha256": "b41d8aab8743d85cc325479f02402aee2df9a4d23c8628215ede7336f06eb868"
+  },
+  {
+    "path": "makefile",
+    "bytes": 321,
+    "sha256": "92ed84e8ec137ef770142e35fdb63c10248b7e73389e52f4255c6812e04d3ac9"
+  },
+  {
+    "path": "reference/rfc6901.txt",
+    "bytes": 13037,
+    "sha256": "12f9f4fc13d686aa4fbe7d144d70166cd3fcd4ab89174c2b13bda8f4b55e49da"
+  },
+  {
+    "path": "requirements-dev.txt",
+    "bytes": 33,
+    "sha256": "7272ab2b29dd3ce79746f9128e68956407cfe60543ed4b6d6ed4cb2847fa0723"
+  },
+  {
+    "path": "setup.cfg",
+    "bytes": 76,
+    "sha256": "18f19f57db624fcdb81f9b34d22ac6fe9f39825d1221a7797e095bf6061e3108"
+  },
+  {
+    "path": "setup.py",
+    "bytes": 1873,
+    "sha256": "718a22267b266bea2ac81135c5f6c888eb581858e3e5b2d2e2012a606d28a6a9"
+  },
+  {
+    "path": "tests.py",
+    "bytes": 21046,
+    "sha256": "74370771a8bd9aa36ad941d76d2b0011bda7517862159e9d8fe27f03ba5057d5"
+  }
+]

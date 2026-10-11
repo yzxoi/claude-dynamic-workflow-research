@@ -1,0 +1,1 @@
+A workflow size guideline is configured for this session: large — keep workflows under 50 agents. This is a guideline, not a hard limit — follow it unless the user's prompt calls for a different scale.

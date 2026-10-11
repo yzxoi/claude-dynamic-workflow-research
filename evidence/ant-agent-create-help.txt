@@ -1,0 +1,45 @@
+NAME:
+   ant beta:agents create - Create Agent
+
+USAGE:
+   ant beta:agents create
+
+OPTIONS:
+   --model value        Model identifier. Accepts the [model string](https://platform.claude.com/docs/en/about-claude/models/overview#latest-models-comparison), e.g. `claude-opus-5`, or a `model_config` object for additional configuration control
+     --model.id string  The model that will power your agent.
+
+      See [models](https://docs.anthropic.com/en/docs/models-overview) for additional details and options.
+     --model.effort value                                       How hard Claude works on each inference call. Accepts a bare level string (`"high"`) or `{"type": "high"}`. On create, omitting it resolves the per-model default; on update, omitting it leaves the stored value unchanged.
+     --model.inference-geo string                               Geographic region for model inference. When unset, requests fall through to the workspace's default_inference_geo. On update, `model` is whole-object replacement — omitting inference_geo clears it.
+     --model.speed string                                       Inference speed mode. Defaults to `standard`.
+   --name string                                                Human-readable name for the agent.
+   --description string                                         Description of what the agent does.
+   --mcp-server '{key: value}' [ --mcp-server '{key: value}' ]  MCP servers this agent connects to. Maximum 20. Names must be unique within the array. Every server must be referenced by an `mcp_toolset` in `tools`; unreferenced servers are rejected. See the [MCP connector guide](https://platform.claude.com/docs/en/managed-agents/mcp-connector).
+     --mcp-server.name string                                   Unique name for this server, referenced by mcp_toolset configurations. 1-255 characters.
+     --mcp-server.type string                                   Allowed values: "url".
+     --mcp-server.url string                                    Endpoint URL for the MCP server.
+   --metadata '{key: value}'                                    Arbitrary key-value metadata. Maximum 16 pairs, keys up to 64 chars, values up to 512 chars.
+   --multiagent '{key: value}'                                  Multiagent orchestration configuration.
+     --multiagent.type string                                   Allowed values: "coordinator", "multiagent_20261001".
+     --multiagent.advisor '{key: value}'                        Whether the session's primary thread can consult an advisor model.
+     --multiagent.agents any                                    Agents the coordinator may spawn as session threads. 1–20 entries. Each entry is an agent ID string, a versioned `{"type":"agent","id","version"}` reference, or `{"type":"self"}` to allow recursive self-invocation. Entries must reference distinct agents (after resolving `self` and string forms); at most one `self`. Referenced agents must exist, must not be archived, and must not themselves have `multiagent` set (depth limit 1).
+     --multiagent.subagents '{key: value}'                      Whether the agent can spawn session threads.
+     --multiagent.workflows '{key: value}'                      Whether the agent can start workflow runs.
+   --skill '{key: value}' [ --skill '{key: value}' ]            Skills available to the agent.
+     --skill.skill-id string                                    Identifier of the Anthropic skill (e.g., "xlsx").
+     --skill.type string                                        Allowed values: "anthropic", "custom".
+     --skill.version string                                     Version to pin. Defaults to latest if omitted.
+   --system string                                              System prompt for the agent.
+   --tool '{key: value}' [ --tool '{key: value}' ]              Tool configurations available to the agent. Maximum of 256 tools across all toolsets allowed.
+     --tool.type string                                         Allowed values: "agent_toolset_20260401", "mcp_toolset", "custom".
+     --tool.configs value                                       
+     --tool.default-config value                                
+     --tool.description string                                  Description of what the tool does, shown to the agent to help it decide when to use the tool.
+     --tool.input-schema '{key: value}'                         JSON Schema for custom tool input parameters.
+     --tool.mcp-server-name string                              Name of the MCP server. Must match a server name from the mcp_servers array. 1-255 characters.
+     --tool.name string                                         Unique name for the tool. 1-128 characters; letters, digits, underscores, and hyphens.
+   --beta string [ --beta string ]                              Optional header to specify the beta version(s) you want to use.
+   --workspace-id string                                        Optional header to select the Workspace for this request. The value is a Workspace ID (for example, `wrkspc_011CZkZaBF1tNoB5wlCeusgy`).
+
+      Only needed for credentials that can act on more than one Workspace. A credential that belongs to a specific Workspace may omit it; if sent, it must match that Workspace.
+   --help, -h  show help

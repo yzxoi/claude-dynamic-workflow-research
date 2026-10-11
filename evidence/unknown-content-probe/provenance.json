@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/stefankoegl/python-json-pointer",
+  "commit": "f2641f09b20dfde10f068e492531f4d914427110",
+  "commit_url": "https://github.com/stefankoegl/python-json-pointer/commit/f2641f09b20dfde10f068e492531f4d914427110",
+  "commit_timestamp": "2026-10-10T21:09:01Z",
+  "archive_url": "https://codeload.github.com/stefankoegl/python-json-pointer/tar.gz/f2641f09b20dfde10f068e492531f4d914427110",
+  "archive_sha256": "14a81ed777e9b12f5f9657a9d34e41b7dfd2a76f3bd7e5a544ad874406d6cf0b",
+  "normative_reference": "https://www.rfc-editor.org/rfc/rfc6901.txt",
+  "planted_bugs": false,
+  "known_bug_oracle": null
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "title": "Pointer validity, path round-trip, from_parts and hash vs RFC 6901 grammar",
+      "classification": "rejected",
+      "citation": "RFC 6901 section 3 (pointer ABNF with escaped = '~' ('0' / '1')) and tests.py test_round_trip, test_parts, test_str_and_repr",
+      "repro": "Exhaustively enumerated every string of length 0-5 over '~01/a\\n'. For each, compared JsonPointer(s) accept/reject with the regex (?s)(?:/(?:[^/~]|~[01])*)*\\Z. For accepted strings, checked p.path == s, from_parts(p.parts) == p, hash(JsonPointer(p.path)) == hash(p). Also checked unescape(escape(x)) == x and from_parts([x]).parts == [x] for all x over '~01/' up to length 4. Script: scratch/class-api/probe.py",
+      "expected": "Acceptance matches the RFC grammar and round trips are lossless",
+      "actual": "No mismatches (bad=0). Trailing-newline and '~01' / '~10' ordering cases are handled correctly."
+    },
+    {
+      "title": "Module doctests (path, from_parts, pairwise, resolve_pointer, set_pointer)",
+      "classification": "rejected",
+      "citation": "Docstring examples in jsonpointer.py",
+      "repro": "doctest.testmod(jsonpointer)",
+      "expected": "All doctests pass",
+      "actual": "TestResults(failed=0, attempted=21)"
+    },
+    {
+      "title": "join / __truediv__ with str, JsonPointer and list suffixes",
+      "classification": "rejected",
+      "citation": "join docstring 'Returns a new JsonPointer with the given suffix append'; tests.py test_join, test_join_magic, test_join_subclass",
+      "repro": "p=JsonPointer('/a/b/c'); p.join(['a/b']).path; p.join('').path; p.join(['']).path; p.join([1,2]).path; p.join(('x','~')).path; p.join(None); p/1; p.join('/a~')",
+      "expected": "List items are treated as unescaped parts, '' as root, and invalid suffixes raise JsonPointerException",
+      "actual": "'/a/b/c/a~1b', '/a/b/c', '/a/b/c/', '/a/b/c/1/2', '/a/b/c/x/~0'. None and 1 raise JsonPointerException('Invalid suffix'). '/a~' raises JsonPointerException('Found invalid escape ~'). p is never mutated."
+    },
+    {
+      "title": "contains / __contains__ direction and boundary cases",
+      "classification": "rejected",
+      "citation": "contains docstring 'Returns True if self contains the given ptr'; tests.py test_contains, test_contains_magic",
+      "repro": "JsonPointer('/ab').contains(JsonPointer('/a')); JsonPointer('/a~1b/c').contains(JsonPointer('/a')); p.contains(JsonPointer('')); JsonPointer('').contains(p)",
+      "expected": "Containment is a whole-token prefix test, and the root pointer is contained in every pointer",
+      "actual": "False, False, True, False. Tokens are compared whole after unescaping, so there is no false string-prefix match."
+    },
+    {
+      "title": "contains / 'in' with a str argument raises AttributeError",
+      "classification": "ambiguity",
+      "citation": "contains docstring says 'the given ptr'. No documented behaviour for str arguments, and join accepts str but contains does not.",
+      "repro": "p=JsonPointer('/a/b/c'); p.contains('/a'); '/a' in p",
+      "expected": "Undocumented. A reader might expect str to be accepted, as in join, or a JsonPointerException.",
+      "actual": "AttributeError: 'str' object has no attribute 'parts'"
+    },
+    {
+      "title": "Fragment form '#/a' is not accepted",
+      "classification": "ambiguity",
+      "citation": "RFC 6901 section 6 (URI fragment identifier representation). The docstring in resolve_pointer treats '/a%20b' as a literal key, and the README only claims 'resolve JSON Pointers according to RFC 6901'.",
+      "repro": "JsonPointer('#/a'); JsonPointer('#')",
+      "expected": "RFC section 6 describes a URI fragment form. The library documents only the string form and never claims fragment support.",
+      "actual": "JsonPointerException: Location must start with /. This is consistent with the documented string representation, and percent-decoding is explicitly not done."
+    },
+    {
+      "title": "get_parts() returns the internal list, so mutating it changes the pointer",
+      "classification": "ambiguity",
+      "citation": "get_parts docstring 'Returns the list of the parts'. It does not say whether the list is a copy.",
+      "repro": "q=JsonPointer('/a/b'); q.get_parts().append('z'); q.path",
+      "expected": "Unspecified. Pointers are hashable, so a mutable view could change hash and equality.",
+      "actual": "'/a/b/z' (the pointer was mutated)"
+    },
+    {
+      "title": "join with a bytes suffix yields numeric parts",
+      "classification": "ambiguity",
+      "citation": "join accepts a JsonPointer, a str or an iterable of parts. bytes is not documented.",
+      "repro": "JsonPointer('/a/b/c').join(b'/a')",
+      "expected": "Undocumented. Either an error or a bytes-based interpretation is plausible.",
+      "actual": "JsonPointer('/a/b/c/47/97'), because iterating bytes yields ints that are then stringified."
+    },
+    {
+      "title": "__eq__, __hash__, set membership, subclass and repr behaviour",
+      "classification": "rejected",
+      "citation": "tests.py test_eq_hash, test_join_subclass, test_str_and_repr; the __eq__ docstring",
+      "repro": "JsonPointer('/a')==Subclass('/a'); JsonPointer('/a')!=JsonPointer('/a'); JsonPointer('/a~1b')==JsonPointer.from_parts(['a/b']); len({JsonPointer('/a'),JsonPointer('/a'),JsonPointer('/b')}); repr(Subclass('/a')); str(JsonPointer('')), repr(JsonPointer(''))",
+      "expected": "Equality compares parts; equal pointers hash equally; repr uses the class name",
+      "actual": "True, False, True, 2, \"P('/a')\", ('', \"JsonPointer('')\"). All as expected."
+    },
+    {
+      "title": "from_parts edge inputs",
+      "classification": "rejected",
+      "citation": "from_parts docstring 'Constructs a JsonPointer from a list of (unescaped) paths'; example ['a','~','/',0] -> '/a/~0/~1/0'",
+      "repro": "from_parts([]).path; from_parts(['']).path; from_parts(x for x in 'ab').path; from_parts([None]).parts",
+      "expected": "Empty list gives the root pointer, [''] gives '/', iterables work, and non-str items are stringified as with the documented int 0",
+      "actual": "'', '/', '/a/b', ['None']. Consistent with the documented int stringification."
+    }
+  ],
+  "coverageGaps": "About 12 probes plus exhaustive small-alphabet enumeration. Not covered: resolve/set (another area), the CLI, non-str inputs such as bytes passed to __init__ (they raise TypeError, which is undocumented), and Sequence-like custom classes. I found no reproducible bug in the JsonPointer class API."
+}

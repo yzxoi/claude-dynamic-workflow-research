@@ -1,0 +1,87 @@
+{
+  "duration_api_ms": 89647,
+  "stop_reason": "end_turn",
+  "session_id": "82d3665d-baba-4221-bb2b-28055303b823",
+  "total_cost_usd": 0.32556000000000007,
+  "usage": {
+    "input_tokens": 18,
+    "cache_creation_input_tokens": 31451,
+    "cache_read_input_tokens": 170486,
+    "output_tokens": 4074,
+    "output_tokens_details": {
+      "thinking_tokens": 471
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31451,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-sonnet-5-5": {
+      "inputTokens": 42,
+      "outputTokens": 9994,
+      "cacheReadInputTokens": 264170,
+      "cacheCreationInputTokens": 60777,
+      "webSearchRequests": 0,
+      "costUSD": 0.32556000000000007,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 929,
+      "canonicalModel": "claude-sonnet-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 12,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "I found five bugs that I re-ran myself and confirmed, plus one precision issue in `moving_average` that I rate as marginal. I did not modify the packages or `SPEC.md`.\n\n## Confirmed bugs\nEach one reproduced in my own run, in `scratch/lead_check.py` and `scratch/lead_check2.py`.\n\n1. **`inventory.py:12` `reserve`** uses `quantity >= available` where it should use `>`.\n   - Repro: `Inventory({'a':5}).reserve('a',5)`\n   - Expected: `True`, with 0 left.\n   - Actual: `False`, with 5 still available.\n2. **`pricing.py` `quote`** uses `amount > discount_minimum_cents` where the spec says \"at least\", so it should be `>=`.\n   - Repro: `quote([{'unit_price_cents':1000,'quantity':1}])`\n   - Expected: discount 100, total 1000.\n   - Actual: `{'subtotal':1000,'discount':0,'shipping':100,'total':1100}`\n3. **`scheduling.py` `overlaps`** uses `<=` where it should use `<`, so touching intervals count as overlapping.\n   - Repro: `overlaps((0,5),(5,10))`\n   - Expected: `False`.\n   - Actual: `True`.\n4. **`scheduling.py` `earliest_slot`** checks `start + duration < begin` where it should be `<=`, so a slot ending exactly at a busy start is rejected.\n   - Repro: `earliest_slot([(5,10)],5,0,20)`\n   - Expected: `0`.\n   - Actual: `10`.\n   - Repro: `earliest_slot([(0,2),(4,10)],2,0,20)`\n   - Expected: `2`.\n   - Actual: `10`.\n5. **`metrics.py` `percentile`** uses the one-based rank `ceil(p/100*n)` as a zero-based index, so it returns the next element up. Only values clamped by `min(len-1, …)`, such as p=100, come out right.\n   - Repro: `percentile(range(1,11), p)`\n   - Expected: p50 → 5, p10 → 1, p70 → 7.\n   - Actual: 6, 2, 8.\n\n## Marginal finding\n**`moving_average` running sum.** I reproduced the behaviour, but it only shows up at extreme magnitudes.\n- Repro: `moving_average([1e16,1,1,1,1e16],2)`\n- Expected: the middle two means are 1.0.\n- Actual: they are 0.0.\n- The spec doesn't address float precision, so I don't count this as a spec violation.\n\n## Rejected\nThe workers checked these, ran them, and found they conform:\n- `reserve` and `restock` raise `ValueError` for invalid quantities and leave state unchanged.\n- `restock` creates unknown SKUs, and `available` returns 0 for them.\n- The `Inventory` constructor copies its input.\n- Discount flooring, empty-input shipping, and `subtotal`/`quote` validation.\n- `merge_overlaps`: touching intervals stay separate, empty input works, and the input isn't mutated.\n- `earliest_slot`: the `latest` boundary, the no-fit case (`None`), and `busy` isn't mutated.\n- `percentile`: p=0 returns the minimum, bad p and empty data raise `ValueError`, and the input isn't mutated.\n- `moving_average`: window validation, short input returns `[]`, and the input isn't mutated.\n\n## Unverified\n- **`quote` with zero minimum and zero subtotal:** the discount comes out as 0 either way, so no observable difference.\n- **Non-integer `unit_price_cents` or quantity types** beyond what the workers tried: I did not test them.\n\n## Division of work and gaps\nI read the code and `SPEC.md` first. Then I ran one worker per module (inventory, pricing, scheduling, metrics). Each had to write and run a proof script under `scratch/` and then classify its findings. There was no separate adversarial verifier. I re-ran the key repros myself instead, but not every worker claim, such as the rejected ones.\n\nBecause each worker saw only one module, cross-module issues weren't checked. The audit is not a full coverage claim.\n\n## Workers and run\n- **Worker count:** 4 `agent()` invocations, with no retries or failures.\n- **Process mistake:** I launched a second Workflow run, a no-op with 0 agents (`wf_b3dc3a8d-0bf`, in the same session), by mistake while waiting. It added no workers, but it breaks the \"one Workflow run\" rule.\n- **Audit run:** runId `wf_19ca15dc-a9c`\n- **scriptPath:** `/home/researcher/.claude/projects/research-workspace-bug-hunt-probe-workspace/82d3665d-baba-4221-bb2b-28055303b823/workflows/scripts/audit-utils-wf_19ca15dc-a9c.js`",
+  "ttft_ms": 2609,
+  "type": "result",
+  "duration_ms": 130557,
+  "uuid": "e62b49e3-df82-460f-8802-53834c2e6631",
+  "ttft_stream_ms": 1950,
+  "time_to_request_ms": 50,
+  "first_content_frame_ms": 1950,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

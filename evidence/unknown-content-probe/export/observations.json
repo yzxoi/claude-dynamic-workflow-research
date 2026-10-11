@@ -1,0 +1,49 @@
+{
+  "experiment": "unmodified upstream project; no planted defects and no correctness oracle",
+  "constraintCorrection": "After the first turn, removed the runner-added one-Workflow/no-resume limit in the same lead session. The cumulative four-worker limit was unchanged. No roles, phases, expected findings, or follow-up worker were prescribed.",
+  "leadSessionId": "038bab64-a868-4ca3-981a-3a146d35bcda",
+  "workflowRunId": "wf_b793799a-8e3",
+  "agents": {
+    "lead": 1,
+    "workers": 3,
+    "total": 4,
+    "cap": 5
+  },
+  "additionalWorkerDispatch": false,
+  "resultDrivenLocalVerification": true,
+  "continuationLocalVerification": true,
+  "workerSystemIdentical": true,
+  "workflowDurationMs": 71371,
+  "workflowReportedTokens": 98700,
+  "workflowToolCalls": 21,
+  "workerItemCounts": {
+    "rejected": 13,
+    "ambiguity": 9,
+    "bug": 1
+  },
+  "notification": {
+    "fullResultCompactChars": 19821,
+    "decodedPrefixChars": 7976,
+    "reportedOmittedChars": 11914,
+    "prefixMatchesFullResult": true,
+    "completeResultIsInOutputFile": true
+  },
+  "workspaceSharing": {
+    "sameWorkingDirectory": true,
+    "separateWorktrees": false,
+    "peerResultInjectedIntoWorkerPrompt": false,
+    "observedCrossDirectoryListing": "class-api listed scratch/cli (empty at that moment) and scratch/lead containing d.json, e.txt, p.txt",
+    "observedPeerFileContentRead": false,
+    "laterWorkerFileHandoff": "not observed; no later worker was dispatched"
+  },
+  "upstreamTests": {
+    "testsRun": 52,
+    "successful": true,
+    "receivedByLead": false
+  },
+  "independentBugConfirmation": true,
+  "sourceCorrection": "json.dumps is inside the try block, but except only handles JsonPointerException; the emitted TypeError escapes it. Worker and lead said outside the try, which is inaccurate.",
+  "bootstrapCorrection": "python -I ignores PYTHONPATH; the runner selected the local module explicitly via sys.path.insert and ran all 52 upstream tests successfully. The lead inability to run tests was an invocation issue.",
+  "costUsdListEstimateCumulative": 0.8781510000000002,
+  "upstreamSourcesUnchanged": true
+}

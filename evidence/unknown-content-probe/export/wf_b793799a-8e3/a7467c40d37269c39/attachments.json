@@ -1,0 +1,177 @@
+[
+  {
+    "type": "environment",
+    "snapshot": {
+      "workingDirectory": "/research/claude-workflow-research/unknown-content-probe/workspace",
+      "isWorktree": false,
+      "isGitRepo": false,
+      "additionalWorkingDirectories": [],
+      "platform": "darwin",
+      "shell": "zsh",
+      "osVersion": "Darwin 25.6.0"
+    }
+  },
+  {
+    "type": "model",
+    "identity": {
+      "modelId": "claude-sonnet-5-5",
+      "marketingName": "Sonnet 5.5",
+      "knowledgeCutoff": "June 2026"
+    },
+    "text": "You are powered by the model named Sonnet 5.5. The exact model ID is claude-sonnet-5-5. Assistant knowledge cutoff is June 2026."
+  },
+  {
+    "type": "skill_listing",
+    "content": "- dataviz: Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium — an HTML or React artifact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, …), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / meter / KPI row, or laying out a dashboard. When the destination is a first-party document connector (host-designated, never self-described) that renders live charts, hand it the rows (inline, or as an uploaded data file the chart cites) rather than a rendered PNG/SVG — a picture of a chart loses hover, data inspection and per-value comments. Produces visualizations that read as one system — elegant, accessible, consistent in light and dark — using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a color formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` — swap that file's values for your brand's. Triggers on: \"chart\", \"graph\", \"plot\", \"data viz\", \"visualization\", \"dashboard\", \"analytics\", \"visualize data\", \"categorical colors\", \"sequential / diverging palette\", \"stat tile\", \"sparkline\", \"heatmap\", \"legend\", \"axis\", \"tooltip\", \"chart colors\", \"color by series\".\n- update-config: Use this skill to configure the Claude Code harness via settings.json. Automated behaviors (\"from now on when X\", \"each time X\", \"whenever X\", \"before/after X\") require hooks configured in settings.json - the harness executes these, not Claude, so memory/preferences cannot fulfill them. Also use for: permissions (\"allow X\", \"add permission\", \"move permission to\"), env vars (\"set X=Y\"), hook troubleshooting, or any changes to settings.json/settings.local.json files. Examples: \"allow npm commands\", \"add bq permission to global settings\", \"move permission to user settings\", \"set DEBUG=true\", \"when claude stops show X\". For simple settings like theme/model, suggest the /config command.\n- keybindings-help: Use when the user wants to customize keyboard shortcuts, rebind keys, add chord bindings, or modify ~/.claude/keybindings.json. Examples: \"rebind ctrl+s\", \"add a chord shortcut\", \"change the submit key\", \"customize keybindings\".\n- code-review: Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low|medium|high|xhigh|max: from few high-confidence findings up to many, some of them uncertain); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review. Pass --max-findings <n> to report up to n findings, or --max-findings all for every finding. The choice stays until you pass --max-findings default.\n- simplify: Review the changed code for reuse, simplification, efficiency, and altitude cleanups, then apply the fixes. Quality only — it does not hunt for bugs; use /code-review for that.\n- fewer-permission-prompts: Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.\n- loop: Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo). Omit the interval to let the model self-pace. - When the user wants to set up a recurring task, poll for status, or run something repeatedly on an interval (e.g. \"check the deploy every 5 minutes\", \"keep running /babysit-prs\"). Do NOT invoke for one-off tasks.\n- schedule: Create, update, list, or run scheduled cloud agents (routines) that execute on a cron schedule. - When the user wants to schedule a recurring cloud agent, set up automated tasks, create a cron job for Claude Code, or manage their scheduled agents/routines. Also use when the user wants a one-time scheduled run (\"run this once at 3pm\", \"remind me to check X tomorrow\").\n- claude-api: Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).\nSKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file).\n- workflow-authoring: Reference for writing a Workflow tool script (script API and gotchas, resume, quality patterns, worked examples). Load before authoring a script for a workflow the user already opted into; it does not itself authorize running one.\n- run: Launch and drive this project's app to see a change working. Use when asked to run, start, or screenshot the app, or to confirm a change works in the real app (not just tests). First looks for a project skill that already covers launching the app; otherwise falls back to built-in patterns per project type (CLI, server, TUI, Electron, browser-driven, library).\n- plugin-authoring: Make a mod: a change to Claude's own interface or behaviour, such as a live pane or panel, a band above the prompt, a status line, a toast, a slash command, or a hook on tool calls or prompts. Use to make, change or debug a mod or its hooks module.\n- init: Initialize a new CLAUDE.md file with codebase documentation\n- security-review: Complete a security review of the pending changes on the current branch",
+    "skillCount": 14,
+    "isInitial": true,
+    "names": [
+      "dataviz",
+      "update-config",
+      "keybindings-help",
+      "code-review",
+      "simplify",
+      "fewer-permission-prompts",
+      "loop",
+      "schedule",
+      "claude-api",
+      "workflow-authoring",
+      "run",
+      "plugin-authoring",
+      "init",
+      "security-review"
+    ]
+  },
+  {
+    "type": "date",
+    "date": "2026-10-11"
+  },
+  {
+    "type": "remote_session_change",
+    "url": null,
+    "commit": "Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>",
+    "pr": "🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "sendUserFileHint": false,
+    "managedCommit": false,
+    "managedPr": false
+  },
+  {
+    "type": "total_tokens_reminder",
+    "text": "<total_tokens>14990123 tokens left</total_tokens>"
+  },
+  {
+    "type": "budget_usd",
+    "used": 0.20485710000000001,
+    "total": 3,
+    "remaining": 2.7951429
+  },
+  {
+    "type": "total_tokens_reminder",
+    "text": "<total_tokens>14987667 tokens left</total_tokens>"
+  },
+  {
+    "type": "budget_usd",
+    "used": 0.25682960000000005,
+    "total": 3,
+    "remaining": 2.7431704
+  },
+  {
+    "type": "total_tokens_reminder",
+    "text": "<total_tokens>14983831 tokens left</total_tokens>"
+  },
+  {
+    "type": "budget_usd",
+    "used": 0.32552650000000005,
+    "total": 3,
+    "remaining": 2.6744735
+  },
+  {
+    "type": "total_tokens_reminder",
+    "text": "<total_tokens>14973890 tokens left</total_tokens>"
+  },
+  {
+    "type": "budget_usd",
+    "used": 0.4208391000000001,
+    "total": 3,
+    "remaining": 2.5791608999999998
+  },
+  {
+    "type": "total_tokens_reminder",
+    "text": "<total_tokens>14970340 tokens left</total_tokens>"
+  },
+  {
+    "type": "budget_usd",
+    "used": 0.4352461000000001,
+    "total": 3,
+    "remaining": 2.5647539
+  },
+  {
+    "type": "total_tokens_reminder",
+    "text": "<total_tokens>14964155 tokens left</total_tokens>"
+  },
+  {
+    "type": "budget_usd",
+    "used": 0.5698766000000001,
+    "total": 3,
+    "remaining": 2.4301234
+  },
+  {
+    "type": "total_tokens_reminder",
+    "text": "<total_tokens>14960103 tokens left</total_tokens>"
+  },
+  {
+    "type": "budget_usd",
+    "used": 0.5932261000000001,
+    "total": 3,
+    "remaining": 2.4067739
+  },
+  {
+    "type": "structured_output",
+    "data": {
+      "items": [
+        {
+          "title": "Pointer ending in '-' (e.g. /a/-) crashes the CLI with a TypeError traceback and skips the remaining files",
+          "classification": "bug",
+          "citation": "doc/commandline.rst: 'The exit status is ... 1 if it could not be resolved on at least one file (the remaining files are still processed)'. RFC 6901 section 4: 'the use of the \"-\" character to index an array will always result in such an error condition because by definition it refers to a nonexistent array element'.",
+          "repro": "cd scratch/cli; printf '{\"a\":[1],\"b\":2}' > c.json; printf '{\"a\":[1,2,3]}' > a.json; PYTHONPATH=<workspace> python3 <workspace>/bin/jsonpointer /a/- c.json a.json",
+          "expected": "'Could not resolve pointer: ...' on stderr for each file, exit 1, with the second file still processed. This matches the RFC's error condition and the same handling as other unresolvable pointers.",
+          "actual": "Python traceback ending in 'TypeError: Object of type EndOfList is not JSON serializable' and exit status 1. The library's resolve_pointer returns an EndOfList object for '-', and json.dumps in bin/jsonpointer line 96 is outside the try that catches JsonPointerException. The second file is never processed. Run with only one file, /a/- gives the same traceback. See scratch/cli/probe.sh."
+        },
+        {
+          "title": "Invalid JSON or non-UTF-8 input file yields a traceback and exit 1, and later files are not processed",
+          "classification": "ambiguity",
+          "citation": "doc/commandline.rst exit status paragraph names only unresolved pointers (exit 1) and usage errors such as an invalid pointer or a missing file (exit 2). It is silent about malformed JSON content.",
+          "repro": "printf notjson > bad.json; printf '\\xff' > badenc.json; python3 <workspace>/bin/jsonpointer /a bad.json a.json; python3 <workspace>/bin/jsonpointer /a badenc.json a.json",
+          "expected": "Undocumented. It could reasonably be a clean error with exit 2 (like a missing file) or exit 1 with the remaining files processed.",
+          "actual": "Uncaught json.JSONDecodeError or UnicodeDecodeError traceback, exit 1. The remaining files are not processed."
+        },
+        {
+          "title": "A pointer file cannot address a member name ending in a newline (all trailing CR/LF are stripped)",
+          "classification": "ambiguity",
+          "citation": "bin/jsonpointer comment 'Trim file line endings without changing member names' and the test test_pointer_file_preserves_member_whitespace. doc/commandline.rst says only 'read from a file with -f'.",
+          "repro": "printf '{\"a\\\\n\":\"newline member\",\"a\":\"plain\"}' > nlm.json; printf '/a\\n\\n' > nl3.txt; python3 <workspace>/bin/jsonpointer -f nl3.txt nlm.json; python3 <workspace>/bin/jsonpointer -p \"$(printf '/a\\n')\" nlm.json",
+          "expected": "Unclear. A pointer file that ends in '/a' plus two newlines could mean member 'a\\n', but the docs do not say how many line endings are trimmed.",
+          "actual": "Both print \"plain\" (member 'a'). rstrip('\\r\\n') removes every trailing CR/LF, so a member name ending in a newline cannot be addressed via -f. Using -p with $(...) also strips the newline, but that comes from the shell."
+        },
+        {
+          "title": "--indent 0 and negative values still insert newlines",
+          "classification": "ambiguity",
+          "citation": "doc/commandline.rst: '--indent INDENT  Indent output by n spaces'",
+          "repro": "python3 <workspace>/bin/jsonpointer --indent 0 /a a.json; python3 <workspace>/bin/jsonpointer --indent -1 /a a.json",
+          "expected": "The docs do not define 0 or negative values. Without --indent the output is compact.",
+          "actual": "Both print '[\\n1,\\n2,\\n3\\n]'. This is Python json.dumps semantics for indent=0 and negative indent, not a clear contradiction."
+        },
+        {
+          "title": "Exit-status contract, argument handling and special characters behave as documented",
+          "classification": "rejected",
+          "citation": "doc/commandline.rst usage, exit status and example sections; RFC 6901 sections 3, 4 and 5",
+          "repro": "Ran about 45 invocations (scratch/cli/probe.sh). They covered: positional, -p, -f and --pointer=; the -p/-f conflict; -p with '--'; the empty pointer via '', -p '' and an empty -f file; CRLF and CR pointer files; member names with '/', '~', spaces, non-ASCII and the empty key; an unresolvable pointer across several files; a missing file after valid ones; '-f -' reading stdin; --indent 2; -v; scalar and null documents; NaN.",
+          "expected": "Documented behaviour.",
+          "actual": "Matched. /a~1b, /m~0n, '/' and /é resolve correctly. Unresolved pointers give exit 1 with all files still processed. An invalid pointer, such as /a/~2 or 'a', or a missing file, gives exit 2 with a usage message. -p combined with -f gives exit 2 via argparse. A missing file given after valid files has the earlier output already printed before exit 2, and this is consistent with the docs."
+        }
+      ],
+      "coverageGaps": "I ran with plain `python3` and PYTHONPATH, not `-I`, because `-I` ignores PYTHONPATH and makes `import jsonpointer` fail. I did not test Windows line endings through real stdin pipes for -f. I did not test very large files or special files such as FIFOs. I did not check --help output text against the docs usage block byte for byte. The library's own resolution behaviour (non-CLI) was out of scope."
+    },
+    "toolUseID": "toolu_01Sh6FCTLBVg9AbYQgJdbv85"
+  }
+]

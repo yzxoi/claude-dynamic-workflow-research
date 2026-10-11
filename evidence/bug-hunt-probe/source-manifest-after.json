@@ -1,0 +1,27 @@
+[
+  {
+    "path": "SPEC.md",
+    "sha256": "aac90976dc8b59b7a71b916e23ffdae0f440d4e465d778a899e799b07d396ca5",
+    "lines": 33
+  },
+  {
+    "path": "inventory.py",
+    "sha256": "f68572816cdfccb177ecf9e6207c38db9434da4557fc837e30fca362d3c1c2db",
+    "lines": 20
+  },
+  {
+    "path": "pricing.py",
+    "sha256": "e0bccd17bdbb1d1b0f29bb8504cd7c22926590bf560cbe8482784808930ad906",
+    "lines": 22
+  },
+  {
+    "path": "scheduling.py",
+    "sha256": "5043bff885308a706ea6fff76ca8f872e605aa36a2eacf65ea499e11a10be5f9",
+    "lines": 25
+  },
+  {
+    "path": "metrics.py",
+    "sha256": "a39037cd6fe31f386674f520e69e177f053a2c239f2aaee4df492ee4c28d49c2",
+    "lines": 24
+  }
+]

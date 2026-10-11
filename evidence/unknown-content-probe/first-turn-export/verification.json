@@ -1,0 +1,125 @@
+{
+  "sessionId": "038bab64-a868-4ca3-981a-3a146d35bcda",
+  "provenance": {
+    "repository": "https://github.com/stefankoegl/python-json-pointer",
+    "commit": "f2641f09b20dfde10f068e492531f4d914427110",
+    "commit_url": "https://github.com/stefankoegl/python-json-pointer/commit/f2641f09b20dfde10f068e492531f4d914427110",
+    "commit_timestamp": "2026-10-10T21:09:01Z",
+    "archive_url": "https://codeload.github.com/stefankoegl/python-json-pointer/tar.gz/f2641f09b20dfde10f068e492531f4d914427110",
+    "archive_sha256": "14a81ed777e9b12f5f9657a9d34e41b7dfd2a76f3bd7e5a544ad874406d6cf0b",
+    "normative_reference": "https://www.rfc-editor.org/rfc/rfc6901.txt",
+    "planted_bugs": false,
+    "known_bug_oracle": null
+  },
+  "workflowCalls": 1,
+  "workflows": [
+    {
+      "runId": "wf_b793799a-8e3",
+      "status": "completed",
+      "agentCount": 3,
+      "durationMs": 71371,
+      "notificationResultMatches": false
+    }
+  ],
+  "leadAgents": 1,
+  "workerAgents": 3,
+  "uniqueWorkerIds": 3,
+  "withinFiveAgentLimit": true,
+  "workers": [
+    {
+      "runId": "wf_b793799a-8e3",
+      "agentId": "a2055a73c0ac276c7",
+      "label": "audit:resolve-set",
+      "phase": "Audit",
+      "startedAt": 1791696241917,
+      "durationMs": 68696,
+      "attempt": 1,
+      "state": "done",
+      "toolCalls": 6,
+      "toolNames": [
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "StructuredOutput"
+      ]
+    },
+    {
+      "runId": "wf_b793799a-8e3",
+      "agentId": "ac41b96f3fc87d5b9",
+      "label": "audit:class-api",
+      "phase": "Audit",
+      "startedAt": 1791696241917,
+      "durationMs": 52982,
+      "attempt": 1,
+      "state": "done",
+      "toolCalls": 5,
+      "toolNames": [
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "StructuredOutput"
+      ]
+    },
+    {
+      "runId": "wf_b793799a-8e3",
+      "agentId": "a7467c40d37269c39",
+      "label": "audit:cli",
+      "phase": "Audit",
+      "startedAt": 1791696241917,
+      "durationMs": 65579,
+      "attempt": 1,
+      "state": "done",
+      "toolCalls": 10,
+      "toolNames": [
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "StructuredOutput"
+      ]
+    }
+  ],
+  "upstreamSourcesUnchanged": true,
+  "extraWorkspaceFiles": [
+    "__pycache__/jsonpointer.cpython-314.pyc",
+    "__pycache__/tests.cpython-314.pyc",
+    "scratch/class-api/probe.py",
+    "scratch/cli/a.json",
+    "scratch/cli/b.json",
+    "scratch/cli/bad.json",
+    "scratch/cli/badenc.json",
+    "scratch/cli/badenc.txt",
+    "scratch/cli/c.json",
+    "scratch/cli/cr.txt",
+    "scratch/cli/crlf.txt",
+    "scratch/cli/empty.txt",
+    "scratch/cli/nan.json",
+    "scratch/cli/nl.txt",
+    "scratch/cli/nl2.txt",
+    "scratch/cli/nl3.txt",
+    "scratch/cli/nlm.json",
+    "scratch/cli/null.json",
+    "scratch/cli/probe.sh",
+    "scratch/cli/scalar.json",
+    "scratch/cli/sp.txt",
+    "scratch/cli/str.json",
+    "scratch/cli/u.txt",
+    "scratch/lead/a.json",
+    "scratch/lead/c.json",
+    "scratch/lead/d.json",
+    "scratch/lead/e.txt",
+    "scratch/lead/p.txt",
+    "scratch/resolve-set/p.py",
+    "scratch/resolve-set/q.py"
+  ],
+  "complete": true,
+  "totalCostUsdListEstimate": 0.8193954000000002
+}

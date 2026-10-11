@@ -1,0 +1,61 @@
+{
+  "method": "execute exact extracted functions with explicit host-boundary stubs; no CLI, agent model, authentication or cloud session",
+  "source": "bun-files/chunk-hedqf2m1.js",
+  "source_sha256": "01fea1c4f8ed9442ca18c30704c8533a1f037b800cc4faae2b4ecaaa273f5a56",
+  "observations": [
+    {
+      "invariant": "pipeline has no barrier between stages; callbacks receive previous, original, index",
+      "events": [
+        "start:fast",
+        "first:fast",
+        "start:slow",
+        "second:fast",
+        "first:slow",
+        "second:slow"
+      ],
+      "result": [
+        {
+          "previous": "FAST",
+          "original": "fast",
+          "index": 0
+        },
+        {
+          "previous": "SLOW",
+          "original": "slow",
+          "index": 1
+        }
+      ]
+    },
+    {
+      "invariant": "pipeline drops throwing/null items and skips remaining stages",
+      "result": [
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "invariant": "parallel waits for every thunk, preserves order, turns failures into null, and rejects promise inputs",
+      "result": [
+        "first",
+        "second",
+        null
+      ]
+    },
+    {
+      "invariant": "journal keys chain through the previous key; model changes invalidate downstream keys; display label/phase do not change keys",
+      "original": "probe:3be9c6ed176eb7dd552ece07149884b9e6d389d690b2e48ea340129a3fd29af9",
+      "changed": "probe:12d54f34532fd4838c00859670e32a397134694110a33aa5edb60d22f4be1aa3",
+      "nextOriginal": "probe:a68c30f793dba3e6428c3052bb3355754a777991d8e2077db49ad663407dcfa1",
+      "nextChanged": "probe:751564cc986c507f58146f1b5bf42139beb33bc16b108c6acd5129f90cdc60df"
+    },
+    {
+      "invariant": "determinism shim rejects live clocks and randomness but accepts explicit dates"
+    }
+  ],
+  "status": "passed",
+  "logs": [
+    "pipeline[0] failed: intentional",
+    "parallel[2] failed: intentional"
+  ]
+}

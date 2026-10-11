@@ -1,0 +1,1006 @@
+{
+  "policy": "redact researcher host paths and account identity metadata; retain task/agent/run IDs and causal timestamps",
+  "raw_originals_modified": false,
+  "redacted_files": 141,
+  "files": [
+    {
+      "path": "evidence/bug-hunt-probe/EXPERIMENT.md",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/capture-sources.json",
+      "rules": {
+        "home-path": 2,
+        "encoded-home": 2,
+        "normalized-encoded-root": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/capture/lead.jsonl",
+      "rules": {
+        "research-root": 75,
+        "home-path": 34,
+        "encoded-home": 43,
+        "temp-user-id": 10,
+        "account-metadata": 2,
+        "normalized-encoded-root": 43
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/capture/session/subagents/workflows/wf_19ca15dc-a9c/agent-a4f81911f2b46ef48.jsonl",
+      "rules": {
+        "research-root": 31,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/capture/session/subagents/workflows/wf_19ca15dc-a9c/agent-a762fcae704fafdb3.jsonl",
+      "rules": {
+        "research-root": 31,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/capture/session/subagents/workflows/wf_19ca15dc-a9c/agent-ab55d16267e7e7e0c.jsonl",
+      "rules": {
+        "research-root": 30,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/capture/session/subagents/workflows/wf_19ca15dc-a9c/agent-ab6ffa32b9d8da01f.jsonl",
+      "rules": {
+        "research-root": 30,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/capture/session/workflows/wf_19ca15dc-a9c.json",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/capture/session/workflows/wf_b3dc3a8d-0bf.json",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/debug.log",
+      "rules": {
+        "research-root": 6,
+        "home-path": 20
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/events.jsonl",
+      "rules": {
+        "research-root": 3,
+        "home-path": 17,
+        "encoded-home": 16,
+        "temp-user-id": 2,
+        "normalized-encoded-root": 16
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/completion.json",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/independent-proof-reruns.json",
+      "rules": {
+        "research-root": 6
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/inventory/attachments.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/inventory/messages.json",
+      "rules": {
+        "research-root": 14
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/inventory/tool-io.json",
+      "rules": {
+        "research-root": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/lead-final.md",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/lead/attachments.json",
+      "rules": {
+        "research-root": 1,
+        "home-path": 4,
+        "encoded-home": 6,
+        "temp-user-id": 2,
+        "normalized-encoded-root": 6
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/lead/messages.json",
+      "rules": {
+        "research-root": 42,
+        "home-path": 14,
+        "encoded-home": 13,
+        "normalized-encoded-root": 13
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/lead/queue-operations.json",
+      "rules": {
+        "home-path": 8,
+        "encoded-home": 12,
+        "temp-user-id": 4,
+        "normalized-encoded-root": 12
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/lead/tool-io.json",
+      "rules": {
+        "research-root": 1,
+        "home-path": 9,
+        "encoded-home": 8,
+        "normalized-encoded-root": 8
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/metrics/attachments.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/metrics/messages.json",
+      "rules": {
+        "research-root": 15
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/metrics/tool-io.json",
+      "rules": {
+        "research-root": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/notification-wag1wflr2.xml",
+      "rules": {
+        "home-path": 2,
+        "encoded-home": 3,
+        "temp-user-id": 1,
+        "normalized-encoded-root": 3
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/notification-wg42tcqmc.xml",
+      "rules": {
+        "home-path": 2,
+        "encoded-home": 3,
+        "temp-user-id": 1,
+        "normalized-encoded-root": 3
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/pricing/attachments.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/pricing/messages.json",
+      "rules": {
+        "research-root": 14
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/pricing/tool-io.json",
+      "rules": {
+        "research-root": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/scheduling/attachments.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/scheduling/messages.json",
+      "rules": {
+        "research-root": 15
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/scheduling/tool-io.json",
+      "rules": {
+        "research-root": 2
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/export/workflow-metadata.json",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/bug-hunt-probe/launch.json",
+      "rules": {
+        "research-root": 4
+      }
+    },
+    {
+      "path": "evidence/bun-extraction.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/decoded-assets/managed-agents-webhooks-c9326ad3.md",
+      "rules": {
+        "account-metadata": 1
+      }
+    },
+    {
+      "path": "evidence/export-unknown-content.py",
+      "rules": {
+        "home-path": 1
+      }
+    },
+    {
+      "path": "evidence/live-probe/capture/lead.jsonl",
+      "rules": {
+        "research-root": 28,
+        "home-path": 11,
+        "encoded-home": 13,
+        "temp-user-id": 2,
+        "account-metadata": 2,
+        "normalized-encoded-root": 13
+      }
+    },
+    {
+      "path": "evidence/live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a13d5005ccdd03e6b.jsonl",
+      "rules": {
+        "research-root": 19,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a2445755e56a74143.jsonl",
+      "rules": {
+        "research-root": 19,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-ac929522131d8814a.jsonl",
+      "rules": {
+        "research-root": 23,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/live-probe/capture/session/workflows/wf_a2116ab0-2a2.json",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/live-probe/debug.log",
+      "rules": {
+        "research-root": 9,
+        "home-path": 19
+      }
+    },
+    {
+      "path": "evidence/live-probe/events.jsonl",
+      "rules": {
+        "research-root": 2,
+        "home-path": 9,
+        "encoded-home": 9,
+        "temp-user-id": 1,
+        "normalized-encoded-root": 9
+      }
+    },
+    {
+      "path": "evidence/live-probe/prompts/lead-messages.json",
+      "rules": {
+        "home-path": 7,
+        "encoded-home": 8,
+        "temp-user-id": 1,
+        "normalized-encoded-root": 8
+      }
+    },
+    {
+      "path": "evidence/live-probe/prompts/worker-A-messages.json",
+      "rules": {
+        "research-root": 3
+      }
+    },
+    {
+      "path": "evidence/live-probe/prompts/worker-B-messages.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/live-probe/prompts/worker-C-messages.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/rea-evidence.json.gz",
+      "rules": {
+        "research-root": 12
+      }
+    },
+    {
+      "path": "evidence/rea-summaries.json",
+      "rules": {
+        "research-root": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/EXPERIMENT.md",
+      "rules": {
+        "research-root": 36,
+        "home-path": 2,
+        "encoded-home": 2,
+        "normalized-encoded-root": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/capture/lead.jsonl",
+      "rules": {
+        "research-root": 227,
+        "home-path": 19,
+        "encoded-home": 31,
+        "temp-user-id": 13,
+        "account-metadata": 2,
+        "normalized-encoded-root": 31
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/capture/session/subagents/workflows/wf_b793799a-8e3/agent-a2055a73c0ac276c7.jsonl",
+      "rules": {
+        "research-root": 80,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/capture/session/subagents/workflows/wf_b793799a-8e3/agent-a7467c40d37269c39.jsonl",
+      "rules": {
+        "research-root": 201,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/capture/session/subagents/workflows/wf_b793799a-8e3/agent-ac41b96f3fc87d5b9.jsonl",
+      "rules": {
+        "research-root": 53,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/capture/session/subagents/workflows/wf_b793799a-8e3/journal.jsonl",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/capture/session/workflows/scripts/jsonpointer-audit-wf_b793799a-8e3.js",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/capture/session/workflows/wf_b793799a-8e3.json",
+      "rules": {
+        "research-root": 12,
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/capture/task-outputs/wbgtfsaya.output",
+      "rules": {
+        "research-root": 11
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/continuation-debug.log",
+      "rules": {
+        "research-root": 5,
+        "home-path": 15
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/continuation-events.jsonl",
+      "rules": {
+        "research-root": 2,
+        "home-path": 2,
+        "encoded-home": 2,
+        "normalized-encoded-root": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/continuation-launch.json",
+      "rules": {
+        "research-root": 4
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/debug.log",
+      "rules": {
+        "research-root": 8,
+        "home-path": 20
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/events.jsonl",
+      "rules": {
+        "research-root": 82,
+        "home-path": 24,
+        "encoded-home": 12,
+        "temp-user-id": 4,
+        "normalized-encoded-root": 12
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/completions.json",
+      "rules": {
+        "home-path": 2,
+        "encoded-home": 2,
+        "normalized-encoded-root": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/independent-verification.json",
+      "rules": {
+        "research-root": 7
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/lead-final.md",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/lead/attachments.json",
+      "rules": {
+        "research-root": 14,
+        "home-path": 2,
+        "encoded-home": 4,
+        "temp-user-id": 2,
+        "normalized-encoded-root": 4
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/lead/environment.json",
+      "rules": {
+        "research-root": 4
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/lead/messages.json",
+      "rules": {
+        "research-root": 130,
+        "home-path": 9,
+        "encoded-home": 11,
+        "temp-user-id": 3,
+        "normalized-encoded-root": 11
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/lead/queue-operations.json",
+      "rules": {
+        "research-root": 14,
+        "home-path": 4,
+        "encoded-home": 8,
+        "temp-user-id": 4,
+        "normalized-encoded-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/lead/tool-io.json",
+      "rules": {
+        "research-root": 30,
+        "home-path": 5,
+        "encoded-home": 7,
+        "temp-user-id": 3,
+        "normalized-encoded-root": 7
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/notification-wbgtfsaya.xml",
+      "rules": {
+        "research-root": 7,
+        "home-path": 2,
+        "encoded-home": 4,
+        "temp-user-id": 2,
+        "normalized-encoded-root": 4
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a2055a73c0ac276c7/attachments.json",
+      "rules": {
+        "research-root": 9
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a2055a73c0ac276c7/environment.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a2055a73c0ac276c7/incoming-task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a2055a73c0ac276c7/journal-terminal.json",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a2055a73c0ac276c7/messages.json",
+      "rules": {
+        "research-root": 52
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a2055a73c0ac276c7/returned-result.json",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a2055a73c0ac276c7/task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a2055a73c0ac276c7/tool-io.json",
+      "rules": {
+        "research-root": 21
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a7467c40d37269c39/attachments.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a7467c40d37269c39/environment.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a7467c40d37269c39/incoming-task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a7467c40d37269c39/messages.json",
+      "rules": {
+        "research-root": 175
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a7467c40d37269c39/task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/a7467c40d37269c39/tool-io.json",
+      "rules": {
+        "research-root": 124
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/ac41b96f3fc87d5b9/attachments.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/ac41b96f3fc87d5b9/environment.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/ac41b96f3fc87d5b9/incoming-task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/ac41b96f3fc87d5b9/messages.json",
+      "rules": {
+        "research-root": 33
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/ac41b96f3fc87d5b9/task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/ac41b96f3fc87d5b9/tool-io.json",
+      "rules": {
+        "research-root": 6
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/journal.json",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/metadata.json",
+      "rules": {
+        "research-root": 12,
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/result.json",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/export/wf_b793799a-8e3/workflow.js",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-capture/lead.jsonl",
+      "rules": {
+        "research-root": 203,
+        "home-path": 18,
+        "encoded-home": 30,
+        "temp-user-id": 13,
+        "account-metadata": 2,
+        "normalized-encoded-root": 30
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-capture/session/subagents/workflows/wf_b793799a-8e3/agent-a2055a73c0ac276c7.jsonl",
+      "rules": {
+        "research-root": 80,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-capture/session/subagents/workflows/wf_b793799a-8e3/agent-a7467c40d37269c39.jsonl",
+      "rules": {
+        "research-root": 201,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-capture/session/subagents/workflows/wf_b793799a-8e3/agent-ac41b96f3fc87d5b9.jsonl",
+      "rules": {
+        "research-root": 53,
+        "account-metadata": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-capture/session/subagents/workflows/wf_b793799a-8e3/journal.jsonl",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-capture/session/workflows/scripts/jsonpointer-audit-wf_b793799a-8e3.js",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-capture/session/workflows/wf_b793799a-8e3.json",
+      "rules": {
+        "research-root": 12,
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/completions.json",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/lead-final.md",
+      "rules": {
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/lead/attachments.json",
+      "rules": {
+        "research-root": 10,
+        "home-path": 2,
+        "encoded-home": 4,
+        "temp-user-id": 2,
+        "normalized-encoded-root": 4
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/lead/environment.json",
+      "rules": {
+        "research-root": 2
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/lead/messages.json",
+      "rules": {
+        "research-root": 120,
+        "home-path": 8,
+        "encoded-home": 10,
+        "temp-user-id": 3,
+        "normalized-encoded-root": 10
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/lead/queue-operations.json",
+      "rules": {
+        "research-root": 14,
+        "home-path": 4,
+        "encoded-home": 8,
+        "temp-user-id": 4,
+        "normalized-encoded-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/lead/tool-io.json",
+      "rules": {
+        "research-root": 29,
+        "home-path": 5,
+        "encoded-home": 7,
+        "temp-user-id": 3,
+        "normalized-encoded-root": 7
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/notification-wbgtfsaya.xml",
+      "rules": {
+        "research-root": 7,
+        "home-path": 2,
+        "encoded-home": 4,
+        "temp-user-id": 2,
+        "normalized-encoded-root": 4
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a2055a73c0ac276c7/attachments.json",
+      "rules": {
+        "research-root": 9
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a2055a73c0ac276c7/environment.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a2055a73c0ac276c7/incoming-task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a2055a73c0ac276c7/journal-terminal.json",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a2055a73c0ac276c7/messages.json",
+      "rules": {
+        "research-root": 52
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a2055a73c0ac276c7/returned-result.json",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a2055a73c0ac276c7/task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a2055a73c0ac276c7/tool-io.json",
+      "rules": {
+        "research-root": 21
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a7467c40d37269c39/attachments.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a7467c40d37269c39/environment.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a7467c40d37269c39/incoming-task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a7467c40d37269c39/messages.json",
+      "rules": {
+        "research-root": 175
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a7467c40d37269c39/task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/a7467c40d37269c39/tool-io.json",
+      "rules": {
+        "research-root": 124
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/ac41b96f3fc87d5b9/attachments.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/ac41b96f3fc87d5b9/environment.json",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/ac41b96f3fc87d5b9/incoming-task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/ac41b96f3fc87d5b9/messages.json",
+      "rules": {
+        "research-root": 33
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/ac41b96f3fc87d5b9/task.txt",
+      "rules": {
+        "research-root": 5
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/ac41b96f3fc87d5b9/tool-io.json",
+      "rules": {
+        "research-root": 6
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/journal.json",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/metadata.json",
+      "rules": {
+        "research-root": 12,
+        "home-path": 1,
+        "encoded-home": 1,
+        "normalized-encoded-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/result.json",
+      "rules": {
+        "research-root": 8
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/first-turn-export/wf_b793799a-8e3/workflow.js",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/launch.json",
+      "rules": {
+        "research-root": 4
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/workspace/scratch/class-api/probe.py",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/workspace/scratch/cli/probe.sh",
+      "rules": {
+        "research-root": 3
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/workspace/scratch/resolve-set/p.py",
+      "rules": {
+        "research-root": 1
+      }
+    },
+    {
+      "path": "evidence/unknown-content-probe/workspace/scratch/resolve-set/q.py",
+      "rules": {
+        "research-root": 2
+      }
+    }
+  ]
+}

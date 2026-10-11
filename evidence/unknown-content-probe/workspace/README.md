@@ -1,0 +1,22 @@
+python-json-pointer
+===================
+
+[![PyPI version](https://img.shields.io/pypi/v/jsonpointer.svg)](https://pypi.python.org/pypi/jsonpointer/)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/jsonpointer.svg)](https://pypi.python.org/pypi/jsonpointer/)
+[![Tests](https://github.com/stefankoegl/python-json-pointer/actions/workflows/test.yaml/badge.svg?branch=master)](https://github.com/stefankoegl/python-json-pointer/actions/workflows/test.yaml)
+[![Coverage Status](https://coveralls.io/repos/github/stefankoegl/python-json-pointer/badge.svg?branch=master)](https://coveralls.io/github/stefankoegl/python-json-pointer?branch=master)
+
+
+Resolve JSON Pointers in Python
+-------------------------------
+
+Library to resolve JSON Pointers according to
+[RFC 6901](http://tools.ietf.org/html/rfc6901)
+
+See source code for examples
+* Website: https://github.com/stefankoegl/python-json-pointer
+* Repository: https://github.com/stefankoegl/python-json-pointer.git
+* Documentation: https://python-json-pointer.readthedocs.org/
+* PyPI: https://pypi.python.org/pypi/jsonpointer
+* GitHub Actions: https://github.com/stefankoegl/python-json-pointer/actions
+* Coveralls: https://coveralls.io/github/stefankoegl/python-json-pointer

@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-11",
+  "release_tag": "research-2026-10-11",
+  "repository": "yzxoi/claude-dynamic-workflow-research",
+  "official_artifacts": [
+    {
+      "name": "@anthropic-ai/claude-code-darwin-arm64",
+      "version": "2.1.296",
+      "source_path": "native-latest.tgz",
+      "metadata_path": "evidence/native-latest-metadata.json",
+      "upstream_url": "https://registry.npmjs.org/@anthropic-ai/claude-code-darwin-arm64/-/claude-code-darwin-arm64-2.1.296.tgz",
+      "bytes": 105100333,
+      "sha256": "50fbf594d6526c9aae7d66b8b45a08d89ae6b863e2bc9777bfb277d6521a7458",
+      "npm_integrity": "sha512-vqtx3kS3r1hNLMk+N8JMG5J4kcLHIbI3t/NSIdcFQZrRVCFA6NtcxJyn/B+Sf3GxJaFJOCEfoBQXsFo10+Oj9A==",
+      "sri_verified": true,
+      "registry_signature_verified": false,
+      "release_asset": "claude-code-darwin-arm64-2.1.296.tgz"
+    },
+    {
+      "name": "@anthropic-ai/claude-code",
+      "version": "2.1.296",
+      "source_path": "wrapper-latest.tgz",
+      "metadata_path": "evidence/wrapper-latest-metadata.json",
+      "upstream_url": "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.296.tgz",
+      "bytes": 29001,
+      "sha256": "f6c375d51d4c22a7a850e185a0d7ddda85173f89dbbeb3262aa7971e3bd670b5",
+      "npm_integrity": "sha512-OX/k/rpcthMqnFKOWcpNcbiLsMKtAjLOpQNJHlYiDCFUznWCIwdRTyl/p9SdHVrsrzZuPMCNqZjnpakIni6upw==",
+      "sri_verified": true,
+      "registry_signature_verified": false,
+      "release_asset": "claude-code-wrapper-2.1.296.tgz"
+    },
+    {
+      "name": "@anthropic-ai/sdk",
+      "version": "0.133.0",
+      "source_path": "anthropic-sdk.tgz",
+      "metadata_path": "evidence/anthropic-sdk-metadata.json",
+      "upstream_url": "https://registry.npmjs.org/@anthropic-ai/sdk/-/sdk-0.133.0.tgz",
+      "bytes": 2190833,
+      "sha256": "7fa1a041cf2646d3e2af161878519ae533683b253514715975a51723dfa6ad78",
+      "npm_integrity": "sha512-jlqUN8p8ESTJj+GJnA4KjzbEfF1waEoGzRT8jwytlYGFFgv+/DUQOxlYGvYw10UzhD1kwLqYzxvA3FrTB2YWuQ==",
+      "sri_verified": true,
+      "registry_signature_verified": false,
+      "release_asset": "anthropic-sdk-0.133.0.tgz"
+    },
+    {
+      "name": "anthropic-cli",
+      "version": "1.40.0",
+      "source_path": "tools/ant-1.40.0/download.zip",
+      "metadata_path": "evidence/ant-release.json",
+      "upstream_url": "https://github.com/anthropics/anthropic-cli/releases/download/v1.40.0/ant_1.40.0_macos_arm64.zip",
+      "bytes": 10279413,
+      "sha256": "ed24efbb6355888666a01fddec26f7d63b139370319bc258c50c0f5cd53492b3",
+      "release_digest_verified": true,
+      "release_asset": "ant_1.40.0_macos_arm64.zip"
+    }
+  ],
+  "executables": [
+    {
+      "source_path": "native-latest/package/claude",
+      "bytes": 240664432,
+      "sha256": "c9b5341637becbd423ddffc5b254afb645682a3868cb708bbc6cc0e7bb419937",
+      "contained_in_release_asset": "claude-code-darwin-arm64-2.1.296.tgz",
+      "direct_git_copy": false
+    },
+    {
+      "source_path": "tools/ant-1.40.0/ant",
+      "bytes": 35259723,
+      "sha256": "4a363e0b091e6020ef64630cc05aaccb7ae752e7d0e6091c9b243b26d2928424",
+      "contained_in_release_asset": "ant_1.40.0_macos_arm64.zip",
+      "direct_git_copy": false
+    }
+  ],
+  "offline_bundle": "research-archive-sanitized.tar.gz",
+  "release_asset_sums": "RELEASE_SHA256SUMS.txt",
+  "policy": "Official archives are unchanged public distributions; offline bundle contains only published sanitized repository files, without .git or auth state."
+}

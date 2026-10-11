@@ -1,0 +1,8 @@
+overlaps touching True
+merge touching [(0, 5), (5, 10)] merge overlap [(0, 10)]
+mutation [(5, 10), (0, 2)]
+slot ends at busy start 10 expected 0
+slot ends at latest 0 expected 0
+gap exact 10 expected 2
+unordered 10 expected 2 [(5, 10), (0, 2)]
+none None expected None

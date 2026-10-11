@@ -1,0 +1,41 @@
+{
+  "args": [
+    "/research/claude-workflow-research/native-latest/package/claude",
+    "--print",
+    "--verbose",
+    "--output-format",
+    "stream-json",
+    "--safe-mode",
+    "--restricted",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--settings",
+    "/research/claude-workflow-research/bug-hunt-probe/settings.json",
+    "--tools",
+    "Workflow,Skill,Read,Glob,Grep,Write,Bash",
+    "--allowedTools",
+    "Workflow,Skill,Read,Glob,Grep,Write,Bash(python3 *)",
+    "--model",
+    "sonnet",
+    "--effort",
+    "medium",
+    "--max-budget-usd",
+    "2",
+    "--session-id",
+    "82d3665d-baba-4221-bb2b-28055303b823",
+    "--system-prompt-snapshot",
+    "on",
+    "--debug-file",
+    "/research/claude-workflow-research/bug-hunt-probe/debug.log"
+  ],
+  "cwd": "/research/claude-workflow-research/bug-hunt-probe/workspace",
+  "environment_overrides": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_SUBAGENT_PROMPT_SNAPSHOT": "1",
+    "CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS": "4",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "wall_timeout_seconds": 300
+}

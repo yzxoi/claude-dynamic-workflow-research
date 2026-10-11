@@ -1,0 +1,310 @@
+{
+  "workflow-slice": {
+    "evidence_id": "ev_8508a17235788ce0e563019731ae90f406173cc2c81e4a0ba478fd4fab9a3a03",
+    "subject": {
+      "architecture": null,
+      "digest": {
+        "sha256": "8c68303e982615fc69ea70615f9c72f80411357c15dfcb448d2ca46b1bcb5646"
+      },
+      "format": "directory",
+      "local_path": "/research/claude-workflow-research/workflow-slice",
+      "name": "workflow-slice"
+    },
+    "provider": {
+      "id": "rea-analysis-view",
+      "name": "REA analysis view projection",
+      "version": "1"
+    },
+    "parent_evidence_id": "ev_86372cd25d4a26323fedaf3d50444f9c3e84e1a05fc9bc6d3309875b238c1472",
+    "statistics": {
+      "findings": 2441,
+      "invalid_utf8_files": 0,
+      "modules": 0,
+      "nested_asar_containers": 0,
+      "parse_failures": 0,
+      "parsed_javascript_files": 13,
+      "relevant_files": 13,
+      "text_bytes_read": 737874,
+      "visited_ast_nodes": 149487
+    },
+    "coverage": {
+      "application": {
+        "limits": [],
+        "omitted_count": 0,
+        "status": "complete",
+        "truncated": false
+      },
+      "application_unknowns": 0,
+      "semantic": {
+        "families": [
+          {
+            "family": "boundary",
+            "omitted_relations": null,
+            "retained_relations": 30,
+            "status": "partial",
+            "unknown_count": 6
+          },
+          {
+            "family": "call-flow",
+            "omitted_relations": null,
+            "retained_relations": 6108,
+            "status": "partial",
+            "unknown_count": 9756
+          },
+          {
+            "family": "child-process",
+            "omitted_relations": null,
+            "retained_relations": 0,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "closure",
+            "omitted_relations": null,
+            "retained_relations": 8679,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "configuration",
+            "omitted_relations": null,
+            "retained_relations": 101,
+            "status": "partial",
+            "unknown_count": 12
+          },
+          {
+            "family": "data-flow",
+            "omitted_relations": null,
+            "retained_relations": 39820,
+            "status": "partial",
+            "unknown_count": 10138
+          },
+          {
+            "family": "event",
+            "omitted_relations": null,
+            "retained_relations": 5,
+            "status": "partial",
+            "unknown_count": 5
+          },
+          {
+            "family": "object-flow",
+            "omitted_relations": null,
+            "retained_relations": 4737,
+            "status": "partial",
+            "unknown_count": 13494
+          },
+          {
+            "family": "promise-ownership",
+            "omitted_relations": null,
+            "retained_relations": 278,
+            "status": "partial",
+            "unknown_count": 197
+          },
+          {
+            "family": "request",
+            "omitted_relations": null,
+            "retained_relations": 0,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "resource-lifecycle",
+            "omitted_relations": null,
+            "retained_relations": 6,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "timer",
+            "omitted_relations": null,
+            "retained_relations": 7,
+            "status": "partial",
+            "unknown_count": 4
+          }
+        ],
+        "limits": [
+          {
+            "name": "semantic_graph_node_ceiling",
+            "unit": "items",
+            "value": 100000
+          }
+        ],
+        "omitted_nodes": null,
+        "omitted_relations": null,
+        "status": "partial",
+        "truncated": true
+      },
+      "semantic_unknowns": 33612
+    },
+    "limitations": [
+      "Boundary extraction covers unshadowed JSON/global coercions plus parse and validation method candidates.",
+      "Child-process extraction covers asynchronous node:child_process creation, literal argv/env/stdio options, exit/error listeners, and kill signals.",
+      "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+      "Configuration extraction covers process.env, process.argv, node:fs reads, and direct logical defaults.",
+      "Event extraction covers EventEmitter-style literal registrations, removals, and dispatch candidates; dynamic names remain unknown.",
+      "Function fingerprints are static candidates; equal digests can remain ambiguous and do not prove behavioral equivalence.",
+      "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+      "Local data flow does not claim control-flow-sensitive reaching definitions or arbitrary dynamic property resolution.",
+      "Promise ownership covers explicit unshadowed Promise construction, static factories, aggregation, chaining, and await syntax only.",
+      "Request extraction covers fetch, WebSocket, node:http/node:https construction, direct option fields, and exact local response consumers.",
+      "Resource extraction covers built-in filesystem/network acquisition and exact local close/destroy/end handles.",
+      "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+      "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+      "The semantic graph contains static syntax observations and conservative relationship candidates; it does not claim runtime execution.",
+      "Timer extraction covers global or node:timers scheduling and exact local-handle cancellation.",
+      "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+    ],
+    "notes": "Static syntax analysis; manual tracing and isolated function probes recorded separately."
+  },
+  "workflow-kernel": {
+    "evidence_id": "ev_e3ded9a9ac6a318e8ae476e2e6a4a76db9dd676213d202ee8c721038c4cd7d8d",
+    "subject": {
+      "architecture": null,
+      "digest": {
+        "sha256": "a4af3078b40015109ee904e54d8fd43d01de9113d4a0bb1349a73a068ee1e6c6"
+      },
+      "format": "directory",
+      "local_path": "/research/claude-workflow-research/workflow-kernel",
+      "name": "workflow-kernel"
+    },
+    "provider": {
+      "id": "rea-analysis-view",
+      "name": "REA analysis view projection",
+      "version": "1"
+    },
+    "parent_evidence_id": "ev_80400b63bb54b35310d8e7ea9b1113836683b4b351450190b8f310d0876de076",
+    "statistics": {
+      "findings": 406,
+      "invalid_utf8_files": 0,
+      "modules": 0,
+      "nested_asar_containers": 0,
+      "parse_failures": 0,
+      "parsed_javascript_files": 3,
+      "relevant_files": 3,
+      "text_bytes_read": 100029,
+      "visited_ast_nodes": 23949
+    },
+    "coverage": {
+      "application": {
+        "limits": [],
+        "omitted_count": 0,
+        "status": "complete",
+        "truncated": false
+      },
+      "application_unknowns": 0,
+      "semantic": {
+        "families": [
+          {
+            "family": "boundary",
+            "omitted_relations": 0,
+            "retained_relations": 16,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "call-flow",
+            "omitted_relations": 0,
+            "retained_relations": 1015,
+            "status": "partial",
+            "unknown_count": 1257
+          },
+          {
+            "family": "child-process",
+            "omitted_relations": 0,
+            "retained_relations": 0,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "closure",
+            "omitted_relations": 0,
+            "retained_relations": 1695,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "configuration",
+            "omitted_relations": 0,
+            "retained_relations": 0,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "data-flow",
+            "omitted_relations": 0,
+            "retained_relations": 14029,
+            "status": "partial",
+            "unknown_count": 1769
+          },
+          {
+            "family": "event",
+            "omitted_relations": 0,
+            "retained_relations": 0,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "object-flow",
+            "omitted_relations": 0,
+            "retained_relations": 1483,
+            "status": "partial",
+            "unknown_count": 1932
+          },
+          {
+            "family": "promise-ownership",
+            "omitted_relations": 0,
+            "retained_relations": 150,
+            "status": "partial",
+            "unknown_count": 116
+          },
+          {
+            "family": "request",
+            "omitted_relations": 0,
+            "retained_relations": 0,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "resource-lifecycle",
+            "omitted_relations": 0,
+            "retained_relations": 4,
+            "status": "partial",
+            "unknown_count": 0
+          },
+          {
+            "family": "timer",
+            "omitted_relations": 0,
+            "retained_relations": 3,
+            "status": "partial",
+            "unknown_count": 4
+          }
+        ],
+        "limits": [],
+        "omitted_nodes": 0,
+        "omitted_relations": 0,
+        "status": "unknown",
+        "truncated": false
+      },
+      "semantic_unknowns": 5078
+    },
+    "limitations": [
+      "Boundary extraction covers unshadowed JSON/global coercions plus parse and validation method candidates.",
+      "Child-process extraction covers asynchronous node:child_process creation, literal argv/env/stdio options, exit/error listeners, and kill signals.",
+      "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+      "Configuration extraction covers process.env, process.argv, node:fs reads, and direct logical defaults.",
+      "Event extraction covers EventEmitter-style literal registrations, removals, and dispatch candidates; dynamic names remain unknown.",
+      "Function fingerprints are static candidates; equal digests can remain ambiguous and do not prove behavioral equivalence.",
+      "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+      "Local data flow does not claim control-flow-sensitive reaching definitions or arbitrary dynamic property resolution.",
+      "Promise ownership covers explicit unshadowed Promise construction, static factories, aggregation, chaining, and await syntax only.",
+      "Request extraction covers fetch, WebSocket, node:http/node:https construction, direct option fields, and exact local response consumers.",
+      "Resource extraction covers built-in filesystem/network acquisition and exact local close/destroy/end handles.",
+      "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+      "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+      "The semantic graph contains static syntax observations and conservative relationship candidates; it does not claim runtime execution.",
+      "Timer extraction covers global or node:timers scheduling and exact local-handle cancellation.",
+      "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+    ],
+    "notes": "Static syntax analysis; manual tracing and isolated function probes recorded separately."
+  }
+}

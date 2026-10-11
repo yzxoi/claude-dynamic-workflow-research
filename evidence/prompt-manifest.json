@@ -1,0 +1,331 @@
+[
+  {
+    "path": "prompts/workflow-tool-with-skill.txt",
+    "source": "bun-files/chunk-62rej6c1.js",
+    "kind": "rendered-pure-prompt-function",
+    "bytes": 3225,
+    "sha256": "53ead689cae6fcae681b9fe719e80a709ce2f43adf839f43b89b38ba3ca935fc"
+  },
+  {
+    "path": "prompts/workflow-tool-inline-reference.txt",
+    "source": "bun-files/chunk-62rej6c1.js",
+    "kind": "rendered-pure-prompt-function",
+    "bytes": 20174,
+    "sha256": "4ceee2df9f4cb97c50affb8a8cdf7f98377640142d1fe02a5ad4c7dd6b38d4cd"
+  },
+  {
+    "path": "prompts/workflow-authoring.txt",
+    "source": "bun-files/chunk-62rej6c1.js",
+    "kind": "rendered-pure-prompt-function",
+    "bytes": 17141,
+    "sha256": "21a07b0a0ae6dd279f1a98e7723e3eb4325489a1a2232cbb7b9c727fadc0e195"
+  },
+  {
+    "path": "prompts/size-guideline-small-configured.txt",
+    "source": "bun-files/chunk-c5zwk83v.js",
+    "kind": "rendered-pure-size-guideline-function",
+    "bytes": 204,
+    "sha256": "9b0f3a3cf2ba56457545cbfcf1a7bab943660d21068aa8c7c73b67142eabfd88"
+  },
+  {
+    "path": "prompts/size-guideline-small-default.txt",
+    "source": "bun-files/chunk-c5zwk83v.js",
+    "kind": "rendered-pure-size-guideline-function",
+    "bytes": 273,
+    "sha256": "5d2b283254c65c8d666b124c6c335e961a219beaf36c135edb605b460afb02f9"
+  },
+  {
+    "path": "prompts/workflow-tool-complete-inline-small.txt",
+    "source": "bun-files/chunk-62rej6c1.js + chunk-c5zwk83v.js + NQr from chunk-04v7vxqn.js",
+    "kind": "rendered-composite-tool-prompt-variant",
+    "bytes": 20449,
+    "sha256": "3d988268bb89baaeef02300da9053415c7c3bf5f9f4a3deb1d8cda4f8c144499"
+  },
+  {
+    "path": "prompts/workflow-tool-complete-with-skill-small.txt",
+    "source": "bun-files/chunk-62rej6c1.js + chunk-c5zwk83v.js + NQr from chunk-04v7vxqn.js",
+    "kind": "rendered-composite-tool-prompt-variant",
+    "bytes": 3500,
+    "sha256": "e08642fc9935c7225de78dfc5609209970d0291e6e1c82dbfd29736baae6b9a7"
+  },
+  {
+    "path": "prompts/size-guideline-medium-configured.txt",
+    "source": "bun-files/chunk-c5zwk83v.js",
+    "kind": "rendered-pure-size-guideline-function",
+    "bytes": 206,
+    "sha256": "ecaa7d09e8753e9c0e46a5447672a64ae9ffea0af16127e56d4e09ec3e9bfaa5"
+  },
+  {
+    "path": "prompts/size-guideline-medium-default.txt",
+    "source": "bun-files/chunk-c5zwk83v.js",
+    "kind": "rendered-pure-size-guideline-function",
+    "bytes": 275,
+    "sha256": "8f16ab632e1b51bdeb0095a51bb4421792ba6a37e996df0d97972d9f1059da8e"
+  },
+  {
+    "path": "prompts/workflow-tool-complete-inline-medium.txt",
+    "source": "bun-files/chunk-62rej6c1.js + chunk-c5zwk83v.js + NQr from chunk-04v7vxqn.js",
+    "kind": "rendered-composite-tool-prompt-variant",
+    "bytes": 20451,
+    "sha256": "47acbefa5cd9bc5594327bed5ff68adfd0c028d83af407f3bde775d1603c15ec"
+  },
+  {
+    "path": "prompts/workflow-tool-complete-with-skill-medium.txt",
+    "source": "bun-files/chunk-62rej6c1.js + chunk-c5zwk83v.js + NQr from chunk-04v7vxqn.js",
+    "kind": "rendered-composite-tool-prompt-variant",
+    "bytes": 3502,
+    "sha256": "78a113f0d17e1f4be8d5fcdba9112372e4e34fb7e2e062959b4fe379e324da4e"
+  },
+  {
+    "path": "prompts/size-guideline-large-configured.txt",
+    "source": "bun-files/chunk-c5zwk83v.js",
+    "kind": "rendered-pure-size-guideline-function",
+    "bytes": 205,
+    "sha256": "e6ced0f066b65095251a910543265f83ac0fcb8dfe4e2524c64b9ac63d5d293b"
+  },
+  {
+    "path": "prompts/size-guideline-large-default.txt",
+    "source": "bun-files/chunk-c5zwk83v.js",
+    "kind": "rendered-pure-size-guideline-function",
+    "bytes": 274,
+    "sha256": "2da57a1064bc070bfd4f5513912a3aada62e9c424290003c0eb3e2774bea8cd3"
+  },
+  {
+    "path": "prompts/workflow-authoring-model-forced.txt",
+    "source": "bun-files/chunk-62rej6c1.js",
+    "kind": "rendered-pure-prompt-function",
+    "bytes": 16776,
+    "sha256": "30146f89f6d319bc6fc8e2dfc2e2481d1cdaa1a14cd03965728ed1360abde275"
+  },
+  {
+    "path": "prompts/worker-text-system.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:45",
+    "kind": "rendered-literal",
+    "bytes": 594,
+    "sha256": "e9be69a804510d72e86dc065d12424e225cb2d452e0e531268870c66d5c3943d"
+  },
+  {
+    "path": "prompts/custom-worker-text-suffix.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:51",
+    "kind": "rendered-literal",
+    "bytes": 307,
+    "sha256": "25a31e14f9a96b6f5dc7e0c42ae10850cb8c087f8addd30ddaf0ff2b52572568"
+  },
+  {
+    "path": "prompts/custom-worker-structured-suffix.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:55",
+    "kind": "rendered-literal",
+    "bytes": 409,
+    "sha256": "02d6b2bb939e0546e77905638bbc074119179b1896eea4cae066bd5ea5da518f"
+  },
+  {
+    "path": "prompts/worker-structured-system.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:59",
+    "kind": "rendered-literal",
+    "bytes": 639,
+    "sha256": "3f332f07b2978b770681ffbded5a88a87a2838a6843a3bb7b76c92fbd3204c3d"
+  },
+  {
+    "path": "prompts/provenance-computed-task.txt",
+    "source": "bun-files/chunk-6f3cp7aa.js",
+    "kind": "literal-concatenation",
+    "bytes": 422,
+    "sha256": "8bb4f9063bba9d96b127c43d4827dd43263112a8800d049d032443b5ad3e2516"
+  },
+  {
+    "path": "prompts/provenance-user-request.txt",
+    "source": "bun-files/chunk-6f3cp7aa.js",
+    "kind": "literal-concatenation",
+    "bytes": 369,
+    "sha256": "534886236d3caec095b629b06679bd93dbcd54b661e09b790ac4646f684cf91e"
+  },
+  {
+    "path": "prompts/provenance-assistant-context.txt",
+    "source": "bun-files/chunk-6f3cp7aa.js",
+    "kind": "literal-concatenation",
+    "bytes": 206,
+    "sha256": "72ada262267bd9e8b4c23203af8c061127eb3d208b3ea5b4b9c0ffdd49e76c9f"
+  },
+  {
+    "path": "prompts/provenance-automated-trigger.txt",
+    "source": "bun-files/chunk-6f3cp7aa.js",
+    "kind": "literal-concatenation",
+    "bytes": 255,
+    "sha256": "48a4fcbdc8f48a7d2c0896a03d9020d8f5a698527bb30ddd16c3901b976114e1"
+  },
+  {
+    "path": "builtins/deep-research-0.js",
+    "source": "bun-files/chunk-qajs04tk.js",
+    "kind": "rendered-bundled-workflow",
+    "bytes": 24693,
+    "sha256": "9e4a49882edec8516ee4932092e9197c34a2e182af1b5e9132427cfdf9b233e7"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-1011699-1.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:1011699-1055751",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 44052,
+    "sha256": "a728f8f95d790cea14c587ab8bdf028aaaf3d29039af20b7521b0e52fec845b9"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-1081817-2.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:1081817-1082125",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 308,
+    "sha256": "1f6e6bf48e5a09dd7a5ff8b2dcf60d366fa29536c75a9bd2014c1240a36c83f0"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-1139787-3.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:1139787-1161676",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 21889,
+    "sha256": "93c3d7f09f441037d2b663630a073202f06c3b45b07ebd914eabd1e6fd858482"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-Cpo-4.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:1172200-1173986",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 1786,
+    "sha256": "4461c82659d734f2640faf785792a1325eec24887d5ad27c1aa737a807d3ddea"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-jpo-5.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:1190071-1200846",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 10775,
+    "sha256": "d41afa21a651eb60972bbf3fb3749b46a86b6678572fe8869392c941668037bd"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-m5t-6.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:2032076-2033524",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 1448,
+    "sha256": "bf5683b001888bf981db10546a964c506ac77637b7f28625364c358539fc6bff"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-b5t-7.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:2036535-2041729",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 5194,
+    "sha256": "d9f1463604c8619890ea73faf7b44e6a55d79fda7b93a0ac781980ade4644e8d"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-2054251-8.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:2054251-2062112",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 7861,
+    "sha256": "1150f4adc7bc43c284f6aa2282e2938e231a7104b26dc285afcddeb15e5eec57"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-4052588-9.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:4052588-4052902",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 314,
+    "sha256": "155009a184c49cc4646000ad804e6dcdc5ce9b5411631c0f3e24b63de0ba57b0"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-Mzr-10.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:4353783-4355058",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 1275,
+    "sha256": "3b7e500dd72f360fce3f956c5978ba28f12747f5f1862248f5a1bace03342a76"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-M-11.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:4448715-4449042",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 327,
+    "sha256": "25479b864e442ee499ce15add08c8b4a104a460233cadef42895e65d80d3e9a4"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-4449136-12.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:4449136-4451089",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 1953,
+    "sha256": "6c7401d481df0d90f7f04880ef26e8546855cc35af29fc03340c752eff1f7ec7"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-w-13.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:4452274-4452985",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 711,
+    "sha256": "c384c13f07c0fc3dbf8bef2b15de26b52251a48e0e90944fddc7a5d45ae732d7"
+  },
+  {
+    "path": "prompts/template-chunk-sfn1dbxq-4468903-14.js.txt",
+    "source": "bun-files/chunk-sfn1dbxq.js:utf16:4468903-4469218",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 315,
+    "sha256": "a08a243f99a3f8bfaa23fc430e499ccf78609272684656292d4170289f587184"
+  },
+  {
+    "path": "prompts/template-chunk-hedqf2m1-25746-1.js.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:utf16:25746-25966",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 220,
+    "sha256": "342e355de155d262662a874c364ce09623ec1a974712115ffda1aa993297a3d7"
+  },
+  {
+    "path": "prompts/template-chunk-hedqf2m1-ks-2.js.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:utf16:38181-38783",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 602,
+    "sha256": "d1127d08aca8d2f1e4b5f0061fa78ea1f6d53b0f2173e2ff1fc5c832fe657089"
+  },
+  {
+    "path": "prompts/template-chunk-hedqf2m1-ys-3.js.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:utf16:38787-39102",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 315,
+    "sha256": "b2382894f1fa30e605f4ca3998f575cf75057cba6676857b5be7cd516ca15922"
+  },
+  {
+    "path": "prompts/template-chunk-hedqf2m1-bs-4.js.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:utf16:39106-39487",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 381,
+    "sha256": "71ecea31c71700eea3d829b7e237dd474c15981bc73dd1ce720f29ada522cf1f"
+  },
+  {
+    "path": "prompts/template-chunk-hedqf2m1-Ss-5.js.txt",
+    "source": "bun-files/chunk-hedqf2m1.js:utf16:39491-40077",
+    "kind": "exact-source-expression-unrendered",
+    "bytes": 586,
+    "sha256": "3e4e34478920cc5ed85157fc4ad13a32d8c2f83bced36ffbf76861bfad80e05f"
+  },
+  {
+    "path": "prompts/cloud-template-bug-hunter-t77r14b6.md",
+    "source": "bun-files/bug-hunter-t77r14b6.md",
+    "kind": "shipped-console-agent-template-not-server-internal-prompt",
+    "bytes": 8092,
+    "sha256": "e7529cf183237046b1ef099e21f0ec9f8eef94fc2bc77050b52378ee9e7a4146"
+  },
+  {
+    "path": "prompts/cloud-template-deep-researcher-kr59y5yh.md",
+    "source": "bun-files/deep-researcher-kr59y5yh.md",
+    "kind": "shipped-console-agent-template-not-server-internal-prompt",
+    "bytes": 2426,
+    "sha256": "5bfac67f99ff5a9057a93dc18a80f135bf9d6e8089088b0fad30be150c1c54e8"
+  },
+  {
+    "path": "prompts/cloud-template-watchlist-scanner-kfkrzjrr.md",
+    "source": "bun-files/watchlist-scanner-kfkrzjrr.md",
+    "kind": "shipped-console-agent-template-not-server-internal-prompt",
+    "bytes": 5638,
+    "sha256": "d09230e53328dfe895d1924da49cb0e75b4045ce6810e2a2e62c08e5c548e72d"
+  },
+  {
+    "path": "prompts/cloud-template-explainer-video-maker-sm29032a.md",
+    "source": "bun-files/explainer-video-maker-sm29032a.md",
+    "kind": "shipped-console-agent-template-not-server-internal-prompt",
+    "bytes": 4882,
+    "sha256": "725b495062159e5215b3e5885fbfc781fdee2f7505bec71ac9329bcb98cba888"
+  },
+  {
+    "path": "prompts/cloud-template-performance-tuner-6c866b59.md",
+    "source": "bun-files/performance-tuner-6c866b59.md.zst decoded with zstd; see decoded-assets-manifest.json",
+    "kind": "shipped-console-agent-template-not-server-internal-prompt",
+    "bytes": 11390,
+    "sha256": "ad392a2f5acf2a5899f6154f7558fc5daa9a0f9d2e311496cef82998968ad1d2"
+  }
+]

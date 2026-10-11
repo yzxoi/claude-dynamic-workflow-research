@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "path": "evidence/unknown-content-probe/workspace/scratch/cli/bad.json",
+      "format": "intentional-invalid-json",
+      "sha256": "7ec107204c1594958bf3365d75ea761be85f86ef4450043e254c09c4664b0738",
+      "reason": "Worker intentionally generated invalid JSON text notjson"
+    },
+    {
+      "path": "evidence/unknown-content-probe/workspace/scratch/cli/badenc.json",
+      "format": "intentional-invalid-json",
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "reason": "Worker intentionally generated a non-UTF-8 byte 0xff as a diagnostic input"
+    },
+    {
+      "path": "evidence/cloud-probe/models.json",
+      "format": "concatenated-json-values",
+      "reason": "Unmodified ant model-list output: separate pretty-printed JSON objects without an enclosing array"
+    }
+  ]
+}

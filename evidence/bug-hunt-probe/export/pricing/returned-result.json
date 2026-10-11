@@ -1,0 +1,28 @@
+{
+  "findings": [
+    {
+      "module": "pricing.py",
+      "title": "Discount threshold uses > instead of >= (boundary)",
+      "status": "confirmed",
+      "repro": "python3 scratch/pricing_proof.py; quote([{'unit_price_cents':1000,'quantity':1}])",
+      "expected": "subtotal 1000 equals the minimum 1000, so discount 100 and total 1000",
+      "actual": "{'subtotal': 1000, 'discount': 0, 'shipping': 100, 'total': 1100}"
+    },
+    {
+      "module": "pricing.py",
+      "title": "Zero minimum with zero subtotal (same root cause)",
+      "status": "unverified",
+      "repro": "quote([{'unit_price_cents':0,'quantity':1}], discount_minimum_cents=0)",
+      "expected": "The discount is 0 either way, so the output matches the spec. The only difference is that the >= check would be true.",
+      "actual": "discount 0, total 100. No observable contradiction."
+    },
+    {
+      "module": "pricing.py",
+      "title": "Floor discount, empty-input shipping, and validation of negative price, zero quantity and float price",
+      "status": "rejected",
+      "repro": "python3 scratch/pricing_proof.py",
+      "expected": "floor(1005*1000/10000)=100; empty input gives shipping 0 and subtotal 0; invalid lines raise ValueError",
+      "actual": "All conform: discount 100, empty quote is all zeros, and ValueError was raised for all three bad lines. quote and subtotal do not mutate their input, and a failed subtotal raises before any state is built."
+    }
+  ]
+}

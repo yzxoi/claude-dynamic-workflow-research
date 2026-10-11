@@ -1,0 +1,248 @@
+[
+  {
+    "type": "launched"
+  },
+  {
+    "type": "started",
+    "key": "v2:e9042366a81e49bc67185dfc48898c76bf829dfeeb2e6a60ddc310fb43530b3d",
+    "agentId": "a2055a73c0ac276c7",
+    "label": "audit:resolve-set",
+    "phase": "Audit"
+  },
+  {
+    "type": "started",
+    "key": "v2:ef2302ab08b2d04a09b7cb2841578c60947da57c37c4ff6a4f11894c50bf3d63",
+    "agentId": "ac41b96f3fc87d5b9",
+    "label": "audit:class-api",
+    "phase": "Audit"
+  },
+  {
+    "type": "started",
+    "key": "v2:e84dad588b2936f4953eac7ec30809462fe66ad3579e3c069394c19560903bd5",
+    "agentId": "a7467c40d37269c39",
+    "label": "audit:cli",
+    "phase": "Audit"
+  },
+  {
+    "type": "result",
+    "key": "v2:ef2302ab08b2d04a09b7cb2841578c60947da57c37c4ff6a4f11894c50bf3d63",
+    "agentId": "ac41b96f3fc87d5b9",
+    "result": {
+      "items": [
+        {
+          "title": "Pointer validity, path round-trip, from_parts and hash vs RFC 6901 grammar",
+          "classification": "rejected",
+          "citation": "RFC 6901 section 3 (pointer ABNF with escaped = '~' ('0' / '1')) and tests.py test_round_trip, test_parts, test_str_and_repr",
+          "repro": "Exhaustively enumerated every string of length 0-5 over '~01/a\\n'. For each, compared JsonPointer(s) accept/reject with the regex (?s)(?:/(?:[^/~]|~[01])*)*\\Z. For accepted strings, checked p.path == s, from_parts(p.parts) == p, hash(JsonPointer(p.path)) == hash(p). Also checked unescape(escape(x)) == x and from_parts([x]).parts == [x] for all x over '~01/' up to length 4. Script: scratch/class-api/probe.py",
+          "expected": "Acceptance matches the RFC grammar and round trips are lossless",
+          "actual": "No mismatches (bad=0). Trailing-newline and '~01' / '~10' ordering cases are handled correctly."
+        },
+        {
+          "title": "Module doctests (path, from_parts, pairwise, resolve_pointer, set_pointer)",
+          "classification": "rejected",
+          "citation": "Docstring examples in jsonpointer.py",
+          "repro": "doctest.testmod(jsonpointer)",
+          "expected": "All doctests pass",
+          "actual": "TestResults(failed=0, attempted=21)"
+        },
+        {
+          "title": "join / __truediv__ with str, JsonPointer and list suffixes",
+          "classification": "rejected",
+          "citation": "join docstring 'Returns a new JsonPointer with the given suffix append'; tests.py test_join, test_join_magic, test_join_subclass",
+          "repro": "p=JsonPointer('/a/b/c'); p.join(['a/b']).path; p.join('').path; p.join(['']).path; p.join([1,2]).path; p.join(('x','~')).path; p.join(None); p/1; p.join('/a~')",
+          "expected": "List items are treated as unescaped parts, '' as root, and invalid suffixes raise JsonPointerException",
+          "actual": "'/a/b/c/a~1b', '/a/b/c', '/a/b/c/', '/a/b/c/1/2', '/a/b/c/x/~0'. None and 1 raise JsonPointerException('Invalid suffix'). '/a~' raises JsonPointerException('Found invalid escape ~'). p is never mutated."
+        },
+        {
+          "title": "contains / __contains__ direction and boundary cases",
+          "classification": "rejected",
+          "citation": "contains docstring 'Returns True if self contains the given ptr'; tests.py test_contains, test_contains_magic",
+          "repro": "JsonPointer('/ab').contains(JsonPointer('/a')); JsonPointer('/a~1b/c').contains(JsonPointer('/a')); p.contains(JsonPointer('')); JsonPointer('').contains(p)",
+          "expected": "Containment is a whole-token prefix test, and the root pointer is contained in every pointer",
+          "actual": "False, False, True, False. Tokens are compared whole after unescaping, so there is no false string-prefix match."
+        },
+        {
+          "title": "contains / 'in' with a str argument raises AttributeError",
+          "classification": "ambiguity",
+          "citation": "contains docstring says 'the given ptr'. No documented behaviour for str arguments, and join accepts str but contains does not.",
+          "repro": "p=JsonPointer('/a/b/c'); p.contains('/a'); '/a' in p",
+          "expected": "Undocumented. A reader might expect str to be accepted, as in join, or a JsonPointerException.",
+          "actual": "AttributeError: 'str' object has no attribute 'parts'"
+        },
+        {
+          "title": "Fragment form '#/a' is not accepted",
+          "classification": "ambiguity",
+          "citation": "RFC 6901 section 6 (URI fragment identifier representation). The docstring in resolve_pointer treats '/a%20b' as a literal key, and the README only claims 'resolve JSON Pointers according to RFC 6901'.",
+          "repro": "JsonPointer('#/a'); JsonPointer('#')",
+          "expected": "RFC section 6 describes a URI fragment form. The library documents only the string form and never claims fragment support.",
+          "actual": "JsonPointerException: Location must start with /. This is consistent with the documented string representation, and percent-decoding is explicitly not done."
+        },
+        {
+          "title": "get_parts() returns the internal list, so mutating it changes the pointer",
+          "classification": "ambiguity",
+          "citation": "get_parts docstring 'Returns the list of the parts'. It does not say whether the list is a copy.",
+          "repro": "q=JsonPointer('/a/b'); q.get_parts().append('z'); q.path",
+          "expected": "Unspecified. Pointers are hashable, so a mutable view could change hash and equality.",
+          "actual": "'/a/b/z' (the pointer was mutated)"
+        },
+        {
+          "title": "join with a bytes suffix yields numeric parts",
+          "classification": "ambiguity",
+          "citation": "join accepts a JsonPointer, a str or an iterable of parts. bytes is not documented.",
+          "repro": "JsonPointer('/a/b/c').join(b'/a')",
+          "expected": "Undocumented. Either an error or a bytes-based interpretation is plausible.",
+          "actual": "JsonPointer('/a/b/c/47/97'), because iterating bytes yields ints that are then stringified."
+        },
+        {
+          "title": "__eq__, __hash__, set membership, subclass and repr behaviour",
+          "classification": "rejected",
+          "citation": "tests.py test_eq_hash, test_join_subclass, test_str_and_repr; the __eq__ docstring",
+          "repro": "JsonPointer('/a')==Subclass('/a'); JsonPointer('/a')!=JsonPointer('/a'); JsonPointer('/a~1b')==JsonPointer.from_parts(['a/b']); len({JsonPointer('/a'),JsonPointer('/a'),JsonPointer('/b')}); repr(Subclass('/a')); str(JsonPointer('')), repr(JsonPointer(''))",
+          "expected": "Equality compares parts; equal pointers hash equally; repr uses the class name",
+          "actual": "True, False, True, 2, \"P('/a')\", ('', \"JsonPointer('')\"). All as expected."
+        },
+        {
+          "title": "from_parts edge inputs",
+          "classification": "rejected",
+          "citation": "from_parts docstring 'Constructs a JsonPointer from a list of (unescaped) paths'; example ['a','~','/',0] -> '/a/~0/~1/0'",
+          "repro": "from_parts([]).path; from_parts(['']).path; from_parts(x for x in 'ab').path; from_parts([None]).parts",
+          "expected": "Empty list gives the root pointer, [''] gives '/', iterables work, and non-str items are stringified as with the documented int 0",
+          "actual": "'', '/', '/a/b', ['None']. Consistent with the documented int stringification."
+        }
+      ],
+      "coverageGaps": "About 12 probes plus exhaustive small-alphabet enumeration. Not covered: resolve/set (another area), the CLI, non-str inputs such as bytes passed to __init__ (they raise TypeError, which is undocumented), and Sequence-like custom classes. I found no reproducible bug in the JsonPointer class API."
+    }
+  },
+  {
+    "type": "result",
+    "key": "v2:e84dad588b2936f4953eac7ec30809462fe66ad3579e3c069394c19560903bd5",
+    "agentId": "a7467c40d37269c39",
+    "result": {
+      "items": [
+        {
+          "title": "Pointer ending in '-' (e.g. /a/-) crashes the CLI with a TypeError traceback and skips the remaining files",
+          "classification": "bug",
+          "citation": "doc/commandline.rst: 'The exit status is ... 1 if it could not be resolved on at least one file (the remaining files are still processed)'. RFC 6901 section 4: 'the use of the \"-\" character to index an array will always result in such an error condition because by definition it refers to a nonexistent array element'.",
+          "repro": "cd scratch/cli; printf '{\"a\":[1],\"b\":2}' > c.json; printf '{\"a\":[1,2,3]}' > a.json; PYTHONPATH=<workspace> python3 <workspace>/bin/jsonpointer /a/- c.json a.json",
+          "expected": "'Could not resolve pointer: ...' on stderr for each file, exit 1, with the second file still processed. This matches the RFC's error condition and the same handling as other unresolvable pointers.",
+          "actual": "Python traceback ending in 'TypeError: Object of type EndOfList is not JSON serializable' and exit status 1. The library's resolve_pointer returns an EndOfList object for '-', and json.dumps in bin/jsonpointer line 96 is outside the try that catches JsonPointerException. The second file is never processed. Run with only one file, /a/- gives the same traceback. See scratch/cli/probe.sh."
+        },
+        {
+          "title": "Invalid JSON or non-UTF-8 input file yields a traceback and exit 1, and later files are not processed",
+          "classification": "ambiguity",
+          "citation": "doc/commandline.rst exit status paragraph names only unresolved pointers (exit 1) and usage errors such as an invalid pointer or a missing file (exit 2). It is silent about malformed JSON content.",
+          "repro": "printf notjson > bad.json; printf '\\xff' > badenc.json; python3 <workspace>/bin/jsonpointer /a bad.json a.json; python3 <workspace>/bin/jsonpointer /a badenc.json a.json",
+          "expected": "Undocumented. It could reasonably be a clean error with exit 2 (like a missing file) or exit 1 with the remaining files processed.",
+          "actual": "Uncaught json.JSONDecodeError or UnicodeDecodeError traceback, exit 1. The remaining files are not processed."
+        },
+        {
+          "title": "A pointer file cannot address a member name ending in a newline (all trailing CR/LF are stripped)",
+          "classification": "ambiguity",
+          "citation": "bin/jsonpointer comment 'Trim file line endings without changing member names' and the test test_pointer_file_preserves_member_whitespace. doc/commandline.rst says only 'read from a file with -f'.",
+          "repro": "printf '{\"a\\\\n\":\"newline member\",\"a\":\"plain\"}' > nlm.json; printf '/a\\n\\n' > nl3.txt; python3 <workspace>/bin/jsonpointer -f nl3.txt nlm.json; python3 <workspace>/bin/jsonpointer -p \"$(printf '/a\\n')\" nlm.json",
+          "expected": "Unclear. A pointer file that ends in '/a' plus two newlines could mean member 'a\\n', but the docs do not say how many line endings are trimmed.",
+          "actual": "Both print \"plain\" (member 'a'). rstrip('\\r\\n') removes every trailing CR/LF, so a member name ending in a newline cannot be addressed via -f. Using -p with $(...) also strips the newline, but that comes from the shell."
+        },
+        {
+          "title": "--indent 0 and negative values still insert newlines",
+          "classification": "ambiguity",
+          "citation": "doc/commandline.rst: '--indent INDENT  Indent output by n spaces'",
+          "repro": "python3 <workspace>/bin/jsonpointer --indent 0 /a a.json; python3 <workspace>/bin/jsonpointer --indent -1 /a a.json",
+          "expected": "The docs do not define 0 or negative values. Without --indent the output is compact.",
+          "actual": "Both print '[\\n1,\\n2,\\n3\\n]'. This is Python json.dumps semantics for indent=0 and negative indent, not a clear contradiction."
+        },
+        {
+          "title": "Exit-status contract, argument handling and special characters behave as documented",
+          "classification": "rejected",
+          "citation": "doc/commandline.rst usage, exit status and example sections; RFC 6901 sections 3, 4 and 5",
+          "repro": "Ran about 45 invocations (scratch/cli/probe.sh). They covered: positional, -p, -f and --pointer=; the -p/-f conflict; -p with '--'; the empty pointer via '', -p '' and an empty -f file; CRLF and CR pointer files; member names with '/', '~', spaces, non-ASCII and the empty key; an unresolvable pointer across several files; a missing file after valid ones; '-f -' reading stdin; --indent 2; -v; scalar and null documents; NaN.",
+          "expected": "Documented behaviour.",
+          "actual": "Matched. /a~1b, /m~0n, '/' and /é resolve correctly. Unresolved pointers give exit 1 with all files still processed. An invalid pointer, such as /a/~2 or 'a', or a missing file, gives exit 2 with a usage message. -p combined with -f gives exit 2 via argparse. A missing file given after valid files has the earlier output already printed before exit 2, and this is consistent with the docs."
+        }
+      ],
+      "coverageGaps": "I ran with plain `python3` and PYTHONPATH, not `-I`, because `-I` ignores PYTHONPATH and makes `import jsonpointer` fail. I did not test Windows line endings through real stdin pipes for -f. I did not test very large files or special files such as FIFOs. I did not check --help output text against the docs usage block byte for byte. The library's own resolution behaviour (non-CLI) was out of scope."
+    }
+  },
+  {
+    "type": "result",
+    "key": "v2:e9042366a81e49bc67185dfc48898c76bf829dfeeb2e6a60ddc310fb43530b3d",
+    "agentId": "a2055a73c0ac276c7",
+    "result": {
+      "items": [
+        {
+          "title": "Array index grammar (leading zeros, signs, unicode digits, empty, '-', negative, out of range, huge) in resolve/get_part/to_last",
+          "classification": "rejected",
+          "citation": "RFC 6901 section 4 (array-index = %x30 / ( %x31-39 *(%x30-39) ), '-' is the nonexistent element after the last); tests.py WrongInputTests.test_leading_zero, test_oob, test_eol",
+          "repro": "L=[10,20,30]; for p in ['/00','/-0','/+1','/1.0','/ 1','/1 ','/١','/²','/０','/','/1\\n','/-1','/3','/10000000000000000000']: resolve_pointer(L,p)  # plus resolve_pointer(L,'/0'), resolve_pointer(L,'/-'), JsonPointer.get_part([1],'01')",
+          "expected": "'/0' returns 10, '/-' returns EndOfList, and every other token is rejected with JsonPointerException.",
+          "actual": "As expected. '/0' gives 10, '/-' gives EndOfList([10, 20, 30]), and all others raise JsonPointerException ('not a valid sequence index' or 'out of bounds'). Unicode digits, a trailing newline, and a 20-digit index are all rejected cleanly.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "Escape decoding order (~01, ~001, ~00, a~01b, ~0~1) and empty-string keys",
+          "classification": "rejected",
+          "citation": "RFC 6901 section 4: first transform ~1 to /, then ~0 to ~; section 5 example '/' -> key '' and '/m~0n'",
+          "repro": "doc={'~1':'tilde1','/':'slash','~':'tilde','~01':'x','~/':'tildeslash','~0':'t0'}; resolve_pointer(doc,p) for p in ['/~01','/~001','/~1','/~0','/~0~1','/~00']; resolve_pointer({'':{'':1}},'//')",
+          "expected": "'~01' -> key '~1'; '~001' -> '~01'; '~1' -> '/'; '~0' -> '~'; '~0~1' -> '~/'; '~00' -> '~0'; '//' -> 1.",
+          "actual": "All matched: tilde1, x, slash, tilde, tildeslash, t0, and 1.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "set_pointer with '-' on a tuple parent raises AttributeError instead of JsonPointerException",
+          "classification": "ambiguity",
+          "citation": "jsonpointer.py JsonPointer.set wraps TypeError and IndexError from parent[part]=value into JsonPointerException ('Invalid assignment target'); set_pointer docs do not say how immutable sequences are handled. JSON documents from json.loads never contain tuples.",
+          "repro": "set_pointer({'a':(1,2)}, '/a/-', 3)   # compare: set_pointer({'a':(1,2)}, '/a/0', 3)",
+          "expected": "Probably JsonPointerException, consistent with the '/a/0' case, but the docs are silent for non-JSON immutable sequences.",
+          "actual": "'/a/-' raises AttributeError: 'tuple' object has no attribute 'append'. '/a/0' raises JsonPointerException 'Invalid assignment target'. The library's own error type is therefore inconsistent for a non-JSON input.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "set_pointer inplace semantics (root, return value, deepcopy, failure leaves original untouched, '-' append)",
+          "classification": "rejected",
+          "citation": "set_pointer docstring: 'With inplace set to true, doc is modified as long as pointer is not the root'; doc/tutorial.rst (inplace=False creates a copy); tests.py SetTests",
+          "repro": "doc={'a':[1]}; r=set_pointer(doc,'/a/0',2); r is doc; r=set_pointer(doc,'/a/0',3,inplace=False); set_pointer([1],'',[2],inplace=False); set_pointer([1],'',[2]); set_pointer(doc,'/a/5/x',1,inplace=False)",
+          "expected": "inplace=True returns the same object. inplace=False returns a copy and leaves doc unchanged, even on failure. Root with inplace=False returns the value, and root with inplace=True raises JsonPointerException.",
+          "actual": "As expected. 'r is doc' is True for inplace=True, and False with the original unchanged for inplace=False. Root with inplace=False returns [2], and the failed non-inplace set left doc == {'a': [1]}. Out-of-range sets (index 5, or index == len) raise JsonPointerException.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "doc/tutorial.rst doctest output differs in dict key order",
+          "classification": "rejected",
+          "citation": "doc/tutorial.rst lines about set_pointer show {'foo': {'another prop': ..., 'anArray': ...}}",
+          "repro": "doctest.testfile('doc/tutorial.rst', module_relative=False)  # run via python3 -I",
+          "expected": "The tutorial doctests pass.",
+          "actual": "4 failures. The only difference is repr key order ('anArray' printed before 'another prop'). The tutorial text assumes pre-3.7 dict ordering, and the module docstrings use '==' comparisons that pass (21/21). This is a documentation artefact, not a library behaviour bug.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/q.py"
+        },
+        {
+          "title": "resolve default argument semantics and error types",
+          "classification": "rejected",
+          "citation": "resolve_pointer docstring and tutorial: resolve_pointer(obj,'/some/path',None) == None; tests LargeIndexTests default handling; tests.py WrongInputTests",
+          "repro": "resolve_pointer([10,20,30],'/9','D'); resolve_pointer(5,'/9','D'); resolve_pointer({},'/a',0); resolve_pointer({'a':None},'/a/b','D'); resolve_pointer({'a':[1]},'/a/-/0','D'); resolve_pointer({}, 'a', 'D')",
+          "expected": "The default is returned for any unresolvable path, including falsy defaults like 0. A malformed pointer string still raises.",
+          "actual": "'D', 'D', 0, 'D', and 'D' respectively. The malformed pointer 'a' raises JsonPointerException 'Location must start with /' even with a default (the pointer is parsed before the default is considered, which matches the tests).",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        },
+        {
+          "title": "Custom __getitem__ object raising IndexError is not mapped to JsonPointerException (default not honoured)",
+          "classification": "ambiguity",
+          "citation": "jsonpointer.py walk only catches KeyError for ducktyped objects; tests.py AltTypesTests only covers KeyError-raising objects; docs do not specify the ducktyping error contract",
+          "repro": "class C:\n    def __getitem__(self,k): raise IndexError(k)\nresolve_pointer(C(), '/x', 'D')",
+          "expected": "Unclear. The docs say nothing about __getitem__ objects that raise other exceptions. A reader could expect 'D' or JsonPointerException.",
+          "actual": "IndexError propagates out of resolve_pointer even with a default supplied. This is only reachable with non-JSON ducktyped containers, and the documented ducktyping tests use KeyError only.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/q.py"
+        },
+        {
+          "title": "to_last / get_part / EndOfList traversal and set via '/-' mid-path",
+          "classification": "rejected",
+          "citation": "tests.py ToLastTests, test_eol (resolve '/foo/-/1' raises JsonPointerException); RFC 6901 section 4 ('-' refers to the nonexistent element after the last)",
+          "repro": "JsonPointer('/a/-').to_last({'a':[1]}); JsonPointer('/a/9').to_last({'a':[1]}); JsonPointer('').to_last(d); set_pointer({'a':[1]},'/a/-/b',1); set_pointer({'a':[1]},'/a/-',[],inplace=False)",
+          "expected": "to_last returns (parent, '-') for a trailing '-' and (doc, None) for the root. Setting through '-' mid-path raises JsonPointerException. A trailing '-' appends.",
+          "actual": "to_last returns ([1], '-') and ([1], 9) (no bounds check, which is only a parent/step split), and (doc, None) for the root. The mid-path '-' set raises JsonPointerException. The trailing '-' append returns {'a': [1, []]}.",
+          "evidenceFile": "/research/claude-workflow-research/unknown-content-probe/workspace/scratch/resolve-set/p.py"
+        }
+      ],
+      "coverageGaps": "I did not probe the CLI (bin/jsonpointer), join, contains, or eq/hash, which belong to other areas. I did not fuzz against a reference implementation, so I covered about 12 hand-picked edge-case groups in resolve, set, walk, get_part and to_last. I did not test non-str pointer inputs beyond JsonPointer(None), which raises TypeError. That is outside documented behaviour. I did not test VERBOSE_EXCEPTIONS=False behaviour. Mutable Sequence types other than list (such as bytearray or deque) were not exercised."
+    }
+  }
+]

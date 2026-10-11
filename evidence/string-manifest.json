@@ -1,0 +1,926 @@
+[
+  {
+    "offset": 74649436,
+    "end": 74652903,
+    "bytes": 3467,
+    "path": "strings/74649436.txt"
+  },
+  {
+    "offset": 75492408,
+    "end": 75494129,
+    "bytes": 1721,
+    "path": "strings/75492408.txt"
+  },
+  {
+    "offset": 77785072,
+    "end": 77795780,
+    "bytes": 10708,
+    "path": "strings/77785072.txt"
+  },
+  {
+    "offset": 81144880,
+    "end": 81145961,
+    "bytes": 1081,
+    "path": "strings/81144880.txt"
+  },
+  {
+    "offset": 84238588,
+    "end": 84241250,
+    "bytes": 2662,
+    "path": "strings/84238588.txt"
+  },
+  {
+    "offset": 84292332,
+    "end": 84294170,
+    "bytes": 1838,
+    "path": "strings/84292332.txt"
+  },
+  {
+    "offset": 186752238,
+    "end": 186876609,
+    "bytes": 124371,
+    "path": "strings/186752238.txt"
+  },
+  {
+    "offset": 186896429,
+    "end": 186979265,
+    "bytes": 82836,
+    "path": "strings/186896429.txt"
+  },
+  {
+    "offset": 186991167,
+    "end": 187095183,
+    "bytes": 104016,
+    "path": "strings/186991167.txt"
+  },
+  {
+    "offset": 187136937,
+    "end": 187205963,
+    "bytes": 69026,
+    "path": "strings/187136937.txt"
+  },
+  {
+    "offset": 187415892,
+    "end": 187450706,
+    "bytes": 34814,
+    "path": "strings/187415892.txt"
+  },
+  {
+    "offset": 187512405,
+    "end": 187552019,
+    "bytes": 39614,
+    "path": "strings/187512405.txt"
+  },
+  {
+    "offset": 187593539,
+    "end": 188257829,
+    "bytes": 664290,
+    "path": "strings/187593539.txt"
+  },
+  {
+    "offset": 188323806,
+    "end": 188330062,
+    "bytes": 6256,
+    "path": "strings/188323806.txt"
+  },
+  {
+    "offset": 188342103,
+    "end": 188776307,
+    "bytes": 434204,
+    "path": "strings/188342103.txt"
+  },
+  {
+    "offset": 188855839,
+    "end": 188953927,
+    "bytes": 98088,
+    "path": "strings/188855839.txt"
+  },
+  {
+    "offset": 188976301,
+    "end": 189089712,
+    "bytes": 113411,
+    "path": "strings/188976301.txt"
+  },
+  {
+    "offset": 189179360,
+    "end": 189210626,
+    "bytes": 31266,
+    "path": "strings/189179360.txt"
+  },
+  {
+    "offset": 189212786,
+    "end": 189215015,
+    "bytes": 2229,
+    "path": "strings/189212786.txt"
+  },
+  {
+    "offset": 189363955,
+    "end": 190108565,
+    "bytes": 744610,
+    "path": "strings/189363955.txt"
+  },
+  {
+    "offset": 190121990,
+    "end": 190125506,
+    "bytes": 3516,
+    "path": "strings/190121990.txt"
+  },
+  {
+    "offset": 190352521,
+    "end": 190592544,
+    "bytes": 240023,
+    "path": "strings/190352521.txt"
+  },
+  {
+    "offset": 190627520,
+    "end": 190630435,
+    "bytes": 2915,
+    "path": "strings/190627520.txt"
+  },
+  {
+    "offset": 190681951,
+    "end": 190685541,
+    "bytes": 3590,
+    "path": "strings/190681951.txt"
+  },
+  {
+    "offset": 190748573,
+    "end": 190777550,
+    "bytes": 28977,
+    "path": "strings/190748573.txt"
+  },
+  {
+    "offset": 190842631,
+    "end": 191162978,
+    "bytes": 320347,
+    "path": "strings/190842631.txt"
+  },
+  {
+    "offset": 191538952,
+    "end": 191551164,
+    "bytes": 12212,
+    "path": "strings/191538952.txt"
+  },
+  {
+    "offset": 191561689,
+    "end": 191565811,
+    "bytes": 4122,
+    "path": "strings/191561689.txt"
+  },
+  {
+    "offset": 191757570,
+    "end": 192003535,
+    "bytes": 245965,
+    "path": "strings/191757570.txt"
+  },
+  {
+    "offset": 192065217,
+    "end": 193008578,
+    "bytes": 943361,
+    "path": "strings/192065217.txt"
+  },
+  {
+    "offset": 193038159,
+    "end": 193091455,
+    "bytes": 53296,
+    "path": "strings/193038159.txt"
+  },
+  {
+    "offset": 193112470,
+    "end": 193114234,
+    "bytes": 1764,
+    "path": "strings/193112470.txt"
+  },
+  {
+    "offset": 193210269,
+    "end": 193249681,
+    "bytes": 39412,
+    "path": "strings/193210269.txt"
+  },
+  {
+    "offset": 193260534,
+    "end": 193262681,
+    "bytes": 2147,
+    "path": "strings/193260534.txt"
+  },
+  {
+    "offset": 193262682,
+    "end": 193310401,
+    "bytes": 47719,
+    "path": "strings/193262682.txt"
+  },
+  {
+    "offset": 193477465,
+    "end": 193530957,
+    "bytes": 53492,
+    "path": "strings/193477465.txt"
+  },
+  {
+    "offset": 193707717,
+    "end": 193708802,
+    "bytes": 1085,
+    "path": "strings/193707717.txt"
+  },
+  {
+    "offset": 195017881,
+    "end": 195037551,
+    "bytes": 19670,
+    "path": "strings/195017881.txt"
+  },
+  {
+    "offset": 195059394,
+    "end": 195083085,
+    "bytes": 23691,
+    "path": "strings/195059394.txt"
+  },
+  {
+    "offset": 195098464,
+    "end": 195116999,
+    "bytes": 18535,
+    "path": "strings/195098464.txt"
+  },
+  {
+    "offset": 195127926,
+    "end": 195181346,
+    "bytes": 53420,
+    "path": "strings/195127926.txt"
+  },
+  {
+    "offset": 195198836,
+    "end": 195207357,
+    "bytes": 8521,
+    "path": "strings/195198836.txt"
+  },
+  {
+    "offset": 195234052,
+    "end": 199996635,
+    "bytes": 4762583,
+    "path": "strings/195234052.txt"
+  },
+  {
+    "offset": 202134857,
+    "end": 202138129,
+    "bytes": 3272,
+    "path": "strings/202134857.txt"
+  },
+  {
+    "offset": 202755982,
+    "end": 202912066,
+    "bytes": 156084,
+    "path": "strings/202755982.txt"
+  },
+  {
+    "offset": 203018452,
+    "end": 203020687,
+    "bytes": 2235,
+    "path": "strings/203018452.txt"
+  },
+  {
+    "offset": 203029938,
+    "end": 203178809,
+    "bytes": 148871,
+    "path": "strings/203029938.txt"
+  },
+  {
+    "offset": 203333218,
+    "end": 203339685,
+    "bytes": 6467,
+    "path": "strings/203333218.txt"
+  },
+  {
+    "offset": 203339686,
+    "end": 203370290,
+    "bytes": 30604,
+    "path": "strings/203339686.txt"
+  },
+  {
+    "offset": 203435971,
+    "end": 203594370,
+    "bytes": 158399,
+    "path": "strings/203435971.txt"
+  },
+  {
+    "offset": 203698024,
+    "end": 203897494,
+    "bytes": 199470,
+    "path": "strings/203698024.txt"
+  },
+  {
+    "offset": 203971677,
+    "end": 204052811,
+    "bytes": 81134,
+    "path": "strings/203971677.txt"
+  },
+  {
+    "offset": 204084166,
+    "end": 204087519,
+    "bytes": 3353,
+    "path": "strings/204084166.txt"
+  },
+  {
+    "offset": 204087520,
+    "end": 204097892,
+    "bytes": 10372,
+    "path": "strings/204087520.txt"
+  },
+  {
+    "offset": 204179572,
+    "end": 204273567,
+    "bytes": 93995,
+    "path": "strings/204179572.txt"
+  },
+  {
+    "offset": 204610997,
+    "end": 204613381,
+    "bytes": 2384,
+    "path": "strings/204610997.txt"
+  },
+  {
+    "offset": 204636736,
+    "end": 204869881,
+    "bytes": 233145,
+    "path": "strings/204636736.txt"
+  },
+  {
+    "offset": 204888838,
+    "end": 204900996,
+    "bytes": 12158,
+    "path": "strings/204888838.txt"
+  },
+  {
+    "offset": 205013938,
+    "end": 205160072,
+    "bytes": 146134,
+    "path": "strings/205013938.txt"
+  },
+  {
+    "offset": 205220505,
+    "end": 205229644,
+    "bytes": 9139,
+    "path": "strings/205220505.txt"
+  },
+  {
+    "offset": 205234140,
+    "end": 205236668,
+    "bytes": 2528,
+    "path": "strings/205234140.txt"
+  },
+  {
+    "offset": 205236669,
+    "end": 205241201,
+    "bytes": 4532,
+    "path": "strings/205236669.txt"
+  },
+  {
+    "offset": 205241202,
+    "end": 205245070,
+    "bytes": 3868,
+    "path": "strings/205241202.txt"
+  },
+  {
+    "offset": 205245071,
+    "end": 205280937,
+    "bytes": 35866,
+    "path": "strings/205245071.txt"
+  },
+  {
+    "offset": 205281697,
+    "end": 205288035,
+    "bytes": 6338,
+    "path": "strings/205281697.txt"
+  },
+  {
+    "offset": 205288036,
+    "end": 205361127,
+    "bytes": 73091,
+    "path": "strings/205288036.txt"
+  },
+  {
+    "offset": 205366892,
+    "end": 205368783,
+    "bytes": 1891,
+    "path": "strings/205366892.txt"
+  },
+  {
+    "offset": 205384676,
+    "end": 205470250,
+    "bytes": 85574,
+    "path": "strings/205384676.txt"
+  },
+  {
+    "offset": 205476123,
+    "end": 205479303,
+    "bytes": 3180,
+    "path": "strings/205476123.txt"
+  },
+  {
+    "offset": 205541481,
+    "end": 205579698,
+    "bytes": 38217,
+    "path": "strings/205541481.txt"
+  },
+  {
+    "offset": 206111138,
+    "end": 206311282,
+    "bytes": 200144,
+    "path": "strings/206111138.txt"
+  },
+  {
+    "offset": 206598914,
+    "end": 206628370,
+    "bytes": 29456,
+    "path": "strings/206598914.txt"
+  },
+  {
+    "offset": 207023164,
+    "end": 207060243,
+    "bytes": 37079,
+    "path": "strings/207023164.txt"
+  },
+  {
+    "offset": 207466912,
+    "end": 207626739,
+    "bytes": 159827,
+    "path": "strings/207466912.txt"
+  },
+  {
+    "offset": 207699457,
+    "end": 207707147,
+    "bytes": 7690,
+    "path": "strings/207699457.txt"
+  },
+  {
+    "offset": 207753705,
+    "end": 207757453,
+    "bytes": 3748,
+    "path": "strings/207753705.txt"
+  },
+  {
+    "offset": 207757454,
+    "end": 208090212,
+    "bytes": 332758,
+    "path": "strings/207757454.txt"
+  },
+  {
+    "offset": 208094534,
+    "end": 208103121,
+    "bytes": 8587,
+    "path": "strings/208094534.txt"
+  },
+  {
+    "offset": 208103122,
+    "end": 208109641,
+    "bytes": 6519,
+    "path": "strings/208103122.txt"
+  },
+  {
+    "offset": 208109642,
+    "end": 208116025,
+    "bytes": 6383,
+    "path": "strings/208109642.txt"
+  },
+  {
+    "offset": 208117938,
+    "end": 208136814,
+    "bytes": 18876,
+    "path": "strings/208117938.txt"
+  },
+  {
+    "offset": 208368126,
+    "end": 208469635,
+    "bytes": 101509,
+    "path": "strings/208368126.txt"
+  },
+  {
+    "offset": 208475476,
+    "end": 208482377,
+    "bytes": 6901,
+    "path": "strings/208475476.txt"
+  },
+  {
+    "offset": 208538869,
+    "end": 208546814,
+    "bytes": 7945,
+    "path": "strings/208538869.txt"
+  },
+  {
+    "offset": 208546815,
+    "end": 208550895,
+    "bytes": 4080,
+    "path": "strings/208546815.txt"
+  },
+  {
+    "offset": 208555120,
+    "end": 208563795,
+    "bytes": 8675,
+    "path": "strings/208555120.txt"
+  },
+  {
+    "offset": 208563796,
+    "end": 208659093,
+    "bytes": 95297,
+    "path": "strings/208563796.txt"
+  },
+  {
+    "offset": 208660324,
+    "end": 208666640,
+    "bytes": 6316,
+    "path": "strings/208660324.txt"
+  },
+  {
+    "offset": 208666641,
+    "end": 208683033,
+    "bytes": 16392,
+    "path": "strings/208666641.txt"
+  },
+  {
+    "offset": 208683034,
+    "end": 208693122,
+    "bytes": 10088,
+    "path": "strings/208683034.txt"
+  },
+  {
+    "offset": 208693123,
+    "end": 208709536,
+    "bytes": 16413,
+    "path": "strings/208693123.txt"
+  },
+  {
+    "offset": 208858029,
+    "end": 208860038,
+    "bytes": 2009,
+    "path": "strings/208858029.txt"
+  },
+  {
+    "offset": 209250587,
+    "end": 209308825,
+    "bytes": 58238,
+    "path": "strings/209250587.txt"
+  },
+  {
+    "offset": 209451645,
+    "end": 209499111,
+    "bytes": 47466,
+    "path": "strings/209451645.txt"
+  },
+  {
+    "offset": 209769121,
+    "end": 209771929,
+    "bytes": 2808,
+    "path": "strings/209769121.txt"
+  },
+  {
+    "offset": 210316498,
+    "end": 210377957,
+    "bytes": 61459,
+    "path": "strings/210316498.txt"
+  },
+  {
+    "offset": 210589417,
+    "end": 210590902,
+    "bytes": 1485,
+    "path": "strings/210589417.txt"
+  },
+  {
+    "offset": 210590903,
+    "end": 210606300,
+    "bytes": 15397,
+    "path": "strings/210590903.txt"
+  },
+  {
+    "offset": 210636123,
+    "end": 210640966,
+    "bytes": 4843,
+    "path": "strings/210636123.txt"
+  },
+  {
+    "offset": 210863180,
+    "end": 210888038,
+    "bytes": 24858,
+    "path": "strings/210863180.txt"
+  },
+  {
+    "offset": 210888039,
+    "end": 210893896,
+    "bytes": 5857,
+    "path": "strings/210888039.txt"
+  },
+  {
+    "offset": 211318384,
+    "end": 211449629,
+    "bytes": 131245,
+    "path": "strings/211318384.txt"
+  },
+  {
+    "offset": 213225650,
+    "end": 214684164,
+    "bytes": 1458514,
+    "path": "strings/213225650.txt"
+  },
+  {
+    "offset": 214687844,
+    "end": 214692464,
+    "bytes": 4620,
+    "path": "strings/214687844.txt"
+  },
+  {
+    "offset": 215329088,
+    "end": 215576298,
+    "bytes": 247210,
+    "path": "strings/215329088.txt"
+  },
+  {
+    "offset": 215594045,
+    "end": 215784167,
+    "bytes": 190122,
+    "path": "strings/215594045.txt"
+  },
+  {
+    "offset": 215785092,
+    "end": 215849142,
+    "bytes": 64050,
+    "path": "strings/215785092.txt"
+  },
+  {
+    "offset": 215967086,
+    "end": 216030108,
+    "bytes": 63022,
+    "path": "strings/215967086.txt"
+  },
+  {
+    "offset": 216094130,
+    "end": 216157787,
+    "bytes": 63657,
+    "path": "strings/216094130.txt"
+  },
+  {
+    "offset": 216161731,
+    "end": 216175868,
+    "bytes": 14137,
+    "path": "strings/216161731.txt"
+  },
+  {
+    "offset": 216411928,
+    "end": 216535093,
+    "bytes": 123165,
+    "path": "strings/216411928.txt"
+  },
+  {
+    "offset": 216617633,
+    "end": 216634208,
+    "bytes": 16575,
+    "path": "strings/216617633.txt"
+  },
+  {
+    "offset": 216640360,
+    "end": 216685638,
+    "bytes": 45278,
+    "path": "strings/216640360.txt"
+  },
+  {
+    "offset": 216782427,
+    "end": 218499168,
+    "bytes": 1716741,
+    "path": "strings/216782427.txt"
+  },
+  {
+    "offset": 218597760,
+    "end": 218604302,
+    "bytes": 6542,
+    "path": "strings/218597760.txt"
+  },
+  {
+    "offset": 218775345,
+    "end": 218797232,
+    "bytes": 21887,
+    "path": "strings/218775345.txt"
+  },
+  {
+    "offset": 218797233,
+    "end": 218798570,
+    "bytes": 1337,
+    "path": "strings/218797233.txt"
+  },
+  {
+    "offset": 218798571,
+    "end": 218813501,
+    "bytes": 14930,
+    "path": "strings/218798571.txt"
+  },
+  {
+    "offset": 219131530,
+    "end": 219138675,
+    "bytes": 7145,
+    "path": "strings/219131530.txt"
+  },
+  {
+    "offset": 219382807,
+    "end": 220052943,
+    "bytes": 670136,
+    "path": "strings/219382807.txt"
+  },
+  {
+    "offset": 220143589,
+    "end": 220173690,
+    "bytes": 30101,
+    "path": "strings/220143589.txt"
+  },
+  {
+    "offset": 220694841,
+    "end": 220769656,
+    "bytes": 74815,
+    "path": "strings/220694841.txt"
+  },
+  {
+    "offset": 220784146,
+    "end": 220798264,
+    "bytes": 14118,
+    "path": "strings/220784146.txt"
+  },
+  {
+    "offset": 220852573,
+    "end": 220888587,
+    "bytes": 36014,
+    "path": "strings/220852573.txt"
+  },
+  {
+    "offset": 221562640,
+    "end": 221613172,
+    "bytes": 50532,
+    "path": "strings/221562640.txt"
+  },
+  {
+    "offset": 221613173,
+    "end": 221659993,
+    "bytes": 46820,
+    "path": "strings/221613173.txt"
+  },
+  {
+    "offset": 221850398,
+    "end": 222541704,
+    "bytes": 691306,
+    "path": "strings/221850398.txt"
+  },
+  {
+    "offset": 222560209,
+    "end": 222714196,
+    "bytes": 153987,
+    "path": "strings/222560209.txt"
+  },
+  {
+    "offset": 222902018,
+    "end": 222951398,
+    "bytes": 49380,
+    "path": "strings/222902018.txt"
+  },
+  {
+    "offset": 223158107,
+    "end": 223200711,
+    "bytes": 42604,
+    "path": "strings/223158107.txt"
+  },
+  {
+    "offset": 223270040,
+    "end": 223309248,
+    "bytes": 39208,
+    "path": "strings/223270040.txt"
+  },
+  {
+    "offset": 223327905,
+    "end": 223334587,
+    "bytes": 6682,
+    "path": "strings/223327905.txt"
+  },
+  {
+    "offset": 225355853,
+    "end": 225375959,
+    "bytes": 20106,
+    "path": "strings/225355853.txt"
+  },
+  {
+    "offset": 225831385,
+    "end": 226148636,
+    "bytes": 317251,
+    "path": "strings/225831385.txt"
+  },
+  {
+    "offset": 226433074,
+    "end": 226449307,
+    "bytes": 16233,
+    "path": "strings/226433074.txt"
+  },
+  {
+    "offset": 226517310,
+    "end": 226542971,
+    "bytes": 25661,
+    "path": "strings/226517310.txt"
+  },
+  {
+    "offset": 226671496,
+    "end": 226788290,
+    "bytes": 116794,
+    "path": "strings/226671496.txt"
+  },
+  {
+    "offset": 226809512,
+    "end": 226834426,
+    "bytes": 24914,
+    "path": "strings/226809512.txt"
+  },
+  {
+    "offset": 227840480,
+    "end": 227908667,
+    "bytes": 68187,
+    "path": "strings/227840480.txt"
+  },
+  {
+    "offset": 228772374,
+    "end": 228800836,
+    "bytes": 28462,
+    "path": "strings/228772374.txt"
+  },
+  {
+    "offset": 228800837,
+    "end": 228817410,
+    "bytes": 16573,
+    "path": "strings/228800837.txt"
+  },
+  {
+    "offset": 228817411,
+    "end": 228831688,
+    "bytes": 14277,
+    "path": "strings/228817411.txt"
+  },
+  {
+    "offset": 228841801,
+    "end": 228842825,
+    "bytes": 1024,
+    "path": "strings/228841801.txt"
+  },
+  {
+    "offset": 228860559,
+    "end": 228872802,
+    "bytes": 12243,
+    "path": "strings/228860559.txt"
+  },
+  {
+    "offset": 230182400,
+    "end": 230198102,
+    "bytes": 15702,
+    "path": "strings/230182400.txt"
+  },
+  {
+    "offset": 230730589,
+    "end": 230743795,
+    "bytes": 13206,
+    "path": "strings/230730589.txt"
+  },
+  {
+    "offset": 237376036,
+    "end": 237384012,
+    "bytes": 7976,
+    "path": "strings/237376036.txt"
+  },
+  {
+    "offset": 237384013,
+    "end": 237388145,
+    "bytes": 4132,
+    "path": "strings/237384013.txt"
+  },
+  {
+    "offset": 237388146,
+    "end": 237389775,
+    "bytes": 1629,
+    "path": "strings/237388146.txt"
+  },
+  {
+    "offset": 237723463,
+    "end": 237731082,
+    "bytes": 7619,
+    "path": "strings/237723463.txt"
+  },
+  {
+    "offset": 238437236,
+    "end": 238445328,
+    "bytes": 8092,
+    "path": "strings/238437236.txt"
+  },
+  {
+    "offset": 238451117,
+    "end": 238455999,
+    "bytes": 4882,
+    "path": "strings/238451117.txt"
+  },
+  {
+    "offset": 238470854,
+    "end": 238476492,
+    "bytes": 5638,
+    "path": "strings/238470854.txt"
+  },
+  {
+    "offset": 238750223,
+    "end": 238756416,
+    "bytes": 6193,
+    "path": "strings/238750223.txt"
+  }
+]

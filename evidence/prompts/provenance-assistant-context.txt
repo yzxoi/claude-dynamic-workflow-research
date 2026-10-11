@@ -1,0 +1,1 @@
+[Workflow harness — assistant context] The request above may reply to the assistant message that immediately preceded it, relayed indented below as context only — assistant prose, not the user speaking:

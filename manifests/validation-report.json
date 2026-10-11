@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "offline_only": true,
+  "structural_only": false,
+  "checks": {
+    "json": 221,
+    "jsonl_records": 1037,
+    "jsonl": 26,
+    "python_syntax": 34,
+    "concatenated_json_values": 5,
+    "concatenated_json_streams": 1,
+    "intentional_invalid_json_fixtures": 2,
+    "authored_local_links": 215,
+    "authored_markdown": 13,
+    "rea_gzip_json": 1,
+    "claim_source_links": 45,
+    "zip_members": 221,
+    "published_hashes": 5947,
+    "source_catalog_published_hashes": 5924
+  },
+  "errors": [],
+  "scope": "all repository JSON/JSONL with declared concatenated stream and negative-fixture formats; Python syntax; authored docs and claim links; published hashes; REA gzip JSON; sanitized experiment ZIP",
+  "excluded_checks": [
+    "network links",
+    "historical/vendor Markdown links",
+    "execution of evidence code",
+    "model or cloud calls",
+    "original-source hash equality after declared redactions"
+  ],
+  "date": "2026-10-11"
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "path": "live-probe/prompts/lead-system.json",
+    "source": "live-probe/capture/lead.jsonl",
+    "representation": "exact-recorded-system-chunk-array",
+    "bytes": 3674,
+    "sha256": "4b460005ebc1432327557e4350fc52ab418606c51a59ade4f662094633e6be88"
+  },
+  {
+    "path": "live-probe/prompts/lead-system.txt",
+    "source": "live-probe/capture/lead.jsonl",
+    "representation": "recorded-system-chunks-joined-for-reading",
+    "bytes": 3615,
+    "sha256": "042d37391751c0cc9795388c6657d3796d9430a35efdf19c101f77f7e5110c25"
+  },
+  {
+    "path": "live-probe/prompts/lead-tools.json",
+    "source": "live-probe/capture/lead.jsonl",
+    "representation": "exact-recorded-tool-definitions",
+    "bytes": 18999,
+    "sha256": "3cfa48398e336995b2e2f2565975704eddedd2947da1e4e644f4501494405484"
+  },
+  {
+    "path": "live-probe/prompts/lead-snapshot.json",
+    "source": "live-probe/capture/lead.jsonl",
+    "representation": "exact-last-recorded-prompt-snapshot",
+    "bytes": 23384,
+    "sha256": "95170b69ec8e4416b6e6cd4f1879c84d4711755fc33f88902d24b9eee0f2d10f"
+  },
+  {
+    "path": "live-probe/prompts/lead-messages.json",
+    "source": "live-probe/capture/lead.jsonl",
+    "representation": "recorded-task-messages-without-unrelated-attachments",
+    "bytes": 31745,
+    "sha256": "b374724035feb8e03c93c25e82a89651da23facb377bbaa141bf9337aea4dded"
+  },
+  {
+    "path": "live-probe/prompts/lead-incoming-task.txt",
+    "source": "live-probe/capture/lead.jsonl",
+    "representation": "exact-first-user-message-text",
+    "bytes": 1560,
+    "sha256": "91ba1db0293642a1483f41d3e7b56878bf9204b94ec3d59e333b72a2a2f416be"
+  },
+  {
+    "path": "live-probe/prompts/worker-B-system.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a13d5005ccdd03e6b.jsonl",
+    "representation": "exact-recorded-system-chunk-array",
+    "bytes": 1969,
+    "sha256": "877dcc49e32adaf9b985cf5794a2e4f3b75f0eac0c89e9374927da4ecd3a1ec1"
+  },
+  {
+    "path": "live-probe/prompts/worker-B-system.txt",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a13d5005ccdd03e6b.jsonl",
+    "representation": "recorded-system-chunks-joined-for-reading",
+    "bytes": 1934,
+    "sha256": "802de73b1dbcd508c09214190dcb643d12b98b20393a8c0bc3d0c01e4da295cd"
+  },
+  {
+    "path": "live-probe/prompts/worker-B-tools.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a13d5005ccdd03e6b.jsonl",
+    "representation": "exact-recorded-tool-definitions",
+    "bytes": 10623,
+    "sha256": "2ca33ffe0a36b3abd368ffc0dc9e8595120144db8a755805dd090b05f1938b3b"
+  },
+  {
+    "path": "live-probe/prompts/worker-B-snapshot.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a13d5005ccdd03e6b.jsonl",
+    "representation": "exact-last-recorded-prompt-snapshot",
+    "bytes": 13263,
+    "sha256": "99849992645e13271f3a24f305924aadce6b8cf806d022f42770063ea86ceb5d"
+  },
+  {
+    "path": "live-probe/prompts/worker-B-messages.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a13d5005ccdd03e6b.jsonl",
+    "representation": "recorded-task-messages-without-unrelated-attachments",
+    "bytes": 4439,
+    "sha256": "ce84f9c2d66732c68b3e8cee79e53b40014284f25f63fa5ee30b0ba7eca59ba5"
+  },
+  {
+    "path": "live-probe/prompts/worker-B-incoming-task.txt",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a13d5005ccdd03e6b.jsonl",
+    "representation": "exact-first-user-message-text",
+    "bytes": 722,
+    "sha256": "5ea8a3e7e2669b7201fcdbcd5bb765a6b731596c23570f3d6bfe5e1d52244d85"
+  },
+  {
+    "path": "live-probe/prompts/worker-C-system.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a2445755e56a74143.jsonl",
+    "representation": "exact-recorded-system-chunk-array",
+    "bytes": 1969,
+    "sha256": "877dcc49e32adaf9b985cf5794a2e4f3b75f0eac0c89e9374927da4ecd3a1ec1"
+  },
+  {
+    "path": "live-probe/prompts/worker-C-system.txt",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a2445755e56a74143.jsonl",
+    "representation": "recorded-system-chunks-joined-for-reading",
+    "bytes": 1934,
+    "sha256": "802de73b1dbcd508c09214190dcb643d12b98b20393a8c0bc3d0c01e4da295cd"
+  },
+  {
+    "path": "live-probe/prompts/worker-C-tools.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a2445755e56a74143.jsonl",
+    "representation": "exact-recorded-tool-definitions",
+    "bytes": 10743,
+    "sha256": "d571e9fd1857b0066bfd588c1a2d467ca2eed08737e6f1bc96d79ed508af6071"
+  },
+  {
+    "path": "live-probe/prompts/worker-C-snapshot.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a2445755e56a74143.jsonl",
+    "representation": "exact-last-recorded-prompt-snapshot",
+    "bytes": 13391,
+    "sha256": "dd62ee26a22de31fbe8a3efc0f099de8e6dd388472bb5446ef79a0055a15054d"
+  },
+  {
+    "path": "live-probe/prompts/worker-C-messages.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a2445755e56a74143.jsonl",
+    "representation": "recorded-task-messages-without-unrelated-attachments",
+    "bytes": 4949,
+    "sha256": "a2cdf85fb6852b315ac30497efcb0fe3eb9714b2493ca93b3728034512bb8dc8"
+  },
+  {
+    "path": "live-probe/prompts/worker-C-incoming-task.txt",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-a2445755e56a74143.jsonl",
+    "representation": "exact-first-user-message-text",
+    "bytes": 931,
+    "sha256": "ee98a0abd0291e4a6ff59ac564d8753be228dc09d25ffe360d27ed0aae264274"
+  },
+  {
+    "path": "live-probe/prompts/worker-A-system.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-ac929522131d8814a.jsonl",
+    "representation": "exact-recorded-system-chunk-array",
+    "bytes": 1969,
+    "sha256": "877dcc49e32adaf9b985cf5794a2e4f3b75f0eac0c89e9374927da4ecd3a1ec1"
+  },
+  {
+    "path": "live-probe/prompts/worker-A-system.txt",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-ac929522131d8814a.jsonl",
+    "representation": "recorded-system-chunks-joined-for-reading",
+    "bytes": 1934,
+    "sha256": "802de73b1dbcd508c09214190dcb643d12b98b20393a8c0bc3d0c01e4da295cd"
+  },
+  {
+    "path": "live-probe/prompts/worker-A-tools.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-ac929522131d8814a.jsonl",
+    "representation": "exact-recorded-tool-definitions",
+    "bytes": 10623,
+    "sha256": "2ca33ffe0a36b3abd368ffc0dc9e8595120144db8a755805dd090b05f1938b3b"
+  },
+  {
+    "path": "live-probe/prompts/worker-A-snapshot.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-ac929522131d8814a.jsonl",
+    "representation": "exact-last-recorded-prompt-snapshot",
+    "bytes": 13263,
+    "sha256": "99849992645e13271f3a24f305924aadce6b8cf806d022f42770063ea86ceb5d"
+  },
+  {
+    "path": "live-probe/prompts/worker-A-messages.json",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-ac929522131d8814a.jsonl",
+    "representation": "recorded-task-messages-without-unrelated-attachments",
+    "bytes": 6267,
+    "sha256": "488c88f64f3a62e84f996e82356bee24a8fac7cabde67fc3262e0744198ea9c0"
+  },
+  {
+    "path": "live-probe/prompts/worker-A-incoming-task.txt",
+    "source": "live-probe/capture/session/subagents/workflows/wf_a2116ab0-2a2/agent-ac929522131d8814a.jsonl",
+    "representation": "exact-first-user-message-text",
+    "bytes": 786,
+    "sha256": "e2a04d79b1d542636c8f0938cc76fa0b155896515fb1723965c776cf85d3ce81"
+  }
+]

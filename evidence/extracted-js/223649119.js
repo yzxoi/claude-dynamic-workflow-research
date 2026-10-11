@@ -1,0 +1,11 @@
+// @bun @bytecode
+// Claude Code is a Beta product per Anthropic's Commercial Terms of Service.
+// By using Claude Code, you agree that all code acceptance or rejection decisions you make,
+// and the associated conversations in context, constitute Feedback under Anthropic's Commercial Terms,
+// and may be used to improve Anthropic's products, including training models.
+// You are responsible for reviewing any code suggestions before use.
+
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.296
+import{ogo}from"/$bunfs/root/chunk-bncpe25p.js";import"/$bunfs/root/chunk-6feyq2pe.js";import"/$bunfs/root/chunk-bd84n5am.js";import"/$bunfs/root/chunk-cpzpr7hy.js";import"/$bunfs/root/chunk-431ax568.js";import"/$bunfs/root/chunk-pnneq8td.js";import"/$bunfs/root/chunk-zzjk4vrs.js";import"/$bunfs/root/chunk-yps0v79v.js";import"/$bunfs/root/chunk-3e1vfdd3.js";import"/$bunfs/root/chunk-4e7xcb9m.js";import"/$bunfs/root/chunk-nmnavv08.js";export default ogo();

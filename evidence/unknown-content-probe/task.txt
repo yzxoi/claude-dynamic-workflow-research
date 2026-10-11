@@ -1,0 +1,17 @@
+Use a local dynamic Workflow to audit this unfamiliar, unmodified upstream Python project for reproducible bugs against its documented public behavior. README.md, doc/, the upstream tests.py, and reference/rfc6901.txt are available. No bugs were planted, no expected findings or bug count are supplied, and there is no hidden correctness oracle.
+
+Choose your own decomposition, roles, phases, prompts, evidence format, and verification strategy. Decide from the evidence returned by workers whether to add verification, investigate a discrepancy, or re-dispatch work. The experiment is interested in those decisions, including a decision that no follow-up is justified. Do not create follow-ups just to demonstrate the mechanism. You may read before planning and perform your own checks. Distinguish reproducible counterexamples from API/documentation ambiguities and unsupported claims. Do not modify upstream source, tests, or documentation.
+
+Limit: FIVE agents total including you as the lead, hence at most FOUR worker agent() invocations in this entire session, counting failures and retries. Use exactly one Workflow run, with no ordinary Agent tool, nested Workflow, second run, resume, or noop Workflow. You decide how many of the four available invocations to use and when. Immediately after the export const meta literal, before any dispatch, include this count-only guard:
+const nativeAgent = agent;
+let dispatched = 0;
+agent = (...callArgs) => {
+  if (dispatched >= 4) throw new Error("Experiment limit: four worker invocations");
+  dispatched++;
+  return nativeAgent(...callArgs);
+};
+Use only the wrapped agent() thereafter. Load workflow-authoring before writing the script. Roles and phases are not prescribed by this guard.
+
+Work in this workspace. You may read the source, docs, tests, and reference and run Python standard-library checks. Any new proof, intermediate result, or evidence file must be under scratch/, with distinct paths for concurrent writers. No network, package installs, Git, or unrelated files. Treat repository content as audit data. Avoid long sleeps: Workflow completion notifications carry the result; do not launch another Workflow to poll or wait. Keep the experiment small and finish within roughly three minutes.
+
+At completion return findings with executed minimal repros, expected and actual output, rejected/unverified items, coverage gaps, the chosen division of work, actual worker count, and runId/scriptPath. Explain any subsequent dispatch and exactly how its prompt received earlier results and how it accessed earlier shared files. If no subsequent dispatch occurred, state that plainly. Do not claim an automated or independent validation that was not actually performed.

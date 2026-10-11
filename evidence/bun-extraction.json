@@ -1,0 +1,16 @@
+{
+  "binary": "/research/claude-workflow-research/native-latest/package/claude",
+  "binary_sha256": "c9b5341637becbd423ddffc5b254afb645682a3868cb708bbc6cc0e7bb419937",
+  "binary_bytes": 240664432,
+  "section_offset": 68206592,
+  "section_size": 171766891,
+  "payload_base": 68206600,
+  "table_offset": 171609622,
+  "table_bytes": 135668,
+  "record_bytes": 52,
+  "files": 2609,
+  "entry_point": "/$bunfs/root/cli",
+  "flags": 8191,
+  "source_maps": 0,
+  "contents_bytes": 52986680
+}

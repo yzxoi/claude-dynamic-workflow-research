@@ -1,0 +1,57 @@
+[
+  {
+    "id": "inventory-exact-stock",
+    "location": "inventory.py:12",
+    "input": "Inventory({'x': 3}).reserve('x', 3)",
+    "expected": true,
+    "actual": false,
+    "baseline_observed": false
+  },
+  {
+    "id": "pricing-inclusive-threshold",
+    "location": "pricing.py:18",
+    "input": "quote([{'unit_price_cents': 1000, 'quantity': 1}])",
+    "expected": {
+      "subtotal": 1000,
+      "discount": 100,
+      "shipping": 100,
+      "total": 1000
+    },
+    "actual": {
+      "subtotal": 1000,
+      "discount": 0,
+      "shipping": 100,
+      "total": 1100
+    },
+    "baseline_observed": {
+      "subtotal": 1000,
+      "discount": 0,
+      "shipping": 100,
+      "total": 1100
+    }
+  },
+  {
+    "id": "scheduling-touching",
+    "location": "scheduling.py:2",
+    "input": "overlaps((0, 5), (5, 10))",
+    "expected": false,
+    "actual": true,
+    "baseline_observed": true
+  },
+  {
+    "id": "scheduling-exact-gap",
+    "location": "scheduling.py:20",
+    "input": "earliest_slot([(5, 10)], 5, 0, 10)",
+    "expected": 0,
+    "actual": null,
+    "baseline_observed": null
+  },
+  {
+    "id": "metrics-nearest-rank",
+    "location": "metrics.py:10",
+    "input": "percentile([10, 20, 30, 40], 50)",
+    "expected": 20,
+    "actual": 30,
+    "baseline_observed": 30
+  }
+]

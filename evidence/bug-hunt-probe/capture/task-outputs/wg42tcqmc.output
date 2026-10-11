@@ -1,0 +1,9 @@
+{
+  "summary": "noop",
+  "agentCount": 0,
+  "logs": [],
+  "result": 1,
+  "workflowProgress": [],
+  "totalTokens": 0,
+  "totalToolCalls": 0
+}

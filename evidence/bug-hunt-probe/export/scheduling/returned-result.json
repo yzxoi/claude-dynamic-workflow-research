@@ -1,0 +1,36 @@
+{
+  "findings": [
+    {
+      "module": "scheduling.py",
+      "title": "overlaps treats touching intervals as overlapping",
+      "status": "confirmed",
+      "repro": "python3 scratch/scheduling_proof.py; overlaps((0,5),(5,10))",
+      "expected": "False (half-open, touching does not overlap)",
+      "actual": "True (uses <= instead of <)"
+    },
+    {
+      "module": "scheduling.py",
+      "title": "earliest_slot rejects slot ending exactly at a busy interval's start",
+      "status": "confirmed",
+      "repro": "earliest_slot([(5,10)],5,0,20); earliest_slot([(0,2),(4,10)],2,0,20); earliest_slot([(5,10),(0,2)],3,0,20)",
+      "expected": "0, 2, 2 respectively",
+      "actual": "10, 10, 10 (check 'start + duration < begin' should be <=)"
+    },
+    {
+      "module": "scheduling.py",
+      "title": "merge_overlaps touching/mutation/empty behavior",
+      "status": "rejected",
+      "repro": "merge_overlaps([(0,5),(5,10)]); merge_overlaps([(0,6),(5,10)]); input list checked after call",
+      "expected": "touching stays separate, overlapping merges, no mutation",
+      "actual": "[(0,5),(5,10)], [(0,10)], input unchanged; conforms"
+    },
+    {
+      "module": "scheduling.py",
+      "title": "earliest_slot latest boundary, no-fit, and busy mutation",
+      "status": "rejected",
+      "repro": "earliest_slot([],5,0,5); earliest_slot([(0,10)],5,0,12); busy list inspected after call",
+      "expected": "0; None; busy unchanged",
+      "actual": "0; None; unchanged; conforms"
+    }
+  ]
+}

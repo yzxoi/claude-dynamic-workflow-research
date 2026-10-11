@@ -1,0 +1,8 @@
+Use exactly ONE local Workflow run to perform a tiny orchestration experiment, with at most THREE agent() calls and no nested workflows. Use the standard Workflow tool, not ordinary Agent delegation. Load the built-in workflow-authoring reference if it is available.
+
+This value is for the lead only: LEAD_ONLY = lead-context-probe-927463. Never include its value in any worker prompt, tool description, phase title, label or forwarded result.
+
+Phase Observe: in parallel, Worker A and Worker B each read seed.txt in the current workspace and return a structured object with their worker name, the seed contents, and leadOnlyValue (null unless they can already see its actual value in their own incoming context). Worker A also writes artifact-a.txt containing exactly artifact-A-85192. Worker B need not read that output.
+Phase Merge: only after those two finish, Worker C receives their exact return objects in its prompt, reads artifact-a.txt, and returns a structured object containing receivedA, receivedB, artifactContents, and leadOnlyValue (again null if unknown).
+
+Keep the worker prompts short. Each worker must act only inside the current workspace. No Bash, network, installs, Git operations or edits outside this directory. Each result should be under 150 words. Do not retry a failed agent with a new agent call. Report actual failures without inventing results. At the end provide the three return values, the workflow runId and scriptPath, and explain whether context and files were shared. This is a diagnostic task; do not do any other work.

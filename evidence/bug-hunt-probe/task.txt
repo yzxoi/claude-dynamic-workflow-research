@@ -1,0 +1,15 @@
+Audit the small Python utility package in the current directory against SPEC.md and find reproducible implementation bugs. Choose your own task decomposition, worker responsibilities, phases, prompts, and verification method. Do not change the audited implementation or SPEC.md. Use one local Workflow run. You may inspect the package before writing the workflow and validate findings yourself after it returns. Establish actual runtime evidence for reported bugs; distinguish confirmed, rejected, and unverified claims. No target bug count is supplied.
+
+Agent limit: at most FIVE agents in total, including you as the lead, so at most FOUR worker agent() invocations over this one run's entire lifetime. Count every invocation, including failed/retried workers. Do not use the ordinary Agent tool, nested workflows, a second Workflow run, or resume to obtain more workers.
+For enforcement, immediately after the export const meta block and before any dispatch, include this wrapper in your script:
+const nativeAgent = agent;
+let dispatched = 0;
+agent = (...callArgs) => {
+  if (dispatched >= 4) throw new Error("Experiment limit: four worker invocations");
+  dispatched++;
+  return nativeAgent(...callArgs);
+};
+Use only the wrapped agent() thereafter. Load the workflow-authoring reference if available. The wrapper constrains the count, not your decomposition.
+
+Keep the experiment small and finish promptly. Work only in the current workspace. Read files with Read/Glob/Grep; executable checks may use python3 and the standard library. Write proof scripts/artifacts only under scratch/. No network, package installs, Git, or access outside this workspace. Avoid concurrent writes to the same proof file. Keep each worker result concise.
+At the end report the confirmed bugs with minimal reproductions and expected/actual outputs, rejected or unverified findings, your chosen division of work and any verification gaps, the actual worker count, and the Workflow runId/scriptPath. Do not invent results or claim full coverage without evidence.

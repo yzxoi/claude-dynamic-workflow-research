@@ -1,0 +1,12 @@
+<task-notification>
+<task-id>wg42tcqmc</task-id>
+<tool-use-id>toolu_0159rDQbLvW1kUvDwwzzCH65</tool-use-id>
+<output-file>/tmp/claude-user/research-workspace-bug-hunt-probe-workspace/82d3665d-baba-4221-bb2b-28055303b823/tasks/wg42tcqmc.output</output-file>
+<status>completed</status>
+<summary>Dynamic workflow "noop" completed</summary>
+<result>1</result>
+<diagnostics>Per-agent results: /home/researcher/.claude/projects/research-workspace-bug-hunt-probe-workspace/82d3665d-baba-4221-bb2b-28055303b823/subagents/workflows/wf_b3dc3a8d-0bf/journal.jsonl — one {"type":"result",...} line per completed agent with its full return value.
+If the result above is empty or unexpected, Read this file BEFORE diagnosing — do not assume agents returned non-empty results.
+To re-run with edited post-processing: Workflow({scriptPath: '/home/researcher/.claude/projects/research-workspace-bug-hunt-probe-workspace/82d3665d-baba-4221-bb2b-28055303b823/workflows/scripts/noop-wf_b3dc3a8d-0bf.js', resumeFromRunId: 'wf_b3dc3a8d-0bf'}) — agents whose (prompt, opts) are unchanged replay from cache.</diagnostics>
+<usage><agent_count>0</agent_count><agents_done>0</agents_done><agents_error>0</agents_error><agents_skipped>0</agents_skipped><agents_empty_result>0</agents_empty_result><subagent_tokens>0</subagent_tokens><tool_uses>0</tool_uses><duration_ms>2</duration_ms></usage>
+</task-notification>

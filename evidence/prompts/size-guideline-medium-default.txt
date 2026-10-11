@@ -1,0 +1,1 @@
+This session has the default workflow size guideline: medium — keep workflows under 10 agents. This is a guideline, not a hard limit — follow it unless the user's prompt calls for a different scale. The user can raise or remove it with "Dynamic workflow size" in /config.

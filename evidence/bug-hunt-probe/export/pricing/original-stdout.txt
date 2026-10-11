@@ -1,0 +1,7 @@
+boundary {'subtotal': 1000, 'discount': 0, 'shipping': 100, 'total': 1100}
+empty {'subtotal': 0, 'discount': 0, 'shipping': 0, 'total': 0} 0
+floor {'subtotal': 1005, 'discount': 100, 'shipping': 100, 'total': 1005}
+zero min {'subtotal': 0, 'discount': 0, 'shipping': 100, 'total': 100}
+raised invalid unit price
+raised invalid quantity
+raised invalid unit price

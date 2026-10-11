@@ -1,0 +1,38 @@
+[
+  {
+    "source": "bun-files/cli",
+    "sha256": "5ec1302ba8afecce27dd404105070c2cbb3048d7c3a6dbf9265d6500b7d50daa",
+    "character_offset": 24048,
+    "snippet": "\"/$bunfs/root/chunk-gextwv2s.js\")).configureZodForStartup();let{main:wt}=await import(\"/$bunfs/root/chunk-7vyj6mx6.js\");v(\"cli_after_main_import\"),await wt(r),v(\"cli_after_main_complete\")}Bt();\n"
+  },
+  {
+    "source": "bun-files/chunk-9shw4xrd.js",
+    "sha256": "3772f0aeaf18af96248c2eae193c2f99cb0b68f20d94f9f34e5059e6709d27c4",
+    "character_offset": 126781,
+    "snippet": "h){c(h);let M=l(h);return Hm(M),await k4({sessionId:K(),message:M,reason:\"temp_dir_unusable\"}),Vo()}Nie(),XEe();let nr=!!y?.host,rr,sr=!1,ir=async()=>{if(rr!==void 0&&!sr)return;try{let{shouldRefreshArtifactRoster:h}=await import(\"/$bunfs/root/chunk-5t1yz76p.js\");if(!h())return;let{artifactRosterFetchDeferred:M,artifactRosterFresh:R,artifactRosterIdentityKnown:L,refreshArtifactRoster:z}=await import(\"/$bunfs/root/chunk-zjy9mte9.js\");if(!L()||R()||M())return;sr=!1,rr=z({credentials:b,storageV5:w,"
+  },
+  {
+    "source": "bun-files/chunk-yy4ay7w5.js",
+    "sha256": "648b2726d46ceecb14e2d3a47e30e429099d3a0701b8da6692e61af47a4d8b05",
+    "character_offset": 232510,
+    "snippet": "{registerScheduleRemoteAgentsSkill:s}=import.meta.require(\"/$bunfs/root/chunk-0y0rpvta.js\");s();let{registerClaudeApiSkill:r}=import.meta.require(\"/$bunfs/root/chunk-yvwrs8a8.js\");r({disabled:a.CLAUDE_CODE_DISABLE_CLAUDE_API_SKILL===!0});let{registerClaudeCodeSkill:c}=import.meta.require(\"/$bunfs/root/chunk-ar9xtx80.js\");c({disabled:a.CLAUDE_CODE_DISABLE_CLAUDE_CODE_SKILL===!0});let{registerWorkflowAuthoringSkill:h}=import.meta.require(\"/$bunfs/root/chunk-ptt85yfj.js\");h(),Bt({disabled:IMe()||a."
+  },
+  {
+    "source": "bun-files/chunk-yvwrs8a8.js",
+    "sha256": "869cb1739dba4fb5319002ea5ac992db6d6ce2fcb4cf75618201b41d4235f520",
+    "character_offset": 6515,
+    "snippet": "root/chunk-yjc18bey.js\";import\"/$bunfs/root/chunk-fdxhcr6b.js\";export{_2e as matchSubcommand,$Bs as registerClaudeApiSkill};\n"
+  },
+  {
+    "source": "bun-files/chunk-k9bc38yt.js",
+    "sha256": "6a6c988a858f1b50f1129d964d42ee61de2c455ce13134969937486eaccc336b",
+    "character_offset": 11622,
+    "snippet": "s session: show the user the template, write nothing, and ask them to run the command again.\n\n${c}`}function $Bs({disabled:r=!1}={}){zs({name:\"claude-api\",menuDescription:\"Build and debug apps that use the Claude API\",description:R,allowedTools:[\"WebFetch(domain:platform.claude.com)\"],userInvocable:!0,disableBridgeInvocation:!0,isEnabled:()=>!r,files:()=>k().then(A),async getPromptForCommand(e,t,o){let[n,a]=await Promise.all([T(),k()]),s=L(a.SKILL_FILES),c=b(e,s),u=c.kind===\"match\"?\"quickstart\":"
+  },
+  {
+    "source": "bun-files/chunk-p6hmrjkc.js",
+    "sha256": "7c16016124c9794a339e0f77a1395715ab8ac6874c905d106f93d50f6f2e4431",
+    "character_offset": 7705,
+    "snippet": "ort-to-eng-escalator-qqj4c1c7.md\");var Gt=Le(\"/$bunfs/root/watchlist-scanner-kfkrzjrr.md\");var Ut={\"shared/managed-agents-quickstarts/bug-hunter.md\":Mt,\"shared/managed-agents-quickstarts/contract-tracker.md\":Lt,\"shared/managed-agents-quickstarts/data-analyst.md\":Nt,\"shared/managed-agents-quickstarts/deep-researcher.md\":Ht,\"shared/managed-agents-quickstarts/explainer-video-maker.md\":Jt,\"shared/managed-agents-quickstarts/field-monitor.md\":jt,\"shared/managed-agents-quickstarts/incident-commander.md"
+  }
+]

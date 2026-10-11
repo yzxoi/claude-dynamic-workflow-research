@@ -1,0 +1,11 @@
+[
+  {
+    "workingDirectory": "/research/claude-workflow-research/unknown-content-probe/workspace",
+    "isWorktree": false,
+    "isGitRepo": false,
+    "additionalWorkingDirectories": [],
+    "platform": "darwin",
+    "shell": "zsh",
+    "osVersion": "Darwin 25.6.0"
+  }
+]
